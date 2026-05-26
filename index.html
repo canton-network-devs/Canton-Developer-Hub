@@ -15,7 +15,6 @@
     --lilac:     #D5A5E3;
     --purple:    #875CFF;
     --taupe:     #A89F91;
-    --lilac-dim: #b080c8;
     --bg:        #FFFFFC;
     --surface:   #f4f3f0;
     --border:    rgba(3,2,6,0.18);
@@ -26,51 +25,25 @@
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { font-size: 16px; }
-  body {
-    font-family: 'IBM Plex Sans', system-ui, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    min-height: 100vh;
-    -webkit-font-smoothing: antialiased;
-  }
+  body { font-family: 'IBM Plex Sans', system-ui, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; -webkit-font-smoothing: antialiased; }
   a { color: inherit; text-decoration: none; }
 
-  .site-header {
-    background: var(--black);
-    padding: 0 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 56px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
+  .disclaimer-bar { background: #030206; border-bottom: 1px solid #875CFF; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; gap: 12px; position: sticky; top: 0; z-index: 101; }
+  .disclaimer-bar-inner { display: flex; align-items: flex-start; gap: 8px; flex: 1; padding: 8px 0; }
+  .disclaimer-bar-icon { flex-shrink: 0; width: 14px; height: 14px; margin-top: 2px; opacity: 0.55; }
+  .disclaimer-bar-text { font-size: 12px; font-weight: 300; color: rgba(255, 255, 252, 0.831); line-height: 1.55; }
+  .disclaimer-bar-text strong { font-weight: 500; color: rgba(255, 255, 252, 0.956); }
+  .disclaimer-bar-close { flex-shrink: 0; background: none; border: none; cursor: pointer; color: rgba(255,255,252,0.3); font-size: 18px; line-height: 1; padding: 4px 2px; transition: color 0.15s; align-self: flex-start; margin-top: 6px; }
+  .disclaimer-bar-close:hover { color: rgba(255,255,252,0.6); }
+  .site-header { background: var(--black); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 56px; position: sticky; top: 0; z-index: 100; }
   .logo { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 500; color: var(--white); }
-  .logo-dot { width: 22px; height: 22px; border-radius: 50%; background: var(--yellow); }
-.header-tag { font-size: 11px; color: var(--taupe); letter-spacing: 0.06em; text-transform: uppercase; }
-.header-actions { display: flex; gap: 8px; align-items: center; }
-.header-btn {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 12px; font-weight: 400;
-  padding: 6px 14px; border-radius: 100px;
-  text-decoration: none; white-space: nowrap;
-  transition: all 0.15s;
-}
-.header-btn.outline {
-  border: 1px solid rgba(255,255,252,0.2);
-  color: var(--white);
-  background: transparent;
-}
-.header-btn.outline:hover { border-color: rgba(255,255,252,0.5); }
-.header-btn.filled {
-  border: 1px solid var(--yellow);
-  background: var(--yellow);
-  color: var(--black);
-  font-weight: 500;
-}
-.header-btn.filled:hover { background: #e8f080; border-color: #e8f080; }
-@media (max-width: 600px) { .header-btn.outline { display: none; } }
+  .header-actions { display: flex; gap: 8px; align-items: center; }
+  .header-btn { font-family: 'IBM Plex Sans', sans-serif; font-size: 12px; font-weight: 400; padding: 6px 14px; border-radius: 100px; text-decoration: none; white-space: nowrap; transition: all 0.15s; }
+  .header-btn.outline { border: 1px solid rgba(255,255,252,0.2); color: var(--white); background: transparent; }
+  .header-btn.outline:hover { border-color: rgba(255,255,252,0.5); }
+  .header-btn.filled { border: 1px solid var(--yellow); background: var(--yellow); color: var(--black); font-weight: 500; }
+  .header-btn.filled:hover { background: #e8f080; border-color: #e8f080; }
+  @media (max-width: 600px) { .header-btn.outline { display: none; } }
 
   .hero { background: var(--black); padding: 3.5rem 2rem 3rem; border-bottom: 1px solid rgba(255,255,252,0.08); }
   .hero-inner { max-width: 960px; margin: 0 auto; }
@@ -80,91 +53,102 @@
   .hero p { font-size: 15px; font-weight: 300; color: var(--taupe); max-width: 520px; line-height: 1.7; }
 
   .main { max-width: 960px; margin: 0 auto; padding: 2rem 1rem 5rem; }
-
   .controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 1rem; }
   .search-wrap { position: relative; flex: 1; min-width: 200px; }
   .search-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; opacity: 0.4; pointer-events: none; }
-  #search {
-    width: 100%; height: 38px; padding: 0 12px 0 36px;
-    border: 1px solid var(--border); border-radius: 100px;
-    background: var(--bg); font-family: inherit; font-size: 13px;
-    color: var(--text); outline: none; transition: border-color 0.15s;
-  }
+  #search { width: 100%; height: 38px; padding: 0 12px 0 36px; border: 1px solid var(--border); border-radius: 100px; background: var(--bg); font-family: inherit; font-size: 13px; color: var(--text); outline: none; transition: border-color 0.15s; }
   #search:focus { border-color: var(--purple); }
   #search::placeholder { color: var(--hint); }
-
   .divider { width: 1px; height: 22px; background: var(--border); flex-shrink: 0; }
   .pills { display: flex; flex-wrap: wrap; gap: 6px; }
-  .pill {
-    height: 32px; padding: 0 14px; border-radius: 100px;
-    border: 2px solid var(--border); background: var(--bg);
-    color: var(--muted); font-family: inherit; font-size: 14px;
-    font-weight: 500; cursor: pointer; white-space: nowrap; transition: all 0.13s;
-  }
+  .pill { height: 32px; padding: 0 14px; border-radius: 100px; border: 2px solid var(--border); background: var(--bg); color: var(--muted); font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer; white-space: nowrap; transition: all 0.13s; }
   .pill:hover { border-color: var(--border-md); color: var(--text); }
   .pill.active { background: var(--black); color: var(--lilac); border-color: var(--black); font-weight: 600; }
   .pill.p-official.active { background: var(--black); color: var(--purple); border-color: var(--black); }
   .pill.p-partner.active { background: transparent; color: var(--purple); border-color: var(--purple); font-weight: 600; }
   .meta-row { display: flex; align-items: center; margin-bottom: 1rem; }
   .count { font-size: 12px; color: var(--hint); }
-  .state-msg {
-    text-align: center; padding: 4rem 1rem;
-    color: var(--muted); font-size: 14px; font-weight: 300;
-  }
+
+  .state-msg { text-align: center; padding: 4rem 1rem; color: var(--muted); font-size: 14px; font-weight: 300; }
   .state-msg strong { display: block; font-size: 16px; font-weight: 500; margin-bottom: 6px; color: var(--text); }
   .state-msg a { color: var(--lilac); text-decoration: underline; }
-  .spinner {
-    width: 28px; height: 28px; border: 2px solid var(--border);
-    border-top-color: var(--purple); border-radius: 50%;
-    animation: spin 0.7s linear infinite; margin: 0 auto 1rem;
-  }
+  .spinner { width: 28px; height: 28px; border: 2px solid var(--border); border-top-color: var(--purple); border-radius: 50%; animation: spin 0.7s linear infinite; margin: 0 auto 1rem; }
   @keyframes spin { to { transform: rotate(360deg); } }
 
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
-
-  .card {
-    background: var(--bg); border: 1px solid var(--border);
-    border-radius: 14px; padding: 1.4rem 1.4rem;
-    display: flex; flex-direction: column; gap: 9px;
-    transition: border-color 0.18s, box-shadow 0.16s;
-  }
-.card:hover { border-color: var(--border-md); box-shadow: 0 4px 16px rgba(3,2,6,0.14); }
+  .card { background: var(--bg); border: 1px solid var(--border); border-radius: 14px; padding: 1.4rem 1.4rem; display: flex; flex-direction: column; gap: 9px; transition: border-color 0.18s, box-shadow 0.16s; }
+  .card:hover { border-color: var(--border-md); box-shadow: 0 4px 16px rgba(2, 2, 5, 0.14); }
   .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
   .card-name { font-size: 14px; font-weight: 500; color: var(--text); line-height: 1.3; letter-spacing: -0.01em; }
   .card-maker { font-size: 12px; color: var(--hint); margin-top: 2px; font-weight: 600; }
-
   .badge { font-size: 12px; font-weight: 600; padding: 3px 8px; border-radius: 100px; white-space: nowrap; flex-shrink: 0; letter-spacing: 0.02em; }
   .badge.official { background: var(--yellow); color: var(--black); }
   .badge.partner  { background: rgba(213,165,227,0.25); color: #4a2060; }
-
-  .cat-tag {
-    display: inline-block; width: fit-content;
-    font-size: 12px; font-weight: 700; padding: 2px 8px;
-    border-radius: 100px; background: var(--surface);
-    color: var(--muted); border: 1px solid rgba(3,2,6,0.20);
-  }
-
-  .card-desc { font-size: 12px; font-weight: 300; color: var(--muted); line-height: 1.65; flex: 1; }
+  .cat-tag { display: inline-block; width: fit-content; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 100px; background: var(--surface); color: var(--muted); border: 1px solid rgba(3,2,6,0.20); }
+  .card-desc { font-size: 12px; font-weight: 400; color: var(--muted); line-height: 1.65; flex: 1; }
   .card-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 2px; }
-  .card-link { font-size: 11px; font-weight: 400; color: var(--purple); display: flex; align-items: center; gap: 3px; transition: opacity 0.12s; }
+  .card-link { font-size: 12px; font-weight: 400; color: var(--purple); display: flex; align-items: center; gap: 3px; transition: opacity 0.12s; }
   .card-link:hover { opacity: 0.7; text-decoration: underline; }
   .card-link svg { width: 11px; height: 11px; flex-shrink: 0; }
-
+  .card-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 4px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .vote-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 5px 12px; border-radius: 100px; border: 1.5px solid var(--border);
+    background: var(--bg); color: var(--muted);
+    font-family: inherit; font-size: 12px; font-weight: 500;
+    cursor: pointer; transition: all 0.15s; white-space: nowrap;
+  }
+  .vote-btn:hover { border-color: var(--purple); color: var(--purple); background: rgba(135,92,255,0.05); }
+  .vote-btn.active { border-color: var(--purple); color: var(--purple); background: rgba(135,92,255,0.08); }
+  .vote-btn .thumb { font-size: 14px; line-height: 1; }
+  .vote-hint { font-size: 10px; color: var(--hint); font-weight: 300; }
+  .giscus-overlay {
+    display: none;
+    position: fixed; inset: 0;
+    z-index: 999;
+    background: rgba(3,2,6,0.45);
+    align-items: center; justify-content: center;
+  }
+  .giscus-overlay.open { display: flex; }
+  .giscus-panel {
+    background: var(--white);
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    width: min(480px, calc(100vw - 2rem));
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 64px rgba(3,2,6,0.25);
+    display: flex; flex-direction: column;
+  }
+  .giscus-panel-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 18px 12px;
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+  .giscus-panel-title { font-size: 13px; font-weight: 500; color: var(--text); }
+  .giscus-panel-sub { font-size: 11px; color: var(--hint); margin-top: 2px; }
+  .giscus-panel-close {
+    background: none; border: none; cursor: pointer;
+    font-size: 20px; color: var(--hint); line-height: 1; padding: 2px 4px;
+    transition: color 0.15s; flex-shrink: 0;
+  }
+  .giscus-panel-close:hover { color: var(--text); }
+  .giscus-panel-body { padding: 12px 18px 16px; min-height: 120px; }
+  .giscus-panel-body .giscus { margin: 0 !important; }
+  .giscus-panel-body iframe { width: 100% !important; border: none !important; }
+  .panel-loading { text-align: center; padding: 2rem; color: var(--hint); font-size: 13px; }
+  .panel-spinner { width: 22px; height: 22px; border: 2px solid var(--border); border-top-color: var(--purple); border-radius: 50%; animation: spin 0.7s linear infinite; margin: 0 auto 10px; }
   .empty { grid-column: 1/-1; text-align: center; padding: 3rem 1rem; color: var(--hint); font-size: 13px; }
   .empty strong { display: block; font-size: 15px; color: var(--muted); margin-bottom: 4px; font-weight: 500; }
-
-  .site-footer {
-    background: var(--black); padding: 2rem; text-align: center;
-    font-size: 12px; color: var(--taupe); border-top: 1px solid rgba(255,255,252,0.06);
-    font-weight: 300;
-  }
+  .site-footer { background: var(--black); padding: 2rem; text-align: center; font-size: 12px; color: var(--taupe); border-top: 1px solid rgba(255,255,252,0.06); font-weight: 300; }
   .site-footer a { color: var(--yellow); }
   .site-footer a:hover { text-decoration: underline; }
-
   @media (max-width: 600px) {
     .hero { padding: 2.5rem 1.25rem 2rem; }
     .main { padding: 1.5rem 1rem 3rem; }
     .site-header { padding: 0 1.25rem; }
+    .disclaimer-bar { padding: 0 1.25rem; }
     .controls { flex-direction: column; align-items: stretch; }
     .divider { display: none; }
   }
@@ -172,27 +156,31 @@
 </head>
 <body>
 
-<header class="site-header">
-  <div class="logo">
-    Canton Network
+<div class="disclaimer-bar" id="disclaimer-bar">
+  <div class="disclaimer-bar-inner">
+    <svg class="disclaimer-bar-icon" viewBox="0 0 16 16" fill="none" stroke="rgba(255,255,252,0.55)" stroke-width="1.5">
+      <circle cx="8" cy="8" r="6.5"/>
+      <path d="M8 5v3.5M8 11v.5" stroke-linecap="round"/>
+    </svg>
+    <p class="disclaimer-bar-text">
+      <strong>Disclaimer:</strong> The tools, libraries, and resources labeled as 'Community' in this repository are submitted by third-party developers and ecosystem partners. They are not audited, endorsed, officially maintained, or guaranteed by the Canton Foundation.
+      <br> These resources are provided 'as is' for informational listing purpose only. The Foundation assumes no liability for any security vulnerabilities, bugs, financial loss, or damages resulting from the use of these tools. Developers must do their own research and independently review the code and security of any third-party/Partner tools before integrating them into their projects.
+    </p>
   </div>
-<div class="header-actions">
-    <a class="header-btn outline"
-       href="https://github.com/Jatinp26/Canton-Developer-Hub/issues/new?assignees=&labels=bad+tool+report&template=&title=%5BBad+Tool+Report%5D+Tool+Name+Here&body=%23%23+Tool+Report%0A%0A**Tool+name:**%20%0A**Issue:**%20%0A**Link+to+tool:**%20%0A**Additional+context:**%20"
-       target="_blank" rel="noopener">
-      Report a tool
-    </a>
-    <a class="header-btn filled"
-       href="https://github.com/Jatinp26/Canton-Developer-Hub/blob/main/Contributing.md"
-       target="_blank" rel="noopener">
-      Submit your tool
-    </a>
+  <button class="disclaimer-bar-close" id="disclaimer-close" aria-label="Dismiss">×</button>
+</div>
+
+<header class="site-header" id="site-header">
+  <div class="logo">Build on Canton</div>
+  <div class="header-actions">
+    <a class="header-btn outline" href="https://github.com/Jatinp26/Canton-Developer-Hub/issues/new?assignees=&labels=bad+tool+report&template=&title=%5BBad+Tool+Report%5D+Tool+Name+Here&body=%23%23+Tool+Report%0A%0A**Tool+name:**%20%0A**Issue:**%20%0A**Link+to+tool:**%20%0A**Additional+context:**%20" target="_blank" rel="noopener">Report a tool</a>
+    <a class="header-btn filled" href="https://github.com/Jatinp26/Canton-Developer-Hub/blob/main/Contributing.md" target="_blank" rel="noopener">Submit your tool</a>
   </div>
 </header>
 
 <section class="hero">
   <div class="hero-inner">
-    <p class="hero-eyebrow">Canton Ecosystem</p>
+    <p class="hero-eyebrow">All Open-Source</p>
     <h1>Developer <em>Tooling</em></h1>
     <p>Tools, SDKs, APIs, and AI Infrastructure for Building on Canton Network. Official and community-built, all in one place.</p>
   </div>
@@ -213,13 +201,8 @@
       <button class="pill p-partner" data-type="partner">Partner tooling</button>
     </div>
   </div>
-
   <div class="pills" id="cat-pills" style="margin-bottom:1.25rem;"></div>
-
-  <div class="meta-row">
-    <span class="count" id="count"></span>
-  </div>
-
+  <div class="meta-row"><span class="count" id="count"></span></div>
   <div id="main-content">
     <div class="state-msg">
       <div class="spinner"></div>
@@ -228,32 +211,108 @@
     </div>
   </div>
 </main>
-
+<div class="giscus-overlay" id="giscus-overlay">
+  <div class="giscus-panel" id="giscus-panel">
+    <div class="giscus-panel-header">
+      <div>
+        <div class="giscus-panel-title" id="panel-title">React to this tool</div>
+        <div class="giscus-panel-sub">Sign in with GitHub to react · reactions are public</div>
+      </div>
+      <button class="giscus-panel-close" id="panel-close" aria-label="Close">×</button>
+    </div>
+    <div class="giscus-panel-body" id="panel-body">
+      <div class="panel-loading">
+        <div class="panel-spinner"></div>
+        Loading reactions…
+      </div>
+    </div>
+  </div>
+</div>
 <footer class="site-footer">
   Maintained by <a href="https://x.com/Jpandya26" target="_blank">Jatin Pandya</a>, Developer Relations Manager · Canton Foundation.
 </footer>
 
 <script>
-const TOOLS_URL =
-  "https://raw.githubusercontent.com/Jatinp26/Canton-Developer-Hub/refs/heads/main/Github%20Page/tools.json";
+const TOOLS_URL          = "https://raw.githubusercontent.com/Jatinp26/Canton-Developer-Hub/refs/heads/main/Github%20Page/tools.json";
+const GISCUS_REPO        = "Jatinp26/Canton-Developer-Hub";
+const GISCUS_REPO_ID     = "R_kgDOROGJ0g";
+const GISCUS_CATEGORY    = "Tools";
+const GISCUS_CATEGORY_ID = "DIC_kwDOROGJ0s4C95t0";
+const GISCUS_ORIGIN      = "https://giscus.app";
 
 const EXT = `<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2H2a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1V7M8 1h3m0 0v3m0-3L5 7"/></svg>`;
-let TOOLS      = [];
-let activeType = "all";
-let activeCat  = "all";
-let searchQ    = "";
+
+let TOOLS = [], activeType = "all", activeCat = "all", searchQ = "";
+let currentSlug = null;
+(function() {
+  const bar = document.getElementById('disclaimer-bar');
+  const hdr = document.getElementById('site-header');
+  function sync() { hdr.style.top = bar.offsetHeight + 'px'; }
+  sync(); window.addEventListener('resize', sync);
+  document.getElementById('disclaimer-close').addEventListener('click', () => { bar.style.display = 'none'; hdr.style.top = '0px'; });
+})();
+
+function slugify(n) {
+  return 'tool-' + n.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
+const overlay   = document.getElementById('giscus-overlay');
+const panelBody = document.getElementById('panel-body');
+const panelTitle = document.getElementById('panel-title');
+function openPanel(toolName, slug) {
+  if (currentSlug !== slug) {
+    currentSlug = slug;
+    panelTitle.textContent = toolName;
+    panelBody.innerHTML = `<div class="panel-loading"><div class="panel-spinner"></div>Loading reactions…</div>`;
+    const s = document.createElement('script');
+    s.src = GISCUS_ORIGIN + '/client.js';
+    s.setAttribute('data-repo',              GISCUS_REPO);
+    s.setAttribute('data-repo-id',           GISCUS_REPO_ID);
+    s.setAttribute('data-category',          GISCUS_CATEGORY);
+    s.setAttribute('data-category-id',       GISCUS_CATEGORY_ID);
+    s.setAttribute('data-mapping',           'specific');
+    s.setAttribute('data-term',              slug);
+    s.setAttribute('data-strict',            '1');
+    s.setAttribute('data-reactions-enabled', '1');
+    s.setAttribute('data-emit-metadata',     '0');
+    s.setAttribute('data-input-position',    'top');  /* reactions at top, comment box below */
+    s.setAttribute('data-theme',             'light');
+    s.setAttribute('data-lang',              'en');
+    s.crossOrigin = 'anonymous';
+    s.async = true;
+    panelBody.appendChild(s);
+  }
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closePanel() {
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('panel-close').addEventListener('click', closePanel);
+overlay.addEventListener('click', e => { if (e.target === overlay) closePanel(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closePanel(); });
+
+window.addEventListener('message', (e) => {
+  if (e.origin !== GISCUS_ORIGIN) return;
+  if (e.data?.giscus?.resizeHeight) {
+    const loader = panelBody.querySelector('.panel-loading');
+    if (loader) loader.style.display = 'none';
+    const iframe = panelBody.querySelector('iframe');
+    if (iframe) iframe.style.height = e.data.giscus.resizeHeight + 'px';
+  }
+});
 
 function buildCatPills() {
   const cats = ["all", ...new Set(TOOLS.map(t => t.category))];
-  const container = document.getElementById("cat-pills");
-  container.innerHTML = cats.map(c =>
-    `<button class="pill${c === "all" ? " active" : ""}" data-cat="${c}">${c === "all" ? "All categories" : c}</button>`
+  const c = document.getElementById("cat-pills");
+  c.innerHTML = cats.map(cat =>
+    `<button class="pill${cat==="all"?" active":""}" data-cat="${cat}">${cat==="all"?"All categories":cat}</button>`
   ).join("");
-  container.addEventListener("click", e => {
+  c.addEventListener("click", e => {
     const pill = e.target.closest("[data-cat]");
     if (!pill) return;
     activeCat = pill.dataset.cat;
-    container.querySelectorAll("[data-cat]").forEach(p => p.classList.remove("active"));
+    c.querySelectorAll("[data-cat]").forEach(p => p.classList.remove("active"));
     pill.classList.add("active");
     render();
   });
@@ -261,21 +320,15 @@ function buildCatPills() {
 
 function render() {
   const filtered = TOOLS.filter(t => {
-    const matchType   = activeType === "all" || t.type === activeType;
-    const matchCat    = activeCat  === "all" || t.category === activeCat;
+    const matchType = activeType === "all" || t.type === activeType;
+    const matchCat  = activeCat  === "all" || t.category === activeCat;
     const q = searchQ.toLowerCase();
-    const matchSearch = !q ||
-      t.name.toLowerCase().includes(q) ||
-      t.desc.toLowerCase().includes(q) ||
-      t.maker.toLowerCase().includes(q) ||
-      t.category.toLowerCase().includes(q);
-    return matchType && matchCat && matchSearch;
+    const matchQ = !q || [t.name, t.desc, t.maker, t.category].some(s => s.toLowerCase().includes(q));
+    return matchType && matchCat && matchQ;
   });
 
   document.getElementById("count").textContent =
-    filtered.length === TOOLS.length
-      ? `${TOOLS.length} tools`
-      : `${filtered.length} of ${TOOLS.length} tools`;
+    filtered.length === TOOLS.length ? `${TOOLS.length} tools` : `${filtered.length} of ${TOOLS.length} tools`;
 
   const container = document.getElementById("main-content");
   if (!filtered.length) {
@@ -283,7 +336,9 @@ function render() {
     return;
   }
 
-  container.innerHTML = `<div class="grid">${filtered.map(t => `
+  container.innerHTML = `<div class="grid">${filtered.map(t => {
+    const slug = slugify(t.name);
+    return `
     <div class="card">
       <div class="card-top">
         <div>
@@ -299,35 +354,39 @@ function render() {
             `<a class="card-link" href="${l.url}" target="_blank" rel="noopener">${EXT}${l.label}</a>`
           ).join("")}</div>`
         : ""}
-    </div>
-  `).join("")}</div>`;
+      <div class="card-footer">
+        <button class="vote-btn" data-slug="${slug}" data-name="${t.name.replace(/"/g,'&quot;')}">
+          <span class="thumb">👍</span> Helpful
+        </button>
+        <span class="vote-hint">React with GitHub</span>
+      </div>
+    </div>`;
+  }).join("")}</div>`;
+  container.querySelectorAll('.vote-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.add('active');
+      openPanel(btn.dataset.name, btn.dataset.slug);
+    });
+  });
 }
+
 async function init() {
   try {
     const res = await fetch(TOOLS_URL + "?nocache=" + Date.now());
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     TOOLS = await res.json();
-
     if (!Array.isArray(TOOLS) || !TOOLS.length) throw new Error("tools.json is empty or malformed.");
-
     buildCatPills();
     render();
   } catch (err) {
     document.getElementById("main-content").innerHTML = `
-      <div class="state-msg">
-        <strong>Could not load catalogue</strong>
-        ${err.message}<br><br>
-        <a href="https://github.com/Jatinp26/Canton-Developer-Hub/blob/page/tools.json" target="_blank">
-          View tools.json on GitHub →
-        </a>
-      </div>`;
+      <div class="state-msg"><strong>Could not load catalogue</strong>${err.message}<br><br>
+      <a href="https://github.com/Jatinp26/Canton-Developer-Hub/blob/page/tools.json" target="_blank">View tools.json →</a></div>`;
     document.getElementById("count").textContent = "";
   }
 }
 
-document.getElementById("search").addEventListener("input", e => {
-  searchQ = e.target.value; render();
-});
+document.getElementById("search").addEventListener("input", e => { searchQ = e.target.value; render(); });
 document.getElementById("type-pills").addEventListener("click", e => {
   const pill = e.target.closest("[data-type]");
   if (!pill) return;
