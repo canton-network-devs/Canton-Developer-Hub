@@ -13,7 +13,7 @@
   },
   {
     "name": "Canton Network API Overview",
-    "maker": "Digital Asset / Canton Foundation",
+    "maker": "Digital Asset",
     "type": "official",
     "category": "Getting Started",
     "desc": "TL;DR overview of all Canton APIs: Ledger API, JSON API, Admin API, Scan API, Validator API, Wallet API. Start here to understand which API you need for what.",
@@ -21,7 +21,7 @@
       { "label": "API overview", "url": "https://docs.canton.network/sdks-tools/api-reference/" }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Digital Asset / Canton Foundation"
+    "maintained_by": "Digital Asset"
   },
   {
     "name": "Canton 101",
