@@ -173,8 +173,8 @@
 <header class="site-header" id="site-header">
   <div class="logo">Build on Canton</div>
   <div class="header-actions">
-    <a class="header-btn outline" href="https://github.com/Jatinp26/Canton-Developer-Hub/issues/new?assignees=&labels=bad+tool+report&template=&title=%5BBad+Tool+Report%5D+Tool+Name+Here&body=%23%23+Tool+Report%0A%0A**Tool+name:**%20%0A**Issue:**%20%0A**Link+to+tool:**%20%0A**Additional+context:**%20" target="_blank" rel="noopener">Report a tool</a>
-    <a class="header-btn filled" href="https://github.com/Jatinp26/Canton-Developer-Hub/blob/main/Contributing.md" target="_blank" rel="noopener">Submit your tool</a>
+    <a class="header-btn outline" href="https://github.com/canton-network-devs/Canton-Developer-Hub/issues/new?assignees=&labels=bad+tool+report&template=&title=%5BBad+Tool+Report%5D+Tool+Name+Here&body=%23%23+Tool+Report%0A%0A**Tool+name:**%20%0A**Issue:**%20%0A**Link+to+tool:**%20%0A**Additional+context:**%20" target="_blank" rel="noopener">Report a tool</a>
+    <a class="header-btn filled" href="https://github.com/canton-network-devs/Canton-Developer-Hub/blob/main/Contributing.md" target="_blank" rel="noopener">Submit your tool</a>
   </div>
 </header>
 
@@ -233,8 +233,8 @@
 </footer>
 
 <script>
-const TOOLS_URL          = "https://raw.githubusercontent.com/Jatinp26/Canton-Developer-Hub/refs/heads/main/Github%20Page/tools.json";
-const GISCUS_REPO        = "Jatinp26/Canton-Developer-Hub";
+const TOOLS_URL          = "https://raw.githubusercontent.com/canton-network-devs/Canton-Developer-Hub/refs/heads/main/Github%20Page/tools.json";
+const GISCUS_REPO        = "canton-network-devs/Canton-Developer-Hub";
 const GISCUS_REPO_ID     = "R_kgDOROGJ0g";
 const GISCUS_CATEGORY    = "Tools";
 const GISCUS_CATEGORY_ID = "DIC_kwDOROGJ0s4C95t0";
@@ -381,7 +381,7 @@ async function init() {
   } catch (err) {
     document.getElementById("main-content").innerHTML = `
       <div class="state-msg"><strong>Could not load catalogue</strong>${err.message}<br><br>
-      <a href="https://github.com/Jatinp26/Canton-Developer-Hub/blob/page/tools.json" target="_blank">View tools.json →</a></div>`;
+      <a href="https://github.com/canton-network-devs/Canton-Developer-Hub/blob/main/Github%20Page/tools.json" target="_blank">View tools.json →</a></div>`;
     document.getElementById("count").textContent = "";
   }
 }
