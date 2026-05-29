@@ -1,0 +1,30 @@
+name: Sync Discourse Forum Highlights
+
+on:
+  schedule:
+    - cron: '0 8 * * *'  
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Discourse sync
+        env:
+          GH_TOKEN: ${{ secrets.DISCOURSE_SYNC_TOKEN }}
+          GH_REPO_OWNER: canton-network-devs
+          GH_REPO_NAME: Canton-Developer-Hub
+          GH_CATEGORY_ID: ${{ secrets.FORUM_HIGHLIGHTS_CATEGORY_ID }}
+          DISCOURSE_URL: https://forum.canton.network
+        run: node .github/scripts/discourse-sync.js
