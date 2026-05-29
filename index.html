@@ -44,14 +44,12 @@
   .header-btn.filled { border: 1px solid var(--yellow); background: var(--yellow); color: var(--black); font-weight: 500; }
   .header-btn.filled:hover { background: #e8f080; border-color: #e8f080; }
   @media (max-width: 600px) { .header-btn.outline { display: none; } }
-
   .hero { background: var(--black); padding: 3.5rem 2rem 3rem; border-bottom: 1px solid rgba(255,255,252,0.08); }
   .hero-inner { max-width: 960px; margin: 0 auto; }
   .hero-eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--taupe); margin-bottom: 0.75rem; }
   .hero h1 { font-size: clamp(28px, 5vw, 44px); font-weight: 300; color: var(--white); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 1rem; }
   .hero h1 em { font-style: normal; color: var(--yellow); }
   .hero p { font-size: 15px; font-weight: 300; color: var(--taupe); max-width: 520px; line-height: 1.7; }
-
   .main { max-width: 960px; margin: 0 auto; padding: 2rem 1rem 5rem; }
   .controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 1rem; }
   .search-wrap { position: relative; flex: 1; min-width: 200px; }
@@ -68,13 +66,11 @@
   .pill.p-partner.active { background: transparent; color: var(--purple); border-color: var(--purple); font-weight: 600; }
   .meta-row { display: flex; align-items: center; margin-bottom: 1rem; }
   .count { font-size: 12px; color: var(--hint); }
-
   .state-msg { text-align: center; padding: 4rem 1rem; color: var(--muted); font-size: 14px; font-weight: 300; }
   .state-msg strong { display: block; font-size: 16px; font-weight: 500; margin-bottom: 6px; color: var(--text); }
   .state-msg a { color: var(--lilac); text-decoration: underline; }
   .spinner { width: 28px; height: 28px; border: 2px solid var(--border); border-top-color: var(--purple); border-radius: 50%; animation: spin 0.7s linear infinite; margin: 0 auto 1rem; }
   @keyframes spin { to { transform: rotate(360deg); } }
-
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
   .card { background: var(--bg); border: 1px solid var(--border); border-radius: 14px; padding: 1.4rem 1.4rem; display: flex; flex-direction: column; gap: 9px; transition: border-color 0.18s, box-shadow 0.16s; }
   .card:hover { border-color: var(--border-md); box-shadow: 0 4px 16px rgba(2, 2, 5, 0.14); }
@@ -90,49 +86,22 @@
   .card-link { font-size: 12px; font-weight: 400; color: var(--purple); display: flex; align-items: center; gap: 3px; transition: opacity 0.12s; }
   .card-link:hover { opacity: 0.7; text-decoration: underline; }
   .card-link svg { width: 11px; height: 11px; flex-shrink: 0; }
-  .card-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 4px; padding-top: 10px; border-top: 1px solid var(--border); }
-  .vote-btn {
-    display: inline-flex; align-items: center; gap: 6px;
-    padding: 5px 12px; border-radius: 100px; border: 1.5px solid var(--border);
-    background: var(--bg); color: var(--muted);
-    font-family: inherit; font-size: 12px; font-weight: 500;
-    cursor: pointer; transition: all 0.15s; white-space: nowrap;
-  }
+  .card-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 4px; padding-top: 10px; border-top: 1px solid var(--border); gap: 8px; }
+  .vote-btn { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 100px; border: 1.5px solid var(--border); background: var(--bg); color: var(--muted); font-family: inherit; font-size: 12px; font-weight: 500; cursor: pointer; transition: all 0.15s; white-space: nowrap; flex-shrink: 0; }
   .vote-btn:hover { border-color: var(--purple); color: var(--purple); background: rgba(135,92,255,0.05); }
   .vote-btn.active { border-color: var(--purple); color: var(--purple); background: rgba(135,92,255,0.08); }
   .vote-btn .thumb { font-size: 14px; line-height: 1; }
-  .vote-hint { font-size: 10px; color: var(--hint); font-weight: 300; }
-  .giscus-overlay {
-    display: none;
-    position: fixed; inset: 0;
-    z-index: 999;
-    background: rgba(3,2,6,0.45);
-    align-items: center; justify-content: center;
-  }
+  .reaction-count { display: flex; align-items: center; gap: 4px; font-size: 11px; color: var(--hint); font-weight: 400; white-space: nowrap; opacity: 0; transition: opacity 0.4s; }
+  .reaction-count.visible { opacity: 1; }
+  .reaction-count .rc-num { font-size: 12px; font-weight: 600; color: var(--purple); }
+  .reaction-count .rc-icon { font-size: 12px; }
+  .giscus-overlay { display: none; position: fixed; inset: 0; z-index: 999; background: rgba(3,2,6,0.45); align-items: center; justify-content: center; }
   .giscus-overlay.open { display: flex; }
-  .giscus-panel {
-    background: var(--white);
-    border-radius: 16px;
-    border: 1px solid var(--border);
-    width: min(480px, calc(100vw - 2rem));
-    max-height: 85vh;
-    overflow-y: auto;
-    box-shadow: 0 24px 64px rgba(3,2,6,0.25);
-    display: flex; flex-direction: column;
-  }
-  .giscus-panel-header {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 14px 18px 12px;
-    border-bottom: 1px solid var(--border);
-    flex-shrink: 0;
-  }
+  .giscus-panel { background: var(--white); border-radius: 16px; border: 1px solid var(--border); width: min(480px, calc(100vw - 2rem)); max-height: 85vh; overflow-y: auto; box-shadow: 0 24px 64px rgba(3,2,6,0.25); display: flex; flex-direction: column; }
+  .giscus-panel-header { display: flex; align-items: center; justify-content: space-between; padding: 14px 18px 12px; border-bottom: 1px solid var(--border); flex-shrink: 0; }
   .giscus-panel-title { font-size: 13px; font-weight: 500; color: var(--text); }
   .giscus-panel-sub { font-size: 11px; color: var(--hint); margin-top: 2px; }
-  .giscus-panel-close {
-    background: none; border: none; cursor: pointer;
-    font-size: 20px; color: var(--hint); line-height: 1; padding: 2px 4px;
-    transition: color 0.15s; flex-shrink: 0;
-  }
+  .giscus-panel-close { background: none; border: none; cursor: pointer; font-size: 20px; color: var(--hint); line-height: 1; padding: 2px 4px; transition: color 0.15s; flex-shrink: 0; }
   .giscus-panel-close:hover { color: var(--text); }
   .giscus-panel-body { padding: 12px 18px 16px; min-height: 120px; }
   .giscus-panel-body .giscus { margin: 0 !important; }
@@ -211,6 +180,7 @@
     </div>
   </div>
 </main>
+
 <div class="giscus-overlay" id="giscus-overlay">
   <div class="giscus-panel" id="giscus-panel">
     <div class="giscus-panel-header">
@@ -228,8 +198,9 @@
     </div>
   </div>
 </div>
+
 <footer class="site-footer">
-  Maintained by <a href="https://x.com/Jpandya26" target="_blank">Jatin Pandya</a>, Developer Relations Manager · Canton Foundation.
+  Maintained by <a href="https://canton.foundation/" target="_blank">Canton Foundation</a>.
 </footer>
 
 <script>
@@ -239,11 +210,12 @@ const GISCUS_REPO_ID     = "R_kgDOROGJ0g";
 const GISCUS_CATEGORY    = "Tools";
 const GISCUS_CATEGORY_ID = "DIC_kwDOROGJ0s4C95t0";
 const GISCUS_ORIGIN      = "https://giscus.app";
-
+const GH_GRAPHQL         = "https://api.github.com/graphql";
 const EXT = `<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2H2a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1V7M8 1h3m0 0v3m0-3L5 7"/></svg>`;
-
 let TOOLS = [], activeType = "all", activeCat = "all", searchQ = "";
 let currentSlug = null;
+let REACTION_COUNTS = {}; 
+
 (function() {
   const bar = document.getElementById('disclaimer-bar');
   const hdr = document.getElementById('site-header');
@@ -255,9 +227,48 @@ let currentSlug = null;
 function slugify(n) {
   return 'tool-' + n.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
-const overlay   = document.getElementById('giscus-overlay');
-const panelBody = document.getElementById('panel-body');
+async function fetchAllReactionCounts() {
+  const query = `{
+    repository(owner: "canton-network-devs", name: "Canton-Developer-Hub") {
+      discussions(first: 100, categoryId: "${GISCUS_CATEGORY_ID}") {
+        nodes {
+          title
+          reactionGroups {
+            content
+            reactors { totalCount }
+          }
+        }
+      }
+    }
+  }`;
+  try {
+    const res = await fetch(GH_GRAPHQL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ query })
+    });
+    if (!res.ok) return;
+    const data = await res.json();
+    const nodes = data?.data?.repository?.discussions?.nodes || [];
+    nodes.forEach(d => {
+      const total = (d.reactionGroups || [])
+        .reduce((sum, g) => sum + (g.reactors?.totalCount || 0), 0);
+      if (total > 0) REACTION_COUNTS[d.title] = total;
+    });
+    Object.entries(REACTION_COUNTS).forEach(([slug, count]) => updateBadge(slug, count));
+  } catch(e) { /* counts just won't show */ }
+}
+
+function updateBadge(slug, count) {
+  const badge = document.querySelector(`.reaction-count[data-slug="${slug}"]`);
+  if (!badge) return;
+  badge.querySelector('.rc-num').textContent = count;
+  if (count > 0) badge.classList.add('visible');
+}
+const overlay    = document.getElementById('giscus-overlay');
+const panelBody  = document.getElementById('panel-body');
 const panelTitle = document.getElementById('panel-title');
+
 function openPanel(toolName, slug) {
   if (currentSlug !== slug) {
     currentSlug = slug;
@@ -273,8 +284,8 @@ function openPanel(toolName, slug) {
     s.setAttribute('data-term',              slug);
     s.setAttribute('data-strict',            '1');
     s.setAttribute('data-reactions-enabled', '1');
-    s.setAttribute('data-emit-metadata',     '0');
-    s.setAttribute('data-input-position',    'top');  /* reactions at top, comment box below */
+    s.setAttribute('data-emit-metadata',     '1');
+    s.setAttribute('data-input-position',    'top');
     s.setAttribute('data-theme',             'light');
     s.setAttribute('data-lang',              'en');
     s.crossOrigin = 'anonymous';
@@ -284,21 +295,26 @@ function openPanel(toolName, slug) {
   overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
-function closePanel() {
-  overlay.classList.remove('open');
-  document.body.style.overflow = '';
-}
+
+function closePanel() { overlay.classList.remove('open'); document.body.style.overflow = ''; }
 document.getElementById('panel-close').addEventListener('click', closePanel);
 overlay.addEventListener('click', e => { if (e.target === overlay) closePanel(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closePanel(); });
-
 window.addEventListener('message', (e) => {
   if (e.origin !== GISCUS_ORIGIN) return;
-  if (e.data?.giscus?.resizeHeight) {
+  const msg = e.data?.giscus;
+  if (!msg) return;
+  if (msg.resizeHeight) {
     const loader = panelBody.querySelector('.panel-loading');
     if (loader) loader.style.display = 'none';
     const iframe = panelBody.querySelector('iframe');
-    if (iframe) iframe.style.height = e.data.giscus.resizeHeight + 'px';
+    if (iframe) iframe.style.height = msg.resizeHeight + 'px';
+  }
+  if (msg.discussion && currentSlug) {
+    const total = Object.values(msg.discussion.reactions || {})
+      .reduce((s, n) => s + (n || 0), 0) || msg.discussion.reactionCount || 0;
+    REACTION_COUNTS[currentSlug] = total;
+    updateBadge(currentSlug, total);
   }
 });
 
@@ -329,7 +345,6 @@ function render() {
 
   document.getElementById("count").textContent =
     filtered.length === TOOLS.length ? `${TOOLS.length} tools` : `${filtered.length} of ${TOOLS.length} tools`;
-
   const container = document.getElementById("main-content");
   if (!filtered.length) {
     container.innerHTML = `<div class="grid"><div class="empty"><strong>No tools found</strong>Try clearing a filter or search term.</div></div>`;
@@ -337,7 +352,8 @@ function render() {
   }
 
   container.innerHTML = `<div class="grid">${filtered.map(t => {
-    const slug = slugify(t.name);
+    const slug  = slugify(t.name);
+    const count = REACTION_COUNTS[slug] || 0;
     return `
     <div class="card">
       <div class="card-top">
@@ -358,10 +374,15 @@ function render() {
         <button class="vote-btn" data-slug="${slug}" data-name="${t.name.replace(/"/g,'&quot;')}">
           <span class="thumb">👍</span> Helpful
         </button>
-        <span class="vote-hint">React with GitHub</span>
+        <span class="reaction-count${count > 0 ? ' visible' : ''}" data-slug="${slug}">
+          <span class="rc-icon">💖</span>
+          <span class="rc-num">${count}</span>
+          <span>reactions</span>
+        </span>
       </div>
     </div>`;
   }).join("")}</div>`;
+
   container.querySelectorAll('.vote-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       btn.classList.add('active');
@@ -369,7 +390,6 @@ function render() {
     });
   });
 }
-
 async function init() {
   try {
     const res = await fetch(TOOLS_URL + "?nocache=" + Date.now());
@@ -378,6 +398,7 @@ async function init() {
     if (!Array.isArray(TOOLS) || !TOOLS.length) throw new Error("tools.json is empty or malformed.");
     buildCatPills();
     render();
+    fetchAllReactionCounts();
   } catch (err) {
     document.getElementById("main-content").innerHTML = `
       <div class="state-msg"><strong>Could not load catalogue</strong>${err.message}<br><br>
@@ -385,7 +406,6 @@ async function init() {
     document.getElementById("count").textContent = "";
   }
 }
-
 document.getElementById("search").addEventListener("input", e => { searchQ = e.target.value; render(); });
 document.getElementById("type-pills").addEventListener("click", e => {
   const pill = e.target.closest("[data-type]");
