@@ -228,35 +228,19 @@ function slugify(n) {
   return 'tool-' + n.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
 async function fetchAllReactionCounts() {
-  const query = `{
-    repository(owner: "canton-network-devs", name: "Canton-Developer-Hub") {
-      discussions(first: 100, categoryId: "${GISCUS_CATEGORY_ID}") {
-        nodes {
-          title
-          reactionGroups {
-            content
-            reactors { totalCount }
-          }
-        }
-      }
-    }
-  }`;
   try {
-    const res = await fetch(GH_GRAPHQL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ query })
-    });
+    const res = await fetch(
+      'https://api.github.com/repos/canton-network-devs/Canton-Developer-Hub/discussions?per_page=100',
+      { headers: { 'Accept': 'application/vnd.github+json' } }
+    );
     if (!res.ok) return;
-    const data = await res.json();
-    const nodes = data?.data?.repository?.discussions?.nodes || [];
-    nodes.forEach(d => {
-      const total = (d.reactionGroups || [])
-        .reduce((sum, g) => sum + (g.reactors?.totalCount || 0), 0);
-      if (total > 0) REACTION_COUNTS[d.title] = total;
+    const discussions = await res.json();
+    discussions.forEach(d => {
+      const count = d.reactions?.total_count || 0;
+      if (count > 0) REACTION_COUNTS[d.title] = count;
     });
     Object.entries(REACTION_COUNTS).forEach(([slug, count]) => updateBadge(slug, count));
-  } catch(e) { /* counts just won't show */ }
+  } catch(e) {}
 }
 
 function updateBadge(slug, count) {
