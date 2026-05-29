@@ -1,7 +1,8 @@
 {
   "origins": [
     "https://canton-network-devs.github.io",
-    "https://canton-network-devs.github.io/Canton-Developer-Hub"
+    "https://canton-network-devs.github.io/Canton-Developer-Hub",
+    "https://canton-network-devs.github.io/Canton-Developer-Hub/"
   ],
   "originsRegex": [
     "https://canton-network-devs\\.github\\.io/.*"
