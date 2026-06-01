@@ -295,9 +295,12 @@ window.addEventListener('message', (e) => {
     const iframe = panelBody.querySelector('iframe');
     if (iframe) iframe.style.height = msg.resizeHeight + 'px';
   }
-  if (msg.discussion && currentSlug) {
-    const total = Object.values(msg.discussion.reactions || {})
-      .reduce((s, n) => s + (n || 0), 0) || msg.discussion.reactionCount || 0;
+if (msg.discussion && currentSlug) {
+    const total = typeof msg.discussion.reactionCount === 'number'
+      ? msg.discussion.reactionCount
+      : Object.values(msg.discussion.reactions || {})
+          .filter(v => typeof v === 'number')
+          .reduce((s, n) => s + n, 0);
     REACTION_COUNTS[currentSlug] = total;
     updateBadge(currentSlug, total);
   }
