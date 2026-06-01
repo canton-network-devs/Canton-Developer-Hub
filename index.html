@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="icon" type="image/svg" href="./favicon.svg">
 <meta name="giscus:backlink" content="https://canton-network-devs.github.io/Canton-Developer-Hub/">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Canton Developer Tooling Catalogue</title>
+<title>Canton Developer Hub</title>
+<link rel="icon" type="image/svg+xml" href="https://raw.githubusercontent.com/canton-network-devs/Canton-Developer-Hub/refs/heads/page/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -170,8 +170,8 @@
     <div class="pills" id="type-pills">
       <button class="pill active" data-type="all">All</button>
       <button class="pill p-official" data-type="official">Official</button>
-  <button class="pill p-partner" data-type="partner">Partner Toolings</button>
-  <button class="pill p-popular" data-type="popular">Most Popular</button>
+      <button class="pill p-partner" data-type="partner">Partner tooling</button>
+      <button class="pill p-popular" data-type="popular">🔥 Most Popular</button>
     </div>
   </div>
   <div class="pills" id="cat-pills" style="margin-bottom:1.25rem;"></div>
@@ -184,7 +184,6 @@
     </div>
   </div>
 </main>
-
 <div class="giscus-overlay" id="giscus-overlay">
   <div class="giscus-panel" id="giscus-panel">
     <div class="giscus-panel-header">
@@ -214,11 +213,10 @@ const GISCUS_REPO_ID     = "R_kgDOROGJ0g";
 const GISCUS_CATEGORY    = "Tools";
 const GISCUS_CATEGORY_ID = "DIC_kwDOROGJ0s4C95t0";
 const GISCUS_ORIGIN      = "https://giscus.app";
-const GH_GRAPHQL         = "https://api.github.com/graphql";
 const EXT = `<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2H2a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1V7M8 1h3m0 0v3m0-3L5 7"/></svg>`;
 let TOOLS = [], activeType = "all", activeCat = "all", searchQ = "";
 let currentSlug = null;
-let REACTION_COUNTS = {}; 
+let REACTION_COUNTS = {};
 
 (function() {
   const bar = document.getElementById('disclaimer-bar');
@@ -298,7 +296,7 @@ window.addEventListener('message', (e) => {
     const iframe = panelBody.querySelector('iframe');
     if (iframe) iframe.style.height = msg.resizeHeight + 'px';
   }
-if (msg.discussion && currentSlug) {
+  if (msg.discussion && currentSlug) {
     const total = typeof msg.discussion.reactionCount === 'number'
       ? msg.discussion.reactionCount
       : Object.values(msg.discussion.reactions || {})
@@ -334,9 +332,12 @@ function render() {
     return matchType && matchCat && matchQ;
   });
 
+  if (activeType === "popular") {
+    filtered.sort((a, b) => (REACTION_COUNTS[slugify(b.name)] || 0) - (REACTION_COUNTS[slugify(a.name)] || 0));
+  }
   document.getElementById("count").textContent =
-    if (activeType === "popular") filtered.sort((a, b) => (REACTION_COUNTS[slugify(b.name)] || 0) - (REACTION_COUNTS[slugify(a.name)] || 0));
     filtered.length === TOOLS.length ? `${TOOLS.length} tools` : `${filtered.length} of ${TOOLS.length} tools`;
+
   const container = document.getElementById("main-content");
   if (!filtered.length) {
     container.innerHTML = `<div class="grid"><div class="empty"><strong>No tools found</strong>Try clearing a filter or search term.</div></div>`;
@@ -382,6 +383,7 @@ function render() {
     });
   });
 }
+
 async function init() {
   try {
     const res = await fetch(TOOLS_URL + "?nocache=" + Date.now());
@@ -398,6 +400,7 @@ async function init() {
     document.getElementById("count").textContent = "";
   }
 }
+
 document.getElementById("search").addEventListener("input", e => { searchQ = e.target.value; render(); });
 document.getElementById("type-pills").addEventListener("click", e => {
   const pill = e.target.closest("[data-type]");
