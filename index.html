@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="icon" type="image/svg" href="./favicon.svg">
 <meta name="giscus:backlink" content="https://canton-network-devs.github.io/Canton-Developer-Hub/">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -65,6 +66,7 @@
   .pill.active { background: var(--black); color: var(--lilac); border-color: var(--black); font-weight: 600; }
   .pill.p-official.active { background: var(--black); color: var(--purple); border-color: var(--black); }
   .pill.p-partner.active { background: transparent; color: var(--purple); border-color: var(--purple); font-weight: 600; }
+  .pill.p-popular.active { background: #1a0a00; color: #F3FF97; border-color: #F3FF97; font-weight: 600; }
   .meta-row { display: flex; align-items: center; margin-bottom: 1rem; }
   .count { font-size: 12px; color: var(--hint); }
   .state-msg { text-align: center; padding: 4rem 1rem; color: var(--muted); font-size: 14px; font-weight: 300; }
@@ -168,7 +170,8 @@
     <div class="pills" id="type-pills">
       <button class="pill active" data-type="all">All</button>
       <button class="pill p-official" data-type="official">Official</button>
-      <button class="pill p-partner" data-type="partner">Partner tooling</button>
+  <button class="pill p-partner" data-type="partner">Partner Toolings</button>
+  <button class="pill p-popular" data-type="popular">Most Popular</button>
     </div>
   </div>
   <div class="pills" id="cat-pills" style="margin-bottom:1.25rem;"></div>
@@ -324,7 +327,7 @@ function buildCatPills() {
 
 function render() {
   const filtered = TOOLS.filter(t => {
-    const matchType = activeType === "all" || t.type === activeType;
+    const matchType = activeType === "all" || activeType === "popular" || t.type === activeType;
     const matchCat  = activeCat  === "all" || t.category === activeCat;
     const q = searchQ.toLowerCase();
     const matchQ = !q || [t.name, t.desc, t.maker, t.category].some(s => s.toLowerCase().includes(q));
@@ -332,6 +335,7 @@ function render() {
   });
 
   document.getElementById("count").textContent =
+    if (activeType === "popular") filtered.sort((a, b) => (REACTION_COUNTS[slugify(b.name)] || 0) - (REACTION_COUNTS[slugify(a.name)] || 0));
     filtered.length === TOOLS.length ? `${TOOLS.length} tools` : `${filtered.length} of ${TOOLS.length} tools`;
   const container = document.getElementById("main-content");
   if (!filtered.length) {
