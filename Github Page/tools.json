@@ -73,6 +73,18 @@
     "maintained_by": "OpenZeppelin"
   },
   {
+    "name": "Canton Security 101",
+    "maker": "SC Audit Studio",
+    "type": "partner",
+    "category": "Smart Contract Dev",
+    "desc": "A Canton-focused cybersecurity guide covering DAML development, web applications, and operational security. Learn about secure dapp development.",
+    "links": [
+      { "label": "Security 101", "url": "https://scauditstudio.com/tools/canton-security101" }
+    ],
+    "daml_sdk_version": null,
+    "maintained_by": "SC Audit Studio OY"
+  },
+  {
     "name": "Catalyx Package Manager",
     "maker": "IntellectEU",
     "type": "partner",
