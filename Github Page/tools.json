@@ -386,5 +386,31 @@
     ],
     "daml_sdk_version": null,
     "maintained_by": "5North"
+  },
+  {
+    "name": "CGGMP24",
+    "maker": "Dfns & LFDT Lockness",
+    "type": "partner",
+    "category": "SDKs",
+    "desc": "Rust implementation of the CGGMP24 threshold ECDSA protocol, the signature scheme used by Canton Network. Supports distributed key generation and threshold signing with presignatures for t-of-n keys for wallet infrastructure and validator key custody.",
+    "links": [
+      { "label": "Repo", "url": "https://github.com/LFDT-Lockness/cggmp21" },
+      { "label": "crates.io", "url": "https://crates.io/crates/cggmp21" }
+    ],
+    "daml_sdk_version": null,
+    "maintained_by": "Dfns & LFDT Lockness"
+  },
+  {
+    "name": "Givre",
+    "maker": "Dfns & LFDT Lockness",
+    "type": "partner",
+    "category": "SDKs",
+    "desc": "Rust implementation of threshold Schnorr / EdDSA signing, the signature scheme used by Canton Network. Supports distributed key generation and threshold signing with presignatures for t-of-n keys for wallet infrastructure and validator key custody.",
+    "links": [
+      { "label": "Repo", "url": "https://github.com/LFDT-Lockness/givre" },
+      { "label": "crates.io", "url": "https://crates.io/crates/givre" }
+    ],
+    "daml_sdk_version": null,
+    "maintained_by": "Dfns & LFDT Lockness"
   }
 ]
