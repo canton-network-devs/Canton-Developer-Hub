@@ -96,7 +96,7 @@ dpm studio        # open project in VS Code with Daml extension
 
 **How it works:** Fetches a curated Canton knowledge base from GitHub on startup, caches it locally, and refreshes hourly. Works with Claude Desktop and any MCP- ompatible client.
 
-**Repo:** [github.com/Jatinp26/Build-on-Canton-MCP](https://github.com/Jatinp26/Build-on-Canton-MCP)
+**Repo:** [github.com/canton-network-devs/Build-on-Canton-MCP](https://github.com/canton-network-devs/Build-on-Canton-MCP)
 
 ## Local Development Environments
 
