@@ -103,7 +103,7 @@
     "category": "AI Tools",
     "desc": "MCP server that plugs accurate Canton docs directly into Claude and other AI tools. Prevents hallucinated or outdated API responses. Refreshes hourly from GitHub.",
     "links": [
-      { "label": "Repo", "url": "https://github.com/Jatinp26/Build-on-Canton-MCP" }
+      { "label": "Repo", "url": "https://github.com/canton-network-devs/Build-on-Canton-MCP" }
     ],
     "daml_sdk_version": null,
     "maintained_by": "Canton Foundation"
