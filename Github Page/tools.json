@@ -386,5 +386,30 @@
     ],
     "daml_sdk_version": null,
     "maintained_by": "5North"
+  },
+  {
+  "name": "AI Agentic Wallet",
+  "maker": "FTP",
+  "type": "partner",
+  "category": "AI Tools",
+  "desc": "Enables AI agents to Create&Manage a Canton wallet and Request initial testnet funding via faucet amd continue using the same wallet for subsequent interactions",
+  "links": [
+    { "label": "Repo", "url": "https://github.com/Denend/agent-wallet-canton" },
+    { "label": "Docs", "url": "https://www.ftptech.xyz/wallet" }
+  ],
+  "daml_sdk_version": "null",
+  "maintained_by": "FTP"
+  },
+  {
+  "name": "x402 MCP",
+  "maker": "FTP",
+  "type": "partner",
+  "category": "AI Tools",
+  "desc": "Enables AI agents to Consume and pay for apps/services that integrated x402, Create wallet and interact with it and Request one-time faucet funding",
+  "links": [
+    { "label": "Docs", "url": "https://www.ftptech.xyz/mcp" }
+  ],
+  "daml_sdk_version": "null",
+  "maintained_by": "FTP"
   }
 ]
