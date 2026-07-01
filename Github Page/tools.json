@@ -328,6 +328,18 @@
     "maintained_by": "CantonLoop"
   },
   {
+    "name": "Canton Event Graph Toolkit",
+    "maker": "Gyorgy Balazsi",
+    "type": "partner",
+    "category": "Data & Indexing",
+    "desc": "Rust tooling for the Canton Ledger API v2: stream ledger events, generate Rust types from DARs, and sync/visualize the Canton event graph (ACS + updates) in a Neo4j graph.",
+    "links": [
+      { "label": "Repo", "url": "https://github.com/gyorgybalazsi/canton-toolbox" }
+    ],
+    "daml_sdk_version": "3.4.11",
+    "maintained_by": "Gyorgy Balazsi"
+  },
+  {
     "name": "Find Canton Wallets",
     "maker": "Canton Ecosystem",
     "type": "partner",
