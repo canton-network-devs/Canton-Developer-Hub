@@ -1,7 +1,7 @@
 [
   {
     "name": "Official Canton Documentation",
-    "maker": "Digital Asset / Canton Foundation",
+    "maker": "Canton Network",
     "type": "official",
     "category": "Getting Started",
     "desc": "The unified new technical docs for Canton Network.",
@@ -9,19 +9,19 @@
       { "label": "docs.canton.network", "url": "https://docs.canton.network" }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Digital Asset / Canton Foundation"
+    "maintained_by": "Canton Network"
   },
   {
     "name": "Canton Network API Overview",
-    "maker": "Digital Asset",
+    "maker": "Canton Network",
     "type": "official",
     "category": "Getting Started",
     "desc": "TL;DR overview of all Canton APIs: Ledger API, JSON API, Admin API, Scan API, Validator API, Wallet API. Start here to understand which API you need for what.",
     "links": [
-      { "label": "API overview", "url": "https://docs.canton.network/sdks-tools/api-reference/" }
+      { "label": "API overview", "url": "https://docs.canton.network/sdks-tools/" }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Digital Asset"
+    "maintained_by": "Canton Network"
   },
   {
     "name": "Canton 101",
@@ -37,7 +37,7 @@
   },
   {
     "name": "DPM: Daml Package Manager",
-    "maker": "Digital Asset",
+    "maker": "Canton Network",
     "type": "official",
     "category": "Smart Contract Dev",
     "desc": "The primary CLI for Canton/Daml development. Scaffolds projects, builds DARs, runs tests, generates TypeScript and Java bindings, manages SDK versions, and runs a local sandbox.",
@@ -46,11 +46,11 @@
       { "label": "Docs", "url": "https://docs.canton.network/sdks-tools/cli-tools/dpm" }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Digital Asset"
+    "maintained_by": "Canton Network"
   },
   {
     "name": "Daml Studio (VS Code Extension)",
-    "maker": "Digital Asset",
+    "maker": "Canton Network",
     "type": "official",
     "category": "Smart Contract Dev",
     "desc": "VS Code extension for Daml syntax highlighting, type checking, inline diagnostics, and code navigation. Installed automatically with DPM. Requires VS Code 1.87+.",
@@ -58,7 +58,7 @@
       { "label": "Extension", "url": "https://marketplace.visualstudio.com/items?itemName=DigitalAssetHoldingsLLC.daml" }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Digital Asset"
+    "maintained_by": "Canton Network"
   },
   {
     "name": "Canton Token Template",
@@ -98,7 +98,7 @@
   },
   {
     "name": "Canton Dev MCP Server",
-    "maker": "Canton Foundation DevRel",
+    "maker": "Canton Foundation",
     "type": "partner",
     "category": "AI Tools",
     "desc": "MCP server that plugs accurate Canton docs directly into Claude and other AI tools. Prevents hallucinated or outdated API responses. Refreshes hourly from GitHub.",
@@ -122,7 +122,7 @@
   },
   {
     "name": "Canton LocalNet (cn-quickstart)",
-    "maker": "Digital Asset / Canton Foundation",
+    "maker": "Canton Network",
     "type": "official",
     "category": "Local Dev",
     "desc": "Full Canton Network in Docker Compose with 3 validators, synchronizer, Canton Coin wallets, PQS, Keycloak, and Scan UI. All on your laptop. No DevNet whitelisting needed.",
@@ -131,11 +131,11 @@
       { "label": "Guide", "url": "https://docs.canton.network/sdks-tools/reference-projects/cn-quickstart" }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Digital Asset"
+    "maintained_by": "Canton Network"
   },
   {
     "name": "Canton Sandbox (via DPM)",
-    "maker": "Digital Asset",
+    "maker": "Canton Network",
     "type": "official",
     "category": "Local Dev",
     "desc": "Lightweight single-node Canton environment for fast contract iteration. No Docker required. Starts instantly. Use it before moving to the full LocalNet stack.",
@@ -143,7 +143,7 @@
       { "label": "Docs", "url": "https://docs.digitalasset.com/build/3.4/dpm/" }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Digital Asset"
+    "maintained_by": "Canton Network"
   },
   {
     "name": "Seaport",
@@ -159,7 +159,7 @@
   },
   {
     "name": "Daml SDK",
-    "maker": "Digital Asset",
+    "maker": "Canton Network",
     "type": "official",
     "category": "SDKs",
     "desc": "The core development kit for building on Canton. Bundles the Daml compiler, Daml Script runner, Canton Sandbox, and supporting tools. Installed and managed through dpm.",
@@ -167,11 +167,11 @@
       { "label": "Docs", "url": "https://docs.canton.network/sdks-tools/sdks/daml-sdk" }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Digital Asset"
+    "maintained_by": "Canton Network"
   },
   {
     "name": "Wallet Kernel",
-    "maker": "Digital Asset",
+    "maker": "Canton Network",
     "type": "official",
     "category": "SDKs",
     "desc": "TypeScript library for programmatic wallet operations on Canton i.e party management, token transfers, UTXO queries, transaction signing, and third-party dApp integration.",
@@ -179,11 +179,11 @@
       { "label": "Docs", "url": "https://docs.canton.network/sdks-tools/sdks/wallet-sdk" }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Digital Asset"
+    "maintained_by": "Canton Network"
   },
   {
     "name": "Exchange SDK",
-    "maker": "Digital Asset",
+    "maker": "Canton Network",
     "type": "official",
     "category": "SDKs",
     "desc": "Java-based reference implementation for connecting exchanges to Canton Network. Demonstrates patterns for listing, trading, and settling Canton-based assets on an exchange platform.",
@@ -191,7 +191,7 @@
       { "label": "Docs", "url": "https://docs.canton.network/sdks-tools/sdks/exchange-sdk" }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Digital Asset"
+    "maintained_by": "Canton Network"
   },
   {
     "name": "Go SDK for Daml Ledger",
@@ -220,7 +220,7 @@
   },
   {
     "name": "JSON Ledger API",
-    "maker": "Digital Asset",
+    "maker": "Canton Network",
     "type": "official",
     "category": "APIs",
     "desc": "HTTP/JSON interface to the Canton Ledger API. Submit commands, query active contracts, and stream events. All over standard HTTP. Easiest integration path without gRPC.",
@@ -228,11 +228,11 @@
       { "label": "Docs", "url": "https://docs.canton.network/sdks-tools/api-reference/json-api" }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Digital Asset"
+    "maintained_by": "Canton Network"
   },
   {
     "name": "gRPC Ledger API",
-    "maker": "Digital Asset",
+    "maker": "Canton Network",
     "type": "official",
     "category": "APIs",
     "desc": "Full Ledger API over gRPC/Protobuf. Higher performance, required for production backends and streaming event subscriptions. Use dpm codegen for typed client bindings.",
@@ -240,11 +240,11 @@
       { "label": "Docs", "url": "https://docs.canton.network/sdks-tools/api-reference/ledger-api-services" }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Digital Asset"
+    "maintained_by": "Canton Network"
   },
   {
     "name": "Scan API",
-    "maker": "Digital Asset",
+    "maker": "Canton Network",
     "type": "official",
     "category": "APIs",
     "desc": "Read-only API for network-level Canton data: mining rounds, Canton Coin supply, featured apps, and DSO governance state. Public read API for the Global Synchronizer.",
@@ -252,11 +252,11 @@
       { "label": "Docs", "url": "https://docs.canton.network/sdks-tools/api-reference/splice-scan-api" }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Digital Asset"
+    "maintained_by": "Canton Network"
   },
   {
     "name": "Validator API",
-    "maker": "Digital Asset",
+    "maker": "Canton Network",
     "type": "official",
     "category": "APIs",
     "desc": "REST APIs exposed by each validator node for wallet ops, traffic management, party onboarding, and Canton Coin transfers. What the wallet UIs talk to under the hood.",
@@ -264,7 +264,7 @@
       { "label": "Docs", "url": "https://docs.canton.network/sdks-tools/api-reference/splice-validator-api" }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Digital Asset"
+    "maintained_by": "Canton Network"
   },
   {
     "name": "Wallet Gateway (dApp SDK)",
@@ -292,7 +292,7 @@
   },
   {
     "name": "PQS: Participant Query Store",
-    "maker": "Digital Asset",
+    "maker": "Canton Network",
     "type": "official",
     "category": "Data & Indexing",
     "desc": "PostgreSQL-backed query store mirroring your participant's ledger state. Run SQL against contract data. Essential for complex queries, aggregations, reporting, and dashboards.",
@@ -300,7 +300,7 @@
       { "label": "Docs", "url": "https://docs.canton.network/sdks-tools/development-tools/pqs/" }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Digital Asset"
+    "maintained_by": "Canton Network"
   },
   {
     "name": "CCView Explorer & Indexing API",
