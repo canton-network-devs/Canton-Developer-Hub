@@ -411,5 +411,85 @@
   ],
   "daml_sdk_version": "null",
   "maintained_by": "FTP"
+  },
+  {
+    "name": "x402 Facilitator for Canton",
+    "maker": "FTP",
+    "type": "partner",
+    "category": "APIs",
+    "desc": "The x402 facilitator service for Canton. Exposes /verify, /settle and /supported for the 'exact' scheme, relays payer-signed TransferFactory_Transfer transactions, and sponsors the Global Synchronizer traffic fee, so payments settle in a single gasless transaction. Live at facilitator.ftptech.xyz.",
+    "links": [
+      {
+        "label": "Repo",
+        "url": "https://github.com/Denend/facilitator-x402-canton"
+      },
+      {
+        "label": "Endpoint",
+        "url": "https://facilitator.ftptech.xyz/supported"
+      },
+      {
+        "label": "Docs",
+        "url": "https://github.com/Denend/x402-canton-docs"
+      }
+    ],
+    "daml_sdk_version": "null",
+    "maintained_by": "FTP"
+  },
+  {
+    "name": "x402 Merchant Middleware for Canton",
+    "maker": "FTP",
+    "type": "partner",
+    "category": "APIs",
+    "desc": "x402 merchant middleware for Canton: Express and Next.js. Gate any route behind a Canton Coin charge; the middleware issues the 402 PaymentRequirements and delegates verify/settle to a facilitator. Publishes as @ftptech/x402-canton-express and @ftptech/x402-canton-next.",
+    "links": [
+      {
+        "label": "Repo",
+        "url": "https://github.com/Denend/merchant-x402-canton"
+      },
+      {
+        "label": "Docs",
+        "url": "https://github.com/Denend/x402-canton-docs"
+      }
+    ],
+    "daml_sdk_version": "null",
+    "maintained_by": "FTP"
+  },
+  {
+    "name": "x402 Agent SDK for Canton",
+    "maker": "FTP",
+    "type": "partner",
+    "category": "SDKs",
+    "desc": "x402 client/agent SDK for Canton with a self-custody wallet. AI agents create and manage a Canton wallet (with one-time faucet funding), then auto-pay 402 challenges by signing a TransferFactory_Transfer and retrying, no API keys or accounts. Publishes as @ftptech/x402-canton-client with the canton-agent-wallet CLI.",
+    "links": [
+      {
+        "label": "Repo",
+        "url": "https://github.com/Denend/agent-x402-canton"
+      },
+      {
+        "label": "Docs",
+        "url": "https://github.com/Denend/x402-canton-docs"
+      }
+    ],
+    "daml_sdk_version": "null",
+    "maintained_by": "FTP"
+  },
+  {
+    "name": "x402 Core for Canton",
+    "maker": "FTP",
+    "type": "partner",
+    "category": "SDKs",
+    "desc": "Shared wire types and the 'exact' payment scheme foundation for x402 on Canton, used by the agent SDK, merchant middleware and facilitator. Publishes as @ftptech/x402-canton-core.",
+    "links": [
+      {
+        "label": "Repo",
+        "url": "https://github.com/Denend/core-x402-canton"
+      },
+      {
+        "label": "Docs",
+        "url": "https://github.com/Denend/x402-canton-docs"
+      }
+    ],
+    "daml_sdk_version": "null",
+    "maintained_by": "FTP"
   }
 ]
