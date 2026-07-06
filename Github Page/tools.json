@@ -421,7 +421,7 @@
     "links": [
       {
         "label": "Repo",
-        "url": "https://github.com/Denend/facilitator-x402-canton"
+        "url": "https://github.com/Denend/x402-canton-facilitator"
       },
       {
         "label": "Endpoint",
@@ -444,7 +444,7 @@
     "links": [
       {
         "label": "Repo",
-        "url": "https://github.com/Denend/merchant-x402-canton"
+        "url": "https://github.com/Denend/x402-canton-merchant"
       },
       {
         "label": "Docs",
@@ -463,7 +463,7 @@
     "links": [
       {
         "label": "Repo",
-        "url": "https://github.com/Denend/agent-x402-canton"
+        "url": "https://github.com/Denend/x402-canton-agent"
       },
       {
         "label": "Docs",
@@ -482,7 +482,7 @@
     "links": [
       {
         "label": "Repo",
-        "url": "https://github.com/Denend/core-x402-canton"
+        "url": "https://github.com/Denend/x402-canton-core"
       },
       {
         "label": "Docs",
