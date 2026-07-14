@@ -36,6 +36,18 @@
     "maintained_by": "Community"
   },
   {
+    "name": "CantonHub",
+    "maker": "Unity Nodes",
+    "type": "partner",
+    "category": "Getting Started",
+    "desc": "Canton ecosystem resource hub in four sections - Education, Developers, Validator, Community. Covering docs, guides, tools, articles, videos, recorded recaps and more.",
+    "links": [
+      { "label": "unityhub.dev/canton", "url": "https://unityhub.dev/canton" }
+    ],
+    "daml_sdk_version": null,
+    "maintained_by": "Unity Nodes"
+  },
+  {
     "name": "DPM: Daml Package Manager",
     "maker": "Canton Network",
     "type": "official",
@@ -119,6 +131,19 @@
     ],
     "daml_sdk_version": null,
     "maintained_by": "Tenzro"
+  },
+  {
+    "name": "CCPedia",
+    "maker": "Unity Nodes",
+    "type": "partner",
+    "category": "AI Tools",
+    "desc": "AI-accessible knowledge base over the Canton ecosystem - CIPs, forum, GitHub, Dev Fund proposals, docs, blog, videos and more. Three AI endpoints: MCP server, REST API, llms.txt. Plus web UI for human research.",
+    "links": [
+      { "label": "ccpedia.xyz", "url": "https://ccpedia.xyz" },
+      { "label": "AI integrations", "url": "https://ccpedia.xyz/for-ai" }
+    ],
+    "daml_sdk_version": null,
+    "maintained_by": "Unity Nodes"
   },
   {
     "name": "Canton LocalNet (cn-quickstart)",
