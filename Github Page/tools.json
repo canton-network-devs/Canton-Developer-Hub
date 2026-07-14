@@ -328,6 +328,19 @@
     "maintained_by": "HydraX"
   },
   {
+    "name": "Noves Canton Data API",
+    "maker": "Noves",
+    "type": "partner",
+    "category": "APIs",
+    "desc": "Hosted HTTP API for publicly observable Canton data, including update history, balances, prices, transfers, rewards, identity data, ANS records, contract details, and real-time streams. Intended for wallets, analytics dashboards, financial reporting, and event-driven integrations without operating a node or indexer.",
+    "links": [
+      { "label": "API Docs", "url": "https://docs.noves.fi/reference/welcome-canton-apis" },
+      { "label": "Swagger", "url": "https://api.canton.noves.fi/swagger/index.html" }
+    ],
+    "daml_sdk_version": null,
+    "maintained_by": "Noves"
+  },
+  {
     "name": "PQS: Participant Query Store",
     "maker": "Canton Network",
     "type": "official",
