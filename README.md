@@ -16,7 +16,7 @@ Each tier is a natural next step from the previous one. Start fast, go deeper as
 
 ## What's Here for Builders then?
 
-### [Canton Dev Toolings Catalogue](https://dev-hub.canton.foundation/) 
+### [Canton Dev Toolings Catalogue](https://dev-hub.canton.foundation/)
 
 A structured catalogue and guide of Tools, SDKs, APIs, and Pieces of infrastructure available for building on Canton. It Covers:
 
@@ -27,7 +27,7 @@ A structured catalogue and guide of Tools, SDKs, APIs, and Pieces of infrastruct
 - Data & indexing (PQS, CCView, Lighthouse)
 - Wallet integration and identity SDK
 
-Each tool is tagged as **Official** (Digital Asset OR Canton Foundation) or **Community** (Canton Ecosystem Partners) so you know what you're working with.
+Each tool is tagged as **Official** (Canton Network) or **Community** (Canton Ecosystem Partners) so you know what you're working with.
 
 ### [Canton Builder Tool: Easy LocalNet Setup](https://github.com/canton-network-devs/Canton-Builder-Tool)
 
@@ -77,7 +77,7 @@ Key properties:
 
 ## Quick Start for Hackathon Builders
 
-Done Coding your Daml contracts and a `.dar` file via `dpm` ? Go straight to either The **[Canton Builder Tool](https://github.com/canton-network-devs/Canton-Builder-Tool)** or **[cn_quickstart LocalNet Deployment Guide](NEW LINK)**.
+Done Coding your Daml contracts and a `.dar` file via `dpm` ? Go straight to either The **[Canton Builder Tool](https://github.com/canton-network-devs/Canton-Builder-Tool)** or **[cn_quickstart LocalNet Deployment Guide](https://canton-network-devs.github.io/Canton-Builder-Tool/#qs-model:~:text=PART%202%20%E2%80%94%20FULL%20CONTROL)**.
 
 #### Starting from scratch?
 
