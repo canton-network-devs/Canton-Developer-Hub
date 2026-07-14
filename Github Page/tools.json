@@ -340,6 +340,19 @@
     "maintained_by": "Canton Network"
   },
   {
+    "name": "Noves Data App",
+    "maker": "Noves",
+    "type": "partner",
+    "category": "Data & Indexing",
+    "desc": "Self-hosted Canton data indexer and dashboard that connects to a participant's Ledger API, indexes activity into Postgres, and exposes structured data through UI views, exports, alerts, streams, and downstream APIs. Deploys with Docker Compose or Kubernetes and preserves party-level access controls through OIDC/JWT passthrough authorization.",
+    "links": [
+      { "label": "Product", "url": "https://noves.fi/data-app" },
+      { "label": "Repo & Deployment Docs", "url": "https://github.com/Noves-Inc/canton-data-app" }
+    ],
+    "daml_sdk_version": null,
+    "maintained_by": "Noves"
+  },
+  {
     "name": "CCView Explorer & Indexing API",
     "maker": "PixelPlex",
     "type": "partner",
