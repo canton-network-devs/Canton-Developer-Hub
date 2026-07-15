@@ -1,25 +1,22 @@
 # Canton Developer Hub
-A community resource maintained by the **Canton Foundation DevRel**. This repo is the starting point for developers and builders coming to Canton Network, whether you're at a hackathon, a bootcamp, or just exploring what Canton can do.
+
+A community resource maintained by the **Canton Foundation**. This repo is the starting point for developers and builders coming to Canton Network, whether you're at a hackathon, a bootcamp, or just exploring what Canton can do.
 
 ## The Developer Path
 
 Not sure where to start? Here's something help:
- 
+
 | Where you are | What to use |
 |---|---|
-| "I have a .DAR file built of my Daml Contracts using `dpm`, I need a Canton LocalNet right now to deploy and show my project demo" | **Canton Builder Tool** |
-| "I want to understand LocalNet along with a sample backend, frontend, keyclock, use PQS to Index, etc" | **cn_quickstart LocalNet Deployment Guide** |
+| "I have a .DAR file built of my Daml Contracts using `dpm`, I need a Canton LocalNet right now to deploy and show my project demo" | **[Canton Builder Tool](https://github.com/canton-network-devs/Canton-Builder-Tool)** |
+| "I want to understand LocalNet along with a sample backend, frontend, keyclock, use PQS to Index, etc" | **[CN_Quickstart LocalNet Deployment Guide](https://canton-network-devs.github.io/Canton-Builder-Tool/#qs-model:~:text=PART%202%20%E2%80%94%20FULL%20CONTROL)** |
 | "I want to build a same fullstack Canton dApp first with backend, auth, frontend to learn" | **[cn-quickstart](https://github.com/digital-asset/cn-quickstart)**
- 
+
 Each tier is a natural next step from the previous one. Start fast, go deeper as you need to.
 
-## What's In Here
+## What's Here for Builders then?
 
-### Canton Dev Toolings Catalogue
-
-- [Catalogue Page to Browse toolings easier](https://jatinp26.github.io/Canton-Developer-Hub/)
-
-- [Github Dev Tooling Guide](./Canton%20Dev%20Toolings%20Guide.md) 
+### [Canton Dev Toolings Catalogue](https://dev-hub.canton.foundation/)
 
 A structured catalogue and guide of Tools, SDKs, APIs, and Pieces of infrastructure available for building on Canton. It Covers:
 
@@ -30,14 +27,15 @@ A structured catalogue and guide of Tools, SDKs, APIs, and Pieces of infrastruct
 - Data & indexing (PQS, CCView, Lighthouse)
 - Wallet integration and identity SDK
 
-Each tool is tagged as **Official** (Digital Asset OR Canton Foundation) or **Community** (Canton Ecosystem Partners) so you know what you're working with.
+Each tool is tagged as **Official** (Canton Network) or **Community** (Canton Ecosystem Partners) so you know what you're working with.
 
-### [Canton Builder Tool: Easy LocalNet Setup](https://github.com/Jatinp26/Canton-Builder-Tool)
-The fastest way to get a full Canton Network running on your laptop. One command, no setup, no Makefile, no DevNet whitelisting.
- 
+### [Canton Builder Tool: Easy LocalNet Setup](https://github.com/canton-network-devs/Canton-Builder-Tool)
+
+The easy and stright way to get a full Canton Network running on your system without manual setup and deploy your .DARs on Canton LocalNet.
+
 ```bash
 # Install
-curl -fsSL https://raw.githubusercontent.com/Jatinp26/Canton-Builder-Tool/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/canton-network-devs/Canton-Builder-Tool/main/install.sh | bash
  
 # Start a full Canton Network locally
 canton builder start
@@ -45,10 +43,10 @@ canton builder start
 # Deploy your DAR
 canton builder deploy ./your-project.dar
 ```
- 
-This Gets you 3 validators, local synchronizer, Canton Coin wallets, Scan UI and other useful full official Splice Canton LocalNet stack. Built for hackathon builders who just need a network to deploy it on.
 
-### [cn_quickstart LocalNet Deployment Guide](./cn_quickstart%20LocalNet%20Deployment%20Setup%20Guide.md)
+This Gets you 3 validators(app_user, app_providor, and SV), local synchronizer, Canton Coin wallets on Localhost, Local Scan UI, Local Ledger APIs and other useful full official Splice Canton LocalNet stack.
+
+### [cn_quickstart LocalNet Deployment Guide](https://canton-network-devs.github.io/Canton-Builder-Tool/#qs-model:~:text=PART%202%20%E2%80%94%20FULL%20CONTROL)
 
 Guide to getting your Daml project running on cn_quickstart based Canton LocalNet with wallets, multi-party transactions, etc. Built specifically for participants who need to plug their project properly into ***cn_quickstart***, use PQS, interact with wallets via the JSON API, and more. Use this when **Canton DevRel Tool** isn't enough and you want full control OVER a localnet stack.
 
@@ -79,13 +77,13 @@ Key properties:
 
 ## Quick Start for Hackathon Builders
 
-Done Coding your Daml contracts and a `.dar` file via `dpm` ? Go straight to either The **[Canton Builder Tool](https://github.com/Jatinp26/Canton-DevRel-Tool)** or **[cn_quickstart LocalNet Deployment Guide](./LocalNet%20Deployment%20Guide.md)**.
+Done Coding your Daml contracts and a `.dar` file via `dpm` ? Go straight to either The **[Canton Builder Tool](https://github.com/canton-network-devs/Canton-Builder-Tool)** or **[cn_quickstart LocalNet Deployment Guide](https://canton-network-devs.github.io/Canton-Builder-Tool/#qs-model:~:text=PART%202%20%E2%80%94%20FULL%20CONTROL)**.
 
-Starting from scratch?
+#### Starting from scratch?
 
 1. Install DPM: [docs.canton.network/sdks-tools/cli-tools/dpm](https://docs.canton.network/sdks-tools/cli-tools/dpm)
 2. Scaffold a project: `dpm new <PROJECT NAME> --template empty-skeleton`
 3. Write your Daml contracts, build with `dpm build` and test with `dpm test`
-4. Use **[Canton Builder Tool](https://github.com/Jatinp26/Canton-DevRel-Tool)** or Follow the **[cn_quickstart LocalNet Deployment Guide](./cn_quickstart%20LocalNet%20Deployment%20Setup%20Guide.md)** to deploy
+4. Use **[Canton Builder Tool](https://github.com/canton-network-devs/Canton-Builder-Tool)** or Follow the **[cn_quickstart LocalNet Deployment Guide](https://canton-network-devs.github.io/Canton-Builder-Tool/#qs-model:~:text=PART%202%20%E2%80%94%20FULL%20CONTROL)** to deploy
 
-> *Maintained by [Jatin Pandya]((https://x.com/Jpandya26)), Developer Relations Manager, Canton Foundation.*
+> *Maintained by Developer Relations, Canton Foundation*

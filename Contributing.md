@@ -7,7 +7,6 @@ There are two ways to contribute depending on what you want to do:
 | What you want | How |
 |---|---|
 | Add/update a tool in the frontend catalogue/page | Open a **PR** to [`tools.json`](./Github%20Page/tools.json) and one MUST add their tool the same format as the others in the JSON File for it to be able to index properly. |
-| Add/update a tool's entry in the markdown [Dev Tooling Guide](./Canton%20Dev%20Toolings%20Guide.md) | Open an **Issue** in this Repo with or Make a PR adding the Respective Tool's Details |
 | Report a broken link or outdated info | Open an **Issue** with the Tool and Source of claim. |
 
 ## Info on Adding a Tool to the frontend Catalogue Page (PR to `tools.json`)
@@ -68,25 +67,6 @@ Before opening your PR, confirm all of the following:
 - [ ] If my tool uses the Daml SDK, `daml_sdk_version` is set to the current version my tool is built against **not** `null`
 - [ ] `maintained_by` is filled in with the person or team responsible for keeping this up to date
 - [ ] I understand I am responsible for submitting a new PR if the Daml SDK version changes and I update my tool
-
-## Adding a Tool Entry to the [Dev Tooling Guide](./Canton%20Dev%20Toolings%20Guide.md) Markdown Catalogue
-
-The `Canton Dev Toolings Guide.md` file is the human readable catalogue. Longer descriptions, context, and usage notes for each tool. 
-
-To add or update an entry there, open an Issue (or a PR) using the template below. The maintainers will review and add it.
-
-### Issue template: New tool prose entry
-
-```
-**Tool name:** 
-**Builder / Company:** 
-**Category:** 
-**Type:** official / ecosystem partner
-**One-line description:** 
-**Full description (2-4 sentences):** 
-**Links:** 
-**Daml SDK version:** 
-```
 
 ## What Gets Rejected
 
