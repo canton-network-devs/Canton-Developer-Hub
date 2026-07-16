@@ -27,7 +27,9 @@ The filterable page at the Developer Hub is powered entirely by `tools.json` in 
     { "label": "Repo", "url": "https://github.com/you/your-tool" }
   ],
   "daml_sdk_version": "3.4.11",
-  "maintained_by": "Your Company"
+  "maintained_by": "Your Company",
+  "dev_fund": false/true, // Specify if your tool is funded from Canton Foundation Dev Fund.
+  "last_updated": "2026-07-16" // Give the date of your latest release of the tool.
 }
 ```
 
