@@ -28,8 +28,8 @@ The filterable page at the Developer Hub is powered entirely by `tools.json` in 
   ],
   "daml_sdk_version": "3.4.11",
   "maintained_by": "Your Company",
-  "dev_fund": false/true, // Specify if your tool is funded from Canton Foundation Dev Fund.
-  "last_updated": "2026-07-16" // Give the date of your latest release of the tool.
+  "dev_fund": false/true, 
+  "last_updated": "2026-07-16" 
 }
 ```
 
@@ -68,6 +68,8 @@ Before opening your PR, confirm all of the following:
 - [ ] `description` is one to two sentences, specific, and free of marketing language
 - [ ] If my tool uses the Daml SDK, `daml_sdk_version` is set to the current version my tool is built against **not** `null`
 - [ ] `maintained_by` is filled in with the person or team responsible for keeping this up to date
+- [ ] `"dev_fund": false/true,` to Specify if your tool is funded from Canton Foundation Dev Fund.
+- [ ] `"last_updated": "2026-07-16"`: Give the date of your latest release of the tool.
 - [ ] I understand I am responsible for submitting a new PR if the Daml SDK version changes and I update my tool
 
 ## What Gets Rejected
