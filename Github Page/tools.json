@@ -6,10 +6,15 @@
     "category": "Getting Started",
     "desc": "The unified new technical docs for Canton Network.",
     "links": [
-      { "label": "docs.canton.network", "url": "https://docs.canton.network" }
+      {
+        "label": "docs.canton.network",
+        "url": "https://docs.canton.network"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Canton Network"
+    "maintained_by": "Canton Network",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "Canton Network API Overview",
@@ -18,10 +23,15 @@
     "category": "Getting Started",
     "desc": "TL;DR overview of all Canton APIs: Ledger API, JSON API, Admin API, Scan API, Validator API, Wallet API. Start here to understand which API you need for what.",
     "links": [
-      { "label": "API overview", "url": "https://docs.canton.network/sdks-tools/" }
+      {
+        "label": "API overview",
+        "url": "https://docs.canton.network/sdks-tools/"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Canton Network"
+    "maintained_by": "Canton Network",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "Canton 101",
@@ -30,22 +40,32 @@
     "category": "Getting Started",
     "desc": "A community-built overview covering Canton architecture, APIs, SDKs, and core concepts. Good first stop before diving into the official docs.",
     "links": [
-      { "label": "canton-101.vercel.app", "url": "https://canton-101.vercel.app" }
+      {
+        "label": "canton-101.vercel.app",
+        "url": "https://canton-101.vercel.app"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Community"
+    "maintained_by": "Community",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
-    "name": "CantonHub",
+    "name": "Canton Hub",
     "maker": "Unity Nodes",
     "type": "partner",
     "category": "Getting Started",
     "desc": "Canton ecosystem resource hub in four sections - Education, Developers, Validator, Community. Covering docs, guides, tools, articles, videos, recorded recaps and more.",
     "links": [
-      { "label": "unityhub.dev/canton", "url": "https://unityhub.dev/canton" }
+      {
+        "label": "unityhub.dev/canton",
+        "url": "https://unityhub.dev/canton"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Unity Nodes"
+    "maintained_by": "Unity Nodes",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "DPM: Daml Package Manager",
@@ -54,11 +74,19 @@
     "category": "Smart Contract Dev",
     "desc": "The primary CLI for Canton/Daml development. Scaffolds projects, builds DARs, runs tests, generates TypeScript and Java bindings, manages SDK versions, and runs a local sandbox.",
     "links": [
-      { "label": "Repo", "url": "https://github.com/digital-asset/dpm" },
-      { "label": "Docs", "url": "https://docs.canton.network/sdks-tools/cli-tools/dpm" }
+      {
+        "label": "Repo",
+        "url": "https://github.com/digital-asset/dpm"
+      },
+      {
+        "label": "Docs",
+        "url": "https://docs.canton.network/sdks-tools/cli-tools/dpm"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Canton Network"
+    "maintained_by": "Canton Network",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "Daml Studio (VS Code Extension)",
@@ -67,10 +95,15 @@
     "category": "Smart Contract Dev",
     "desc": "VS Code extension for Daml syntax highlighting, type checking, inline diagnostics, and code navigation. Installed automatically with DPM. Requires VS Code 1.87+.",
     "links": [
-      { "label": "Extension", "url": "https://marketplace.visualstudio.com/items?itemName=DigitalAssetHoldingsLLC.daml" }
+      {
+        "label": "Extension",
+        "url": "https://marketplace.visualstudio.com/items?itemName=DigitalAssetHoldingsLLC.daml"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Canton Network"
+    "maintained_by": "Canton Network",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "Canton Token Template",
@@ -79,10 +112,15 @@
     "category": "Smart Contract Dev",
     "desc": "A Daml template for building CIP-056 compliant token registries on Canton Network. Clone it, run the setup script, and build your token contract on top.",
     "links": [
-      { "label": "Repo", "url": "https://github.com/OpenZeppelin/canton-token-template" }
+      {
+        "label": "Repo",
+        "url": "https://github.com/OpenZeppelin/canton-token-template"
+      }
     ],
     "daml_sdk_version": "3.4",
-    "maintained_by": "OpenZeppelin"
+    "maintained_by": "OpenZeppelin",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "Canton Security 101",
@@ -91,10 +129,15 @@
     "category": "Smart Contract Dev",
     "desc": "A Canton-focused cybersecurity guide covering DAML development, web applications, and operational security. Learn about secure dapp development.",
     "links": [
-      { "label": "Security 101", "url": "https://scauditstudio.com/tools/canton-security101" }
+      {
+        "label": "Security 101",
+        "url": "https://scauditstudio.com/tools/canton-security101"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "SC Audit Studio OY"
+    "maintained_by": "SC Audit Studio OY",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "Catalyx Package Manager",
@@ -103,10 +146,15 @@
     "category": "Smart Contract Dev",
     "desc": "A community package marketplace for Canton/Daml components. Discover, share, and consume reusable Daml packages across projects.",
     "links": [
-      { "label": "Marketplace", "url": "https://apps.catalyx.solutions/marketplace" }
+      {
+        "label": "Marketplace",
+        "url": "https://apps.catalyx.solutions/marketplace"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "IntellectEU"
+    "maintained_by": "IntellectEU",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "Tokenization Explorer",
@@ -115,22 +163,32 @@
     "category": "Smart Contract Dev",
     "desc": "Visual explorer for Canton tokenization workflows useful for prototyping how tokenised assets flow across Canton participants without building everything from scratch.",
     "links": [
-      { "label": "Explorer", "url": "https://tokenization.catalyst.intellecteu.com/" }
+      {
+        "label": "Explorer",
+        "url": "https://tokenization.catalyst.intellecteu.com/"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "IntellectEU"
+    "maintained_by": "IntellectEU",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
-    "name": "Canton Dev MCP Server",
+    "name": "Canton Foundation MCP",
     "maker": "Canton Foundation",
     "type": "partner",
     "category": "AI Tools",
     "desc": "MCP server that plugs accurate Canton docs directly into Claude and other AI tools. Prevents hallucinated or outdated API responses. Refreshes hourly from GitHub.",
     "links": [
-      { "label": "Repo", "url": "https://github.com/canton-network-devs/Build-on-Canton-MCP" }
+      {
+        "label": "Repo",
+        "url": "https://github.com/canton-network-devs/Build-on-Canton-MCP"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Canton Foundation"
+    "maintained_by": "Canton Foundation",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "Tenzro DAML Studio",
@@ -139,10 +197,15 @@
     "category": "AI Tools",
     "desc": "AI-powered browser IDE for generating and editing Daml smart contracts. Includes an agentic layer for DevNet interactions. Review all generated code before deploying.",
     "links": [
-      { "label": "Docs", "url": "https://www.tenzro.com/docs/canton" }
+      {
+        "label": "Docs",
+        "url": "https://www.tenzro.com/docs/canton"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Tenzro"
+    "maintained_by": "Tenzro",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "CCPedia",
@@ -151,11 +214,19 @@
     "category": "AI Tools",
     "desc": "AI-accessible knowledge base over the Canton ecosystem - CIPs, forum, GitHub, Dev Fund proposals, docs, blog, videos and more. Three AI endpoints: MCP server, REST API, llms.txt. Plus web UI for human research.",
     "links": [
-      { "label": "ccpedia.xyz", "url": "https://ccpedia.xyz" },
-      { "label": "AI integrations", "url": "https://ccpedia.xyz/for-ai" }
+      {
+        "label": "ccpedia.xyz",
+        "url": "https://ccpedia.xyz"
+      },
+      {
+        "label": "AI integrations",
+        "url": "https://ccpedia.xyz/for-ai"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Unity Nodes"
+    "maintained_by": "Unity Nodes",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "Canton LocalNet (cn-quickstart)",
@@ -164,11 +235,19 @@
     "category": "Local Dev",
     "desc": "Full Canton Network in Docker Compose with 3 validators, synchronizer, Canton Coin wallets, PQS, Keycloak, and Scan UI. All on your laptop. No DevNet whitelisting needed.",
     "links": [
-      { "label": "Repo", "url": "https://github.com/digital-asset/cn-quickstart" },
-      { "label": "Guide", "url": "https://docs.canton.network/sdks-tools/reference-projects/cn-quickstart" }
+      {
+        "label": "Repo",
+        "url": "https://github.com/digital-asset/cn-quickstart"
+      },
+      {
+        "label": "Guide",
+        "url": "https://docs.canton.network/sdks-tools/reference-projects/cn-quickstart"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Canton Network"
+    "maintained_by": "Canton Network",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "Canton Sandbox (via DPM)",
@@ -177,10 +256,15 @@
     "category": "Local Dev",
     "desc": "Lightweight single-node Canton environment for fast contract iteration. No Docker required. Starts instantly. Use it before moving to the full LocalNet stack.",
     "links": [
-      { "label": "Docs", "url": "https://docs.digitalasset.com/build/3.4/dpm/" }
+      {
+        "label": "Docs",
+        "url": "https://docs.digitalasset.com/build/3.4/dpm/"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Canton Network"
+    "maintained_by": "Canton Network",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "Seaport",
@@ -189,10 +273,15 @@
     "category": "Smart Contract Dev",
     "desc": "Cloud platform for coding, building, deploying, and managing Daml smart contracts, all without local setup. A hosted alternative to the LocalNet toolchain.",
     "links": [
-      { "label": "seaport.to", "url": "https://devnet.seaport.to/" }
+      {
+        "label": "seaport.to",
+        "url": "https://devnet.seaport.to/"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "5North"
+    "maintained_by": "5North",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "Daml SDK",
@@ -201,34 +290,32 @@
     "category": "SDKs",
     "desc": "The core development kit for building on Canton. Bundles the Daml compiler, Daml Script runner, Canton Sandbox, and supporting tools. Installed and managed through dpm.",
     "links": [
-      { "label": "Docs", "url": "https://docs.canton.network/sdks-tools/sdks/daml-sdk" }
+      {
+        "label": "Docs",
+        "url": "https://docs.canton.network/sdks-tools/sdks/daml-sdk"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Canton Network"
+    "maintained_by": "Canton Network",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
-    "name": "Wallet Kernel",
+    "name": "Wallet SDK",
     "maker": "Canton Network",
     "type": "official",
     "category": "SDKs",
     "desc": "TypeScript library for programmatic wallet operations on Canton i.e party management, token transfers, UTXO queries, transaction signing, and third-party dApp integration.",
     "links": [
-      { "label": "Docs", "url": "https://docs.canton.network/sdks-tools/sdks/wallet-sdk" }
+      {
+        "label": "Docs",
+        "url": "https://docs.canton.network/sdks-tools/sdks/wallet-sdk"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Canton Network"
-  },
-  {
-    "name": "Exchange SDK",
-    "maker": "Canton Network",
-    "type": "official",
-    "category": "SDKs",
-    "desc": "Java-based reference implementation for connecting exchanges to Canton Network. Demonstrates patterns for listing, trading, and settling Canton-based assets on an exchange platform.",
-    "links": [
-      { "label": "Docs", "url": "https://docs.canton.network/sdks-tools/sdks/exchange-sdk" }
-    ],
-    "daml_sdk_version": null,
-    "maintained_by": "Canton Network"
+    "maintained_by": "Canton Network",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "Go SDK for Daml Ledger",
@@ -237,11 +324,19 @@
     "category": "SDKs",
     "desc": "Comprehensive Go SDK for Canton/Daml ledgers including Ledger API client, service abstractions, type-safe code generator from .dar files, and a separate Splice Amulet wallet SDK.",
     "links": [
-      { "label": "Ledger SDK", "url": "https://github.com/noders-team/go-daml" },
-      { "label": "Wallet SDK", "url": "https://github.com/noders-team/go-wallet-daml" }
+      {
+        "label": "Ledger SDK",
+        "url": "https://github.com/noders-team/go-daml"
+      },
+      {
+        "label": "Wallet SDK",
+        "url": "https://github.com/noders-team/go-wallet-daml"
+      }
     ],
     "daml_sdk_version": "3.4",
-    "maintained_by": "Noders"
+    "maintained_by": "Noders",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "C7 Ledger & C7 React",
@@ -250,10 +345,15 @@
     "category": "SDKs",
     "desc": "Drop-in replacements for @daml/ledger and @daml/react with active maintenance. Same API, works with JS/TS frontends and Node.js backends on Canton.",
     "links": [
-      { "label": "Repo", "url": "https://github.com/C7-Digital/c7_ledger" }
+      {
+        "label": "Repo",
+        "url": "https://github.com/C7-Digital/c7_ledger"
+      }
     ],
     "daml_sdk_version": "3.4",
-    "maintained_by": "C7 Digital"
+    "maintained_by": "C7 Digital",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "JSON Ledger API",
@@ -262,10 +362,15 @@
     "category": "APIs",
     "desc": "HTTP/JSON interface to the Canton Ledger API. Submit commands, query active contracts, and stream events. All over standard HTTP. Easiest integration path without gRPC.",
     "links": [
-      { "label": "Docs", "url": "https://docs.canton.network/sdks-tools/api-reference/json-api" }
+      {
+        "label": "Docs",
+        "url": "https://docs.canton.network/sdks-tools/api-reference/json-api"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Canton Network"
+    "maintained_by": "Canton Network",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "gRPC Ledger API",
@@ -274,10 +379,15 @@
     "category": "APIs",
     "desc": "Full Ledger API over gRPC/Protobuf. Higher performance, required for production backends and streaming event subscriptions. Use dpm codegen for typed client bindings.",
     "links": [
-      { "label": "Docs", "url": "https://docs.canton.network/sdks-tools/api-reference/ledger-api-services" }
+      {
+        "label": "Docs",
+        "url": "https://docs.canton.network/sdks-tools/api-reference/ledger-api-services"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Canton Network"
+    "maintained_by": "Canton Network",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "Scan API",
@@ -286,10 +396,15 @@
     "category": "APIs",
     "desc": "Read-only API for network-level Canton data: mining rounds, Canton Coin supply, featured apps, and DSO governance state. Public read API for the Global Synchronizer.",
     "links": [
-      { "label": "Docs", "url": "https://docs.canton.network/sdks-tools/api-reference/splice-scan-api" }
+      {
+        "label": "Docs",
+        "url": "https://docs.canton.network/sdks-tools/api-reference/splice-scan-api"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Canton Network"
+    "maintained_by": "Canton Network",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "Validator API",
@@ -298,10 +413,15 @@
     "category": "APIs",
     "desc": "REST APIs exposed by each validator node for wallet ops, traffic management, party onboarding, and Canton Coin transfers. What the wallet UIs talk to under the hood.",
     "links": [
-      { "label": "Docs", "url": "https://docs.canton.network/sdks-tools/api-reference/splice-validator-api" }
+      {
+        "label": "Docs",
+        "url": "https://docs.canton.network/sdks-tools/api-reference/splice-validator-api"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Canton Network"
+    "maintained_by": "Canton Network",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "Wallet Gateway (dApp SDK)",
@@ -310,10 +430,15 @@
     "category": "APIs",
     "desc": "Open-source SDK for building dApps that integrate with Canton wallets. Includes the dApp API spec (OpenRPC) and a dApp SDK for connecting your frontend to Canton wallet functionality.",
     "links": [
-      { "label": "Repo", "url": "https://github.com/canton-network/wallet-gateway/tree/main" }
+      {
+        "label": "Repo",
+        "url": "https://github.com/canton-network/wallet-gateway/tree/main"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Canton Network"
+    "maintained_by": "Canton Network",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "HydraX Tokenisation REST APIs",
@@ -322,10 +447,15 @@
     "category": "APIs",
     "desc": "REST APIs for tokenisation utilities on Canton i.e asset issuance, transfer, and custody workflows. Targeted at institutions building tokenised asset infrastructure. Paid service.",
     "links": [
-      { "label": "Pricing & Access", "url": "https://metra.sg/pricing/" }
+      {
+        "label": "Pricing & Access",
+        "url": "https://metra.sg/pricing/"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "HydraX"
+    "maintained_by": "HydraX",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "PQS: Participant Query Store",
@@ -334,10 +464,15 @@
     "category": "Data & Indexing",
     "desc": "PostgreSQL-backed query store mirroring your participant's ledger state. Run SQL against contract data. Essential for complex queries, aggregations, reporting, and dashboards.",
     "links": [
-      { "label": "Docs", "url": "https://docs.canton.network/sdks-tools/development-tools/pqs/" }
+      {
+        "label": "Docs",
+        "url": "https://docs.canton.network/sdks-tools/development-tools/pqs/"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Canton Network"
+    "maintained_by": "Canton Network",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "CCView Explorer & Indexing API",
@@ -346,11 +481,19 @@
     "category": "Data & Indexing",
     "desc": "Canton block explorer with a public indexing API. Browse transactions, ANS lookups, and transaction history. Pull Canton on-chain data into your own application.",
     "links": [
-      { "label": "ccview.io", "url": "https://ccview.io" },
-      { "label": "API Docs", "url": "https://docs.ccview.io/reference/ans" }
+      {
+        "label": "ccview.io",
+        "url": "https://ccview.io"
+      },
+      {
+        "label": "API Docs",
+        "url": "https://docs.ccview.io/reference/ans"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "PixelPlex"
+    "maintained_by": "PixelPlex",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "Lighthouse Explorer",
@@ -359,10 +502,15 @@
     "category": "Data & Indexing",
     "desc": "Community-built Canton Network explorer, an alternative view into network activity and transactions.",
     "links": [
-      { "label": "lighthouse.cantonloop.com", "url": "https://lighthouse.cantonloop.com" }
+      {
+        "label": "lighthouse.cantonloop.com",
+        "url": "https://lighthouse.cantonloop.com"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "CantonLoop"
+    "maintained_by": "CantonLoop",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "Canton Event Graph Toolkit",
@@ -371,10 +519,15 @@
     "category": "Data & Indexing",
     "desc": "Rust tooling for the Canton Ledger API v2: stream ledger events, generate Rust types from DARs, and sync/visualize the Canton event graph (ACS + updates) in a Neo4j graph.",
     "links": [
-      { "label": "Repo", "url": "https://github.com/gyorgybalazsi/canton-toolbox" }
+      {
+        "label": "Repo",
+        "url": "https://github.com/gyorgybalazsi/canton-toolbox"
+      }
     ],
     "daml_sdk_version": "3.4.11",
-    "maintained_by": "Gyorgy Balazsi"
+    "maintained_by": "Gyorgy Balazsi",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "Find Canton Wallets",
@@ -383,10 +536,15 @@
     "category": "Wallet Integration",
     "desc": "Growing ecosystem of wallets: retail, enterprise, self-custody, and custodial for supporting Canton Network assets and Canton Coin.",
     "links": [
-      { "label": "cantonecosystem.com", "url": "https://www.cantonecosystem.com/" }
+      {
+        "label": "cantonecosystem.com",
+        "url": "https://www.cantonecosystem.com/"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Canton Ecosystem"
+    "maintained_by": "Canton Ecosystem",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "WalletConnect",
@@ -395,10 +553,15 @@
     "category": "Wallet Integration",
     "desc": "WalletConnect integration for Canton Network, connect your dApp to any WalletConnect-compatible wallet that supports Canton.",
     "links": [
-      { "label": "docs", "url": "https://docs.walletconnect.network/wallet-sdk/chain-support/canton" }
+      {
+        "label": "docs",
+        "url": "https://docs.walletconnect.network/wallet-sdk/chain-support/canton"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "WalletConnect"
+    "maintained_by": "WalletConnect",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "Console dApp SDK",
@@ -407,10 +570,15 @@
     "category": "Wallet Integration",
     "desc": "npm package for integrating Console Wallet into your Canton dApp. Lets your frontend connect to users' Console Wallet for signing and submitting transactions.",
     "links": [
-      { "label": "npm", "url": "https://www.npmjs.com/package/@console-wallet/dapp-sdk" }
+      {
+        "label": "npm",
+        "url": "https://www.npmjs.com/package/@console-wallet/dapp-sdk"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "PixelPlex"
+    "maintained_by": "PixelPlex",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "Loop SDK",
@@ -419,10 +587,15 @@
     "category": "Wallet Integration",
     "desc": "SDK for integrating the Loop Wallet into your Canton dApp frontend. Connects users' Loop Wallet for Canton Coin and asset management.",
     "links": [
-      { "label": "Docs", "url": "https://docs.fivenorth.io/" }
+      {
+        "label": "Docs",
+        "url": "https://docs.fivenorth.io/"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "5North"
+    "maintained_by": "5North",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "Five North ID SDK",
@@ -431,35 +604,53 @@
     "category": "Identity",
     "desc": "Identity verification SDK for Canton applications. Integrates tamper-proof KYC/identity checks, relevant for regulated industries where user identity verification is a requirement.",
     "links": [
-      { "label": "Docs", "url": "https://docs.fivenorth.io/id-sdk/introduction/" }
+      {
+        "label": "Docs",
+        "url": "https://docs.fivenorth.io/id-sdk/introduction/"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "5North"
+    "maintained_by": "5North",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
-  "name": "AI Agentic Wallet",
-  "maker": "FTP",
-  "type": "partner",
-  "category": "AI Tools",
-  "desc": "Enables AI agents to Create&Manage a Canton wallet and Request initial testnet funding via faucet amd continue using the same wallet for subsequent interactions",
-  "links": [
-    { "label": "Repo", "url": "https://github.com/Denend/agent-wallet-canton" },
-    { "label": "Docs", "url": "https://www.ftptech.xyz/wallet" }
-  ],
-  "daml_sdk_version": "null",
-  "maintained_by": "FTP"
+    "name": "AI Agentic Wallet",
+    "maker": "FTP",
+    "type": "partner",
+    "category": "AI Tools",
+    "desc": "Enables AI agents to Create&Manage a Canton wallet and Request initial testnet funding via faucet amd continue using the same wallet for subsequent interactions",
+    "links": [
+      {
+        "label": "Repo",
+        "url": "https://github.com/Denend/agent-wallet-canton"
+      },
+      {
+        "label": "Docs",
+        "url": "https://www.ftptech.xyz/wallet"
+      }
+    ],
+    "daml_sdk_version": "null",
+    "maintained_by": "FTP",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
-  "name": "x402 MCP",
-  "maker": "FTP",
-  "type": "partner",
-  "category": "AI Tools",
-  "desc": "Enables AI agents to Consume and pay for apps/services that integrated x402, Create wallet and interact with it and Request one-time faucet funding",
-  "links": [
-    { "label": "Docs", "url": "https://www.ftptech.xyz/mcp" }
-  ],
-  "daml_sdk_version": "null",
-  "maintained_by": "FTP"
+    "name": "x402 MCP",
+    "maker": "FTP",
+    "type": "partner",
+    "category": "AI Tools",
+    "desc": "Enables AI agents to Consume and pay for apps/services that integrated x402, Create wallet and interact with it and Request one-time faucet funding",
+    "links": [
+      {
+        "label": "Docs",
+        "url": "https://www.ftptech.xyz/mcp"
+      }
+    ],
+    "daml_sdk_version": "null",
+    "maintained_by": "FTP",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "x402 Facilitator for Canton",
@@ -482,7 +673,9 @@
       }
     ],
     "daml_sdk_version": "null",
-    "maintained_by": "FTP"
+    "maintained_by": "FTP",
+    "dev_fund": true,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "x402 Merchant Middleware for Canton",
@@ -501,7 +694,9 @@
       }
     ],
     "daml_sdk_version": "null",
-    "maintained_by": "FTP"
+    "maintained_by": "FTP",
+    "dev_fund": true,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "x402 Agent SDK for Canton",
@@ -520,7 +715,9 @@
       }
     ],
     "daml_sdk_version": "null",
-    "maintained_by": "FTP"
+    "maintained_by": "FTP",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "x402 Core for Canton",
@@ -539,7 +736,9 @@
       }
     ],
     "daml_sdk_version": "null",
-    "maintained_by": "FTP"
+    "maintained_by": "FTP",
+    "dev_fund": true,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "CGGMP24",
@@ -548,11 +747,19 @@
     "category": "SDKs",
     "desc": "Rust implementation of the CGGMP24 threshold ECDSA protocol, the signature scheme used by Canton Network. Supports distributed key generation and threshold signing with presignatures for t-of-n keys for wallet infrastructure and validator key custody.",
     "links": [
-      { "label": "Repo", "url": "https://github.com/LFDT-Lockness/cggmp21" },
-      { "label": "crates.io", "url": "https://crates.io/crates/cggmp21" }
+      {
+        "label": "Repo",
+        "url": "https://github.com/LFDT-Lockness/cggmp21"
+      },
+      {
+        "label": "crates.io",
+        "url": "https://crates.io/crates/cggmp21"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Dfns & LFDT Lockness"
+    "maintained_by": "Dfns & LFDT Lockness",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   },
   {
     "name": "Givre",
@@ -561,10 +768,18 @@
     "category": "SDKs",
     "desc": "Rust implementation of threshold Schnorr / EdDSA signing, the signature scheme used by Canton Network. Supports distributed key generation and threshold signing with presignatures for t-of-n keys for wallet infrastructure and validator key custody.",
     "links": [
-      { "label": "Repo", "url": "https://github.com/LFDT-Lockness/givre" },
-      { "label": "crates.io", "url": "https://crates.io/crates/givre" }
+      {
+        "label": "Repo",
+        "url": "https://github.com/LFDT-Lockness/givre"
+      },
+      {
+        "label": "crates.io",
+        "url": "https://crates.io/crates/givre"
+      }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Dfns & LFDT Lockness"
+    "maintained_by": "Dfns & LFDT Lockness",
+    "dev_fund": false,
+    "last_updated": "2026-07-16"
   }
 ]
