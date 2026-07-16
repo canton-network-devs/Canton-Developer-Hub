@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="giscus:backlink" content="https://canton-network-devs.github.io/Canton-Developer-Hub/">
+<meta name="giscus:backlink" content="https://dev-hub.canton.foundation">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Canton Developer Hub</title>
@@ -29,18 +29,17 @@
   html { font-size: 16px; }
   body { font-family: 'IBM Plex Sans', system-ui, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; -webkit-font-smoothing: antialiased; }
   a { color: inherit; text-decoration: none; }
-
   .disclaimer-bar { background: #030206; border-bottom: 1px solid #875CFF; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; gap: 12px; position: sticky; top: 0; z-index: 101; }
   .disclaimer-bar-inner { display: flex; align-items: flex-start; gap: 8px; flex: 1; padding: 8px 0; }
   .disclaimer-bar-icon { flex-shrink: 0; width: 14px; height: 14px; margin-top: 2px; opacity: 0.55; }
-  .disclaimer-bar-text { font-size: 12px; font-weight: 300; color: rgba(255, 255, 252, 0.894); line-height: 1.55; }
+  .disclaimer-bar-text { font-size: 13px; font-weight: 300; color: rgba(255, 255, 252, 0.894); line-height: 1.55; }
   .disclaimer-bar-text strong { font-weight: 500; color: rgba(255, 255, 252, 0.956); }
   .disclaimer-bar-close { flex-shrink: 0; background: none; border: none; cursor: pointer; color: rgba(255,255,252,0.3); font-size: 18px; line-height: 1; padding: 4px 2px; transition: color 0.15s; align-self: flex-start; margin-top: 6px; }
   .disclaimer-bar-close:hover { color: rgba(255,255,252,0.6); }
   .site-header { background: var(--black); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 56px; position: sticky; top: 0; z-index: 100; }
-  .logo { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 500; color: var(--white); }
+  .logo { display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 500; color: var(--white); }
   .header-actions { display: flex; gap: 8px; align-items: center; }
-  .header-btn { font-family: 'IBM Plex Sans', sans-serif; font-size: 12px; font-weight: 400; padding: 6px 14px; border-radius: 100px; text-decoration: none; white-space: nowrap; transition: all 0.15s; }
+  .header-btn { font-family: 'IBM Plex Sans', sans-serif; font-size: 13px; font-weight: 400; padding: 6px 14px; border-radius: 100px; text-decoration: none; white-space: nowrap; transition: all 0.15s; }
   .header-btn.outline { border: 1px solid rgba(255,255,252,0.2); color: var(--white); background: transparent; }
   .header-btn.outline:hover { border-color: rgba(255,255,252,0.5); }
   .header-btn.filled { border: 1px solid var(--yellow); background: var(--yellow); color: var(--black); font-weight: 500; }
@@ -48,72 +47,83 @@
   @media (max-width: 600px) { .header-btn.outline { display: none; } }
   .hero { background: var(--black); padding: 3.5rem 2rem 3rem; border-bottom: 1px solid rgba(255,255,252,0.08); }
   .hero-inner { max-width: 960px; margin: 0 auto; }
-  .hero-eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--taupe); margin-bottom: 0.75rem; }
+  .hero-eyebrow { font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--taupe); margin-bottom: 0.75rem; }
   .hero h1 { font-size: clamp(28px, 5vw, 44px); font-weight: 300; color: var(--white); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 1rem; }
   .hero h1 em { font-style: normal; color: var(--yellow); }
-  .hero p { font-size: 15px; font-weight: 300; color: var(--taupe); max-width: 520px; line-height: 1.7; }
+  .hero p { font-size: 16px; font-weight: 300; color: var(--taupe); max-width: 520px; line-height: 1.7; }
   .main { max-width: 960px; margin: 0 auto; padding: 2rem 1rem 5rem; }
   .controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 1rem; }
   .search-wrap { position: relative; flex: 1; min-width: 200px; }
   .search-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; opacity: 0.4; pointer-events: none; }
-  #search { width: 100%; height: 38px; padding: 0 12px 0 36px; border: 1px solid var(--border); border-radius: 100px; background: var(--bg); font-family: inherit; font-size: 13px; color: var(--text); outline: none; transition: border-color 0.15s; }
+  #search { width: 100%; height: 40px; padding: 0 12px 0 36px; border: 1px solid var(--border); border-radius: 100px; background: var(--bg); font-family: inherit; font-size: 14px; color: var(--text); outline: none; transition: border-color 0.15s; }
   #search:focus { border-color: var(--purple); }
   #search::placeholder { color: var(--hint); }
   .divider { width: 1px; height: 22px; background: var(--border); flex-shrink: 0; }
   .pills { display: flex; flex-wrap: wrap; gap: 6px; }
-  .pill { height: 32px; padding: 0 14px; border-radius: 100px; border: 2px solid var(--border); background: var(--bg); color: var(--muted); font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer; white-space: nowrap; transition: all 0.13s; }
+  .pill { height: 34px; padding: 0 16px; border-radius: 100px; border: 2px solid var(--border); background: var(--bg); color: var(--muted); font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer; white-space: nowrap; transition: all 0.13s; }
   .pill:hover { border-color: var(--border-md); color: var(--text); }
   .pill.active { background: var(--black); color: var(--lilac); border-color: var(--black); font-weight: 600; }
   .pill.p-official.active { background: var(--black); color: var(--purple); border-color: var(--black); }
   .pill.p-partner.active { background: transparent; color: var(--purple); border-color: var(--purple); font-weight: 600; }
-  .pill.p-popular.active { background: #1a0a00; color: #F3FF97; border-color: #F3FF97; font-weight: 600; }
+  .pill.p-devfund.active { background: #0a1a0a; color: #7dde7d; border-color: #4caf50; font-weight: 600; }
   .meta-row { display: flex; align-items: center; margin-bottom: 1rem; }
-  .count { font-size: 12px; color: var(--hint); }
-  .state-msg { text-align: center; padding: 4rem 1rem; color: var(--muted); font-size: 14px; font-weight: 300; }
-  .state-msg strong { display: block; font-size: 16px; font-weight: 500; margin-bottom: 6px; color: var(--text); }
+  .count { font-size: 13px; color: var(--hint); }
+  .state-msg { text-align: center; padding: 4rem 1rem; color: var(--muted); font-size: 15px; font-weight: 300; }
+  .state-msg strong { display: block; font-size: 17px; font-weight: 500; margin-bottom: 6px; color: var(--text); }
   .state-msg a { color: var(--lilac); text-decoration: underline; }
   .spinner { width: 28px; height: 28px; border: 2px solid var(--border); border-top-color: var(--purple); border-radius: 50%; animation: spin 0.7s linear infinite; margin: 0 auto 1rem; }
   @keyframes spin { to { transform: rotate(360deg); } }
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
-  .card { background: var(--bg); border: 1px solid var(--border); border-radius: 14px; padding: 1.4rem 1.4rem; display: flex; flex-direction: column; gap: 9px; transition: border-color 0.18s, box-shadow 0.16s; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+  .card { background: var(--bg); border: 1px solid var(--border); border-radius: 14px; padding: 1.6rem 1.6rem; display: flex; flex-direction: column; gap: 10px; transition: border-color 0.18s, box-shadow 0.16s; }
   .card:hover { border-color: var(--border-md); box-shadow: 0 4px 16px rgba(2, 2, 5, 0.14); }
   .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
-  .card-name { font-size: 14px; font-weight: 500; color: var(--text); line-height: 1.3; letter-spacing: -0.01em; }
-  .card-maker { font-size: 12px; color: var(--hint); margin-top: 2px; font-weight: 600; }
-  .badge { font-size: 12px; font-weight: 600; padding: 3px 8px; border-radius: 100px; white-space: nowrap; flex-shrink: 0; letter-spacing: 0.02em; }
+  .card-name { font-size: 15px; font-weight: 500; color: var(--text); line-height: 1.3; letter-spacing: -0.01em; }
+  .card-maker { font-size: 13px; color: var(--hint); margin-top: 2px; font-weight: 600; }
+  .badge { font-size: 13px; font-weight: 600; padding: 3px 9px; border-radius: 100px; white-space: nowrap; flex-shrink: 0; letter-spacing: 0.02em; }
   .badge.official { background: var(--yellow); color: var(--black); }
   .badge.partner  { background: rgba(213,165,227,0.25); color: #4a2060; }
-  .cat-tag { display: inline-block; width: fit-content; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 100px; background: var(--surface); color: var(--muted); border: 1px solid rgba(3,2,6,0.20); }
-  .card-desc { font-size: 12px; font-weight: 400; color: var(--muted); line-height: 1.65; flex: 1; }
+  .badge-devfund {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 12px; font-weight: 600; padding: 2px 9px;
+    border-radius: 100px;
+    background: rgba(76,175,80,0.12);
+    color: #2e7d32;
+    border: 1px solid rgba(76,175,80,0.35);
+    white-space: nowrap;
+  }
+  .cat-tag { display: inline-block; width: fit-content; font-size: 13px; font-weight: 700; padding: 3px 9px; border-radius: 100px; background: var(--surface); color: var(--muted); border: 1px solid rgba(3,2,6,0.20); }
+  .card-desc { font-size: 13px; font-weight: 400; color: var(--muted); line-height: 1.65; flex: 1; }
   .card-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 2px; }
-  .card-link { font-size: 12px; font-weight: 400; color: var(--purple); display: flex; align-items: center; gap: 3px; transition: opacity 0.12s; }
+  .card-link { font-size: 13px; font-weight: 400; color: var(--purple); display: flex; align-items: center; gap: 3px; transition: opacity 0.12s; }
   .card-link:hover { opacity: 0.7; text-decoration: underline; }
   .card-link svg { width: 11px; height: 11px; flex-shrink: 0; }
+  .card-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+  .last-updated { font-size: 11.2px; font-weight: 500; color: #313130; }
+  .last-updated.stale { color: #c0780a; font-weight: 500; }
   .card-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 4px; padding-top: 10px; border-top: 1px solid var(--border); gap: 8px; }
-  .vote-btn { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 100px; border: 1.5px solid var(--border); background: var(--bg); color: var(--muted); font-family: inherit; font-size: 12px; font-weight: 500; cursor: pointer; transition: all 0.15s; white-space: nowrap; flex-shrink: 0; }
+  .vote-btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 13px; border-radius: 100px; border: 1.5px solid var(--border); background: var(--bg); color: var(--muted); font-family: inherit; font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.15s; white-space: nowrap; flex-shrink: 0; }
   .vote-btn:hover { border-color: var(--purple); color: var(--purple); background: rgba(135,92,255,0.05); }
   .vote-btn.active { border-color: var(--purple); color: var(--purple); background: rgba(135,92,255,0.08); }
   .vote-btn .thumb { font-size: 14px; line-height: 1; }
-  .reaction-count { display: flex; align-items: center; gap: 4px; font-size: 11px; color: var(--hint); font-weight: 400; white-space: nowrap; opacity: 0; transition: opacity 0.4s; }
+  .reaction-count { display: flex; align-items: center; gap: 4px; font-size: 12px; color: var(--hint); font-weight: 400; white-space: nowrap; opacity: 0; transition: opacity 0.4s; }
   .reaction-count.visible { opacity: 1; }
-  .reaction-count .rc-num { font-size: 12px; font-weight: 600; color: var(--purple); }
-  .reaction-count .rc-icon { font-size: 12px; }
+  .reaction-count .rc-num { font-size: 13px; font-weight: 600; color: var(--purple); }
   .giscus-overlay { display: none; position: fixed; inset: 0; z-index: 999; background: rgba(3,2,6,0.45); align-items: center; justify-content: center; }
   .giscus-overlay.open { display: flex; }
   .giscus-panel { background: var(--white); border-radius: 16px; border: 1px solid var(--border); width: min(480px, calc(100vw - 2rem)); max-height: 85vh; overflow-y: auto; box-shadow: 0 24px 64px rgba(3,2,6,0.25); display: flex; flex-direction: column; }
   .giscus-panel-header { display: flex; align-items: center; justify-content: space-between; padding: 14px 18px 12px; border-bottom: 1px solid var(--border); flex-shrink: 0; }
-  .giscus-panel-title { font-size: 13px; font-weight: 500; color: var(--text); }
-  .giscus-panel-sub { font-size: 11px; color: var(--hint); margin-top: 2px; }
+  .giscus-panel-title { font-size: 14px; font-weight: 500; color: var(--text); }
+  .giscus-panel-sub { font-size: 12px; color: var(--hint); margin-top: 2px; }
   .giscus-panel-close { background: none; border: none; cursor: pointer; font-size: 20px; color: var(--hint); line-height: 1; padding: 2px 4px; transition: color 0.15s; flex-shrink: 0; }
   .giscus-panel-close:hover { color: var(--text); }
   .giscus-panel-body { padding: 12px 18px 16px; min-height: 120px; }
   .giscus-panel-body .giscus { margin: 0 !important; }
   .giscus-panel-body iframe { width: 100% !important; border: none !important; }
-  .panel-loading { text-align: center; padding: 2rem; color: var(--hint); font-size: 13px; }
+  .panel-loading { text-align: center; padding: 2rem; color: var(--hint); font-size: 14px; }
   .panel-spinner { width: 22px; height: 22px; border: 2px solid var(--border); border-top-color: var(--purple); border-radius: 50%; animation: spin 0.7s linear infinite; margin: 0 auto 10px; }
-  .empty { grid-column: 1/-1; text-align: center; padding: 3rem 1rem; color: var(--hint); font-size: 13px; }
-  .empty strong { display: block; font-size: 15px; color: var(--muted); margin-bottom: 4px; font-weight: 500; }
-  .site-footer { background: var(--black); padding: 2rem; text-align: center; font-size: 12px; color: var(--taupe); border-top: 1px solid rgba(255,255,252,0.06); font-weight: 300; }
+  .empty { grid-column: 1/-1; text-align: center; padding: 3rem 1rem; color: var(--hint); font-size: 14px; }
+  .empty strong { display: block; font-size: 16px; color: var(--muted); margin-bottom: 4px; font-weight: 500; }
+  .site-footer { background: var(--black); padding: 2rem; text-align: center; font-size: 13px; color: var(--taupe); border-top: 1px solid rgba(255,255,252,0.06); font-weight: 300; }
   .site-footer a { color: var(--yellow); }
   .site-footer a:hover { text-decoration: underline; }
   @media (max-width: 600px) {
@@ -141,7 +151,6 @@
   </div>
   <button class="disclaimer-bar-close" id="disclaimer-close" aria-label="Dismiss">×</button>
 </div>
-
 <header class="site-header" id="site-header">
   <div class="logo">Build on Canton</div>
   <div class="header-actions">
@@ -149,7 +158,6 @@
     <a class="header-btn filled" href="https://github.com/canton-network-devs/Canton-Developer-Hub/blob/main/Contributing.md" target="_blank" rel="noopener">Submit your tool</a>
   </div>
 </header>
-
 <section class="hero">
   <div class="hero-inner">
     <p class="hero-eyebrow">All Open-Source</p>
@@ -157,7 +165,6 @@
     <p>Tools, SDKs, APIs, and AI Infrastructure for Building on Canton Network. Official and community-built, all in one place.</p>
   </div>
 </section>
-
 <main class="main">
   <div class="controls" style="margin-top:1.5rem;">
     <div class="search-wrap">
@@ -171,6 +178,7 @@
       <button class="pill active" data-type="all">All</button>
       <button class="pill p-official" data-type="official">Official</button>
       <button class="pill p-partner" data-type="partner">Partner Tooling</button>
+      <button class="pill p-devfund" data-type="devfund">CF Dev Fund Tools</button>
     </div>
   </div>
   <div class="pills" id="cat-pills" style="margin-bottom:1.25rem;"></div>
@@ -193,14 +201,10 @@
       <button class="giscus-panel-close" id="panel-close" aria-label="Close">×</button>
     </div>
     <div class="giscus-panel-body" id="panel-body">
-      <div class="panel-loading">
-        <div class="panel-spinner"></div>
-        Loading reactions…
-      </div>
+      <div class="panel-loading"><div class="panel-spinner"></div>Loading reactions…</div>
     </div>
   </div>
 </div>
-
 <footer class="site-footer">
   Maintained by <a href="https://canton.foundation/" target="_blank">Canton Foundation</a>.
 </footer>
@@ -224,9 +228,22 @@ let REACTION_COUNTS = {};
   sync(); window.addEventListener('resize', sync);
   document.getElementById('disclaimer-close').addEventListener('click', () => { bar.style.display = 'none'; hdr.style.top = '0px'; });
 })();
-
 function slugify(n) {
   return 'tool-' + n.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
+function formatDate(dateStr) {
+  if (!dateStr) return null;
+  const d = new Date(dateStr);
+  if (isNaN(d)) return null;
+  return d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+}
+function isStale(dateStr) {
+  if (!dateStr) return false;
+  const d = new Date(dateStr);
+  if (isNaN(d)) return false;
+  const sixMonthsAgo = new Date();
+  sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6);
+  return d < sixMonthsAgo;
 }
 async function fetchAllReactionCounts() {
   try {
@@ -243,17 +260,16 @@ async function fetchAllReactionCounts() {
     Object.entries(REACTION_COUNTS).forEach(([slug, count]) => updateBadge(slug, count));
   } catch(e) {}
 }
-
 function updateBadge(slug, count) {
   const badge = document.querySelector(`.reaction-count[data-slug="${slug}"]`);
   if (!badge) return;
   badge.querySelector('.rc-num').textContent = count;
   if (count > 0) badge.classList.add('visible');
 }
+
 const overlay    = document.getElementById('giscus-overlay');
 const panelBody  = document.getElementById('panel-body');
 const panelTitle = document.getElementById('panel-title');
-
 function openPanel(toolName, slug) {
   if (currentSlug !== slug) {
     currentSlug = slug;
@@ -321,22 +337,20 @@ function buildCatPills() {
     render();
   });
 }
-
 function render() {
   const filtered = TOOLS.filter(t => {
-    const matchType = activeType === "all" || activeType === "popular" || t.type === activeType;
-    const matchCat  = activeCat  === "all" || t.category === activeCat;
+    const matchType = activeType === "all"
+      ? true
+      : activeType === "devfund"
+        ? t.dev_fund === true
+        : t.type === activeType;
+    const matchCat = activeCat === "all" || t.category === activeCat;
     const q = searchQ.toLowerCase();
     const matchQ = !q || [t.name, t.desc, t.maker, t.category].some(s => s.toLowerCase().includes(q));
     return matchType && matchCat && matchQ;
   });
-
-  if (activeType === "popular") {
-    filtered.sort((a, b) => (REACTION_COUNTS[slugify(b.name)] || 0) - (REACTION_COUNTS[slugify(a.name)] || 0));
-  }
   document.getElementById("count").textContent =
     filtered.length === TOOLS.length ? `${TOOLS.length} tools` : `${filtered.length} of ${TOOLS.length} tools`;
-
   const container = document.getElementById("main-content");
   if (!filtered.length) {
     container.innerHTML = `<div class="grid"><div class="empty"><strong>No tools found</strong>Try clearing a filter or search term.</div></div>`;
@@ -344,8 +358,11 @@ function render() {
   }
 
   container.innerHTML = `<div class="grid">${filtered.map(t => {
-    const slug  = slugify(t.name);
-    const count = REACTION_COUNTS[slug] || 0;
+    const slug    = slugify(t.name);
+    const count   = REACTION_COUNTS[slug] || 0;
+    const dateFmt = formatDate(t.last_updated);
+    const stale   = isStale(t.last_updated);
+    const devFund = t.dev_fund === true;
     return `
     <div class="card">
       <div class="card-top">
@@ -355,26 +372,33 @@ function render() {
         </div>
         <span class="badge ${t.type}">${t.type === "official" ? "Official" : "Partner tooling"}</span>
       </div>
-      <span class="cat-tag">${t.category}</span>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;">
+        <span class="cat-tag">${t.category}</span>
+        ${devFund ? `<span class="badge-devfund">Dev Fund</span>` : ''}
+      </div>
       <div class="card-desc">${t.desc}</div>
       ${t.links && t.links.length
         ? `<div class="card-links">${t.links.map(l =>
             `<a class="card-link" href="${l.url}" target="_blank" rel="noopener">${EXT}${l.label}</a>`
           ).join("")}</div>`
         : ""}
+      ${dateFmt ? `
+      <div class="card-meta">
+        <span class="last-updated${stale ? ' stale' : ''}">
+          Updated ${dateFmt}${stale ? ' · May be outdated' : ''}
+        </span>
+      </div>` : ''}
       <div class="card-footer">
         <button class="vote-btn" data-slug="${slug}" data-name="${t.name.replace(/"/g,'&quot;')}">
           <span class="thumb">👍</span> Helpful
         </button>
         <span class="reaction-count${count > 0 ? ' visible' : ''}" data-slug="${slug}">
-          <span class="rc-icon">👍</span>
           <span class="rc-num">${count}</span>
           <span>reactions</span>
         </span>
       </div>
     </div>`;
   }).join("")}</div>`;
-
   container.querySelectorAll('.vote-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       btn.classList.add('active');
@@ -399,7 +423,6 @@ async function init() {
     document.getElementById("count").textContent = "";
   }
 }
-
 document.getElementById("search").addEventListener("input", e => { searchQ = e.target.value; render(); });
 document.getElementById("type-pills").addEventListener("click", e => {
   const pill = e.target.closest("[data-type]");
@@ -409,7 +432,6 @@ document.getElementById("type-pills").addEventListener("click", e => {
   pill.classList.add("active");
   render();
 });
-
 init();
 </script>
 </body>
