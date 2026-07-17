@@ -781,5 +781,22 @@
     "maintained_by": "Dfns & LFDT Lockness",
     "dev_fund": false,
     "last_updated": "2026-07-16"
+  },
+  {
+    "name": "CC Space",
+    "maker": "ITRocket",
+    "type": "partner",
+    "category": "Data & Indexing",
+    "desc": "Canton Network Explorer with activity, analytics, indexed-data API, configurable alerts and validator monitoring – all in one place.",
+    "links": [
+      {
+        "label": "cc.itrocket.space",
+        "url": "https://cc.itrocket.space/"
+      }
+    ],
+    "daml_sdk_version": null,
+    "maintained_by": "ITRocket",
+    "dev_fund": false,
+    "last_updated": "2026-07-17"
   }
 ]
