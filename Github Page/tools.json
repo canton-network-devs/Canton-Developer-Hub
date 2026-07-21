@@ -513,6 +513,18 @@
     "last_updated": "2026-07-16"
   },
   {
+    "name": "Noves Data Studio",
+    "maker": "Noves",
+    "type": "partner",
+    "category": "Data & Indexing",
+    "desc": "Public explorer for Canton Network activity, including CC price, validators, earnings and rebates, party directories, and featured app compliance metrics. Provides network-level views without requiring users to run an indexer.",
+    "links": [
+      { "label": "Explorer", "url": "https://ccdata.noves.fi/" }
+    ],
+    "daml_sdk_version": null,
+    "maintained_by": "Noves"
+  },
+  {
     "name": "Canton Event Graph Toolkit",
     "maker": "Gyorgy Balazsi",
     "type": "partner",
