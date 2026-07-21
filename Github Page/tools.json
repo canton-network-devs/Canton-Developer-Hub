@@ -468,7 +468,9 @@
       { "label": "Swagger", "url": "https://api.canton.noves.fi/swagger/index.html" }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Noves"
+    "maintained_by": "Noves",
+    "dev_fund": false,
+    "last_updated": "2026-07-21"
   },
   {
     "name": "PQS: Participant Query Store",
@@ -498,7 +500,9 @@
       { "label": "Repo & Deployment Docs", "url": "https://github.com/Noves-Inc/canton-data-app" }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Noves"
+    "maintained_by": "Noves",
+    "dev_fund": false,
+    "last_updated": "2026-07-21"
   },
   {
     "name": "CCView Explorer & Indexing API",
@@ -548,24 +552,9 @@
       { "label": "Explorer", "url": "https://ccdata.noves.fi/" }
     ],
     "daml_sdk_version": null,
-    "maintained_by": "Noves"
-  },
-  {
-    "name": "Canton Event Graph Toolkit",
-    "maker": "Gyorgy Balazsi",
-    "type": "partner",
-    "category": "Data & Indexing",
-    "desc": "Rust tooling for the Canton Ledger API v2: stream ledger events, generate Rust types from DARs, and sync/visualize the Canton event graph (ACS + updates) in a Neo4j graph.",
-    "links": [
-      {
-        "label": "Repo",
-        "url": "https://github.com/gyorgybalazsi/canton-toolbox"
-      }
-    ],
-    "daml_sdk_version": "3.4.11",
-    "maintained_by": "Gyorgy Balazsi",
+    "maintained_by": "Noves",
     "dev_fund": false,
-    "last_updated": "2026-07-16"
+    "last_updated": "2026-07-21"
   },
   {
     "name": "Find Canton Wallets",
