@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Generate llms.txt from tools.json
-        run: python3 scripts/generate_llms_txt.py
+        run: python3 .github/scripts/generate_llms_txt.py
 
       - name: Commit and push to main
         run: |
