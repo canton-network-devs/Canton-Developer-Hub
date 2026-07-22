@@ -33,7 +33,7 @@ jobs:
 
       - name: Copy into pages branch root and push
         run: |
-          cp "main/Github Page/llms.txt" pages/llms.txt
+          cp "main/Github Page/llms.txt" page/llms.txt
           cd pages
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
