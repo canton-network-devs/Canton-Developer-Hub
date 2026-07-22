@@ -19,7 +19,7 @@ jobs:
           ref: main
           path: main
 
-      - name: Checkout pages (deploy target — the live site)
+      - name: Checkout page (deploy target — the live site)
         uses: actions/checkout@v4
         with:
           ref: page
@@ -30,11 +30,11 @@ jobs:
       - name: Generate llms.txt from tools.json
         working-directory: main
         run: python3 .github/scripts/generate_llms_txt.py
-
-      - name: Copy into pages branch root and push
+ 
+      - name: Copy into page branch root and push
         run: |
           cp "main/Github Page/llms.txt" page/llms.txt
-          cd pages
+          cd page
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add llms.txt
