@@ -22,8 +22,8 @@ jobs:
       - name: Checkout pages (deploy target — the live site)
         uses: actions/checkout@v4
         with:
-          ref: pages
-          path: pages
+          ref: page
+          path: page
           fetch-depth: 0
           token: ${{ secrets.LLMS_PUSH_TOKEN }}
 
@@ -39,4 +39,4 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add llms.txt
           git diff --cached --quiet || git commit -m "chore: regenerate llms.txt from tools.json [automated]"
-          git push origin pages
+          git push origin page
