@@ -14,6 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.LLMS_PUSH_TOKEN }}
 
       - name: Generate llms.txt from tools.json
         run: python3 .github/scripts/generate_llms_txt.py
