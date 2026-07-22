@@ -13,17 +13,30 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout main (source of tools.json + script)
+        uses: actions/checkout@v4
         with:
+          ref: main
+          path: main
+
+      - name: Checkout pages (deploy target — the live site)
+        uses: actions/checkout@v4
+        with:
+          ref: pages
+          path: pages
+          fetch-depth: 0
           token: ${{ secrets.LLMS_PUSH_TOKEN }}
 
       - name: Generate llms.txt from tools.json
+        working-directory: main
         run: python3 .github/scripts/generate_llms_txt.py
 
-      - name: Commit and push to main
+      - name: Copy into pages branch root and push
         run: |
+          cp "main/Github Page/llms.txt" pages/llms.txt
+          cd pages
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add "Github Page/llms.txt"
+          git add llms.txt
           git diff --cached --quiet || git commit -m "chore: regenerate llms.txt from tools.json [automated]"
-          git push
+          git push origin pages
