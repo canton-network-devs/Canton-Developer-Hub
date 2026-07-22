@@ -1,0 +1,80 @@
+# Canton Developer Hub
+
+> Canton Developer Hub (dev-hub.canton.foundation) is the community maintained catalog of ecosystem tooling for building on Canton Network. This is a plain-text index for AI assistants; the interactive version with filtering is at https://dev-hub.canton.foundation.
+
+## AI Tools
+
+- [AI Agentic Wallet](https://github.com/Denend/agent-wallet-canton): Enables AI agents to Create&Manage a Canton wallet and Request initial testnet funding via faucet amd continue using the same wallet for subsequent interactions — Maker: FTP. Type: partner. Last updated: 2026-07-16.
+- [CCPedia](https://ccpedia.xyz): AI-accessible knowledge base over the Canton ecosystem - CIPs, forum, GitHub, Dev Fund proposals, docs, blog, videos and more. Three AI endpoints: MCP server, REST API, llms.txt. Plus web UI for human research. — Maker: Unity Nodes. Type: partner. Last updated: 2026-07-16.
+- [Canton Foundation MCP](https://github.com/canton-network-devs/Build-on-Canton-MCP): MCP server that plugs accurate Canton docs directly into Claude and other AI tools. Prevents hallucinated or outdated API responses. Refreshes hourly from GitHub. — Maker: Canton Foundation. Type: partner. Last updated: 2026-07-16.
+- [Tenzro DAML Studio](https://www.tenzro.com/docs/canton): AI-powered browser IDE for generating and editing Daml smart contracts. Includes an agentic layer for DevNet interactions. Review all generated code before deploying. — Maker: Tenzro. Type: partner. Last updated: 2026-07-16.
+- [x402 MCP](https://www.ftptech.xyz/mcp): Enables AI agents to Consume and pay for apps/services that integrated x402, Create wallet and interact with it and Request one-time faucet funding — Maker: FTP. Type: partner. Last updated: 2026-07-16.
+
+## APIs
+
+- [HydraX Tokenisation REST APIs](https://metra.sg/pricing/): REST APIs for tokenisation utilities on Canton i.e asset issuance, transfer, and custody workflows. Targeted at institutions building tokenised asset infrastructure. Paid service. — Maker: HydraX. Type: partner. Last updated: 2026-07-16.
+- [JSON Ledger API](https://docs.canton.network/sdks-tools/api-reference/json-api): HTTP/JSON interface to the Canton Ledger API. Submit commands, query active contracts, and stream events. All over standard HTTP. Easiest integration path without gRPC. — Maker: Canton Network. Type: official. Last updated: 2026-07-16.
+- [Noves Canton Data API](https://docs.noves.fi/reference/welcome-canton-apis): Hosted HTTP API for publicly observable Canton data, including update history, balances, prices, transfers, rewards, identity data, ANS records, contract details, and real-time streams. Intended for wallets, analytics dashboards, financial reporting, and event-driven integrations without operating a node or indexer. — Maker: Noves. Type: partner. Last updated: 2026-07-21.
+- [Scan API](https://docs.canton.network/sdks-tools/api-reference/splice-scan-api): Read-only API for network-level Canton data: mining rounds, Canton Coin supply, featured apps, and DSO governance state. Public read API for the Global Synchronizer. — Maker: Canton Network. Type: official. Last updated: 2026-07-16.
+- [Validator API](https://docs.canton.network/sdks-tools/api-reference/splice-validator-api): REST APIs exposed by each validator node for wallet ops, traffic management, party onboarding, and Canton Coin transfers. What the wallet UIs talk to under the hood. — Maker: Canton Network. Type: official. Last updated: 2026-07-16.
+- [Wallet Gateway (dApp SDK)](https://github.com/canton-network/wallet-gateway/tree/main): Open-source SDK for building dApps that integrate with Canton wallets. Includes the dApp API spec (OpenRPC) and a dApp SDK for connecting your frontend to Canton wallet functionality. — Maker: Canton Network. Type: partner. Last updated: 2026-07-16.
+- [gRPC Ledger API](https://docs.canton.network/sdks-tools/api-reference/ledger-api-services): Full Ledger API over gRPC/Protobuf. Higher performance, required for production backends and streaming event subscriptions. Use dpm codegen for typed client bindings. — Maker: Canton Network. Type: official. Last updated: 2026-07-16.
+- [x402 Facilitator for Canton](https://github.com/Denend/x402-canton-facilitator): The x402 facilitator service for Canton. Exposes /verify, /settle and /supported for the 'exact' scheme, relays payer-signed TransferFactory_Transfer transactions, and sponsors the Global Synchronizer traffic fee, so payments settle in a single gasless transaction. Live at facilitator.ftptech.xyz. — Maker: FTP (Canton Foundation Dev Fund). Type: partner. Last updated: 2026-07-16.
+- [x402 Merchant Middleware for Canton](https://github.com/Denend/x402-canton-merchant): x402 merchant middleware for Canton: Express and Next.js. Gate any route behind a Canton Coin charge; the middleware issues the 402 PaymentRequirements and delegates verify/settle to a facilitator. Publishes as @ftptech/x402-canton-express and @ftptech/x402-canton-next. — Maker: FTP (Canton Foundation Dev Fund). Type: partner. Last updated: 2026-07-16.
+
+## Data & Indexing
+
+- [CC Space](https://cc.itrocket.space/): Canton Network Explorer with activity, analytics, indexed-data API, configurable alerts and validator monitoring – all in one place. — Maker: ITRocket. Type: partner. Last updated: 2026-07-17.
+- [CCView Explorer & Indexing API](https://ccview.io): Canton block explorer with a public indexing API. Browse transactions, ANS lookups, and transaction history. Pull Canton on-chain data into your own application. — Maker: PixelPlex. Type: partner. Last updated: 2026-07-16.
+- [Lighthouse Explorer](https://lighthouse.cantonloop.com): Community-built Canton Network explorer, an alternative view into network activity and transactions. — Maker: CantonLoop. Type: partner. Last updated: 2026-07-16.
+- [Noves Data App](https://noves.fi/data-app): Self-hosted Canton data indexer and dashboard that connects to a participant's Ledger API, indexes activity into Postgres, and exposes structured data through UI views, exports, alerts, streams, and downstream APIs. Deploys with Docker Compose or Kubernetes and preserves party-level access controls through OIDC/JWT passthrough authorization. — Maker: Noves. Type: partner. Last updated: 2026-07-21.
+- [Noves Data Studio](https://ccdata.noves.fi/): Public explorer for Canton Network activity, including CC price, validators, earnings and rebates, party directories, and featured app compliance metrics. Provides network-level views without requiring users to run an indexer. — Maker: Noves. Type: partner. Last updated: 2026-07-21.
+- [PQS: Participant Query Store](https://docs.canton.network/sdks-tools/development-tools/pqs/): PostgreSQL-backed query store mirroring your participant's ledger state. Run SQL against contract data. Essential for complex queries, aggregations, reporting, and dashboards. — Maker: Canton Network. Type: official. Last updated: 2026-07-16.
+
+## Getting Started
+
+- [Canton 101](https://canton-101.vercel.app): A community-built overview covering Canton architecture, APIs, SDKs, and core concepts. Good first stop before diving into the official docs. — Maker: Community. Type: partner. Last updated: 2026-07-16.
+- [Canton Hub](https://unityhub.dev/canton): Canton ecosystem resource hub in four sections - Education, Developers, Validator, Community. Covering docs, guides, tools, articles, videos, recorded recaps and more. — Maker: Unity Nodes. Type: partner. Last updated: 2026-07-16.
+- [Canton Network API Overview](https://docs.canton.network/sdks-tools/): TL;DR overview of all Canton APIs: Ledger API, JSON API, Admin API, Scan API, Validator API, Wallet API. Start here to understand which API you need for what. — Maker: Canton Network. Type: official. Last updated: 2026-07-16.
+- [Official Canton Documentation](https://docs.canton.network): The unified new technical docs for Canton Network. — Maker: Canton Network. Type: official. Last updated: 2026-07-16.
+
+## Identity
+
+- [Five North ID SDK](https://docs.fivenorth.io/id-sdk/introduction/): Identity verification SDK for Canton applications. Integrates tamper-proof KYC/identity checks, relevant for regulated industries where user identity verification is a requirement. — Maker: 5North. Type: partner. Last updated: 2026-07-16.
+
+## Local Dev
+
+- [Canton LocalNet (cn-quickstart)](https://github.com/digital-asset/cn-quickstart): Full Canton Network in Docker Compose with 3 validators, synchronizer, Canton Coin wallets, PQS, Keycloak, and Scan UI. All on your laptop. No DevNet whitelisting needed. — Maker: Canton Network. Type: official. Last updated: 2026-07-16.
+- [Canton Sandbox (via DPM)](https://docs.digitalasset.com/build/3.4/dpm/): Lightweight single-node Canton environment for fast contract iteration. No Docker required. Starts instantly. Use it before moving to the full LocalNet stack. — Maker: Canton Network. Type: official. Last updated: 2026-07-16.
+
+## SDKs
+
+- [C7 Ledger & C7 React](https://github.com/C7-Digital/c7_ledger): Drop-in replacements for @daml/ledger and @daml/react with active maintenance. Same API, works with JS/TS frontends and Node.js backends on Canton. — Maker: C7 Digital. Type: partner. Last updated: 2026-07-16.
+- [CGGMP24](https://github.com/LFDT-Lockness/cggmp21): Rust implementation of the CGGMP24 threshold ECDSA protocol, the signature scheme used by Canton Network. Supports distributed key generation and threshold signing with presignatures for t-of-n keys for wallet infrastructure and validator key custody. — Maker: Dfns & LFDT Lockness. Type: partner. Last updated: 2026-07-16.
+- [Daml SDK](https://docs.canton.network/sdks-tools/sdks/daml-sdk): The core development kit for building on Canton. Bundles the Daml compiler, Daml Script runner, Canton Sandbox, and supporting tools. Installed and managed through dpm. — Maker: Canton Network. Type: official. Last updated: 2026-07-16.
+- [Givre](https://github.com/LFDT-Lockness/givre): Rust implementation of threshold Schnorr / EdDSA signing, the signature scheme used by Canton Network. Supports distributed key generation and threshold signing with presignatures for t-of-n keys for wallet infrastructure and validator key custody. — Maker: Dfns & LFDT Lockness. Type: partner. Last updated: 2026-07-16.
+- [Go SDK for Daml Ledger](https://github.com/noders-team/go-daml): Comprehensive Go SDK for Canton/Daml ledgers including Ledger API client, service abstractions, type-safe code generator from .dar files, and a separate Splice Amulet wallet SDK. — Maker: Noders. Type: partner. Last updated: 2026-07-16.
+- [Wallet SDK](https://docs.canton.network/sdks-tools/sdks/wallet-sdk): TypeScript library for programmatic wallet operations on Canton i.e party management, token transfers, UTXO queries, transaction signing, and third-party dApp integration. — Maker: Canton Network. Type: official. Last updated: 2026-07-16.
+- [x402 Agent SDK for Canton](https://github.com/Denend/x402-canton-agent): x402 client/agent SDK for Canton with a self-custody wallet. AI agents create and manage a Canton wallet (with one-time faucet funding), then auto-pay 402 challenges by signing a TransferFactory_Transfer and retrying, no API keys or accounts. Publishes as @ftptech/x402-canton-client with the canton-agent-wallet CLI. — Maker: FTP. Type: partner. Last updated: 2026-07-16.
+- [x402 Core for Canton](https://github.com/Denend/x402-canton-core): Shared wire types and the 'exact' payment scheme foundation for x402 on Canton, used by the agent SDK, merchant middleware and facilitator. Publishes as @ftptech/x402-canton-core. — Maker: FTP (Canton Foundation Dev Fund). Type: partner. Last updated: 2026-07-16.
+
+## Smart Contract Dev
+
+- [Canton Security 101](https://scauditstudio.com/tools/canton-security101): A Canton-focused cybersecurity guide covering DAML development, web applications, and operational security. Learn about secure dapp development. — Maker: SC Audit Studio. Type: partner. Last updated: 2026-07-16.
+- [Canton Token Template](https://github.com/OpenZeppelin/canton-token-template): A Daml template for building CIP-056 compliant token registries on Canton Network. Clone it, run the setup script, and build your token contract on top. — Maker: OpenZeppelin. Type: partner. Last updated: 2026-07-16.
+- [Catalyx Package Manager](https://apps.catalyx.solutions/marketplace): A community package marketplace for Canton/Daml components. Discover, share, and consume reusable Daml packages across projects. — Maker: IntellectEU. Type: partner. Last updated: 2026-07-16.
+- [DPM: Daml Package Manager](https://github.com/digital-asset/dpm): The primary CLI for Canton/Daml development. Scaffolds projects, builds DARs, runs tests, generates TypeScript and Java bindings, manages SDK versions, and runs a local sandbox. — Maker: Canton Network. Type: official. Last updated: 2026-07-16.
+- [Daml Studio (VS Code Extension)](https://marketplace.visualstudio.com/items?itemName=DigitalAssetHoldingsLLC.daml): VS Code extension for Daml syntax highlighting, type checking, inline diagnostics, and code navigation. Installed automatically with DPM. Requires VS Code 1.87+. — Maker: Canton Network. Type: official. Last updated: 2026-07-16.
+- [Seaport](https://devnet.seaport.to/): Cloud platform for coding, building, deploying, and managing Daml smart contracts, all without local setup. A hosted alternative to the LocalNet toolchain. — Maker: 5North. Type: partner. Last updated: 2026-07-16.
+- [Tokenization Explorer](https://tokenization.catalyst.intellecteu.com/): Visual explorer for Canton tokenization workflows useful for prototyping how tokenised assets flow across Canton participants without building everything from scratch. — Maker: IntellectEU / Catalyx. Type: partner. Last updated: 2026-07-16.
+
+## Wallet Integration
+
+- [Console dApp SDK](https://www.npmjs.com/package/@console-wallet/dapp-sdk): npm package for integrating Console Wallet into your Canton dApp. Lets your frontend connect to users' Console Wallet for signing and submitting transactions. — Maker: PixelPlex. Type: partner. Last updated: 2026-07-16.
+- [Find Canton Wallets](https://www.cantonecosystem.com/): Growing ecosystem of wallets: retail, enterprise, self-custody, and custodial for supporting Canton Network assets and Canton Coin. — Maker: Canton Ecosystem. Type: partner. Last updated: 2026-07-16.
+- [Loop SDK](https://docs.fivenorth.io/): SDK for integrating the Loop Wallet into your Canton dApp frontend. Connects users' Loop Wallet for Canton Coin and asset management. — Maker: 5North. Type: partner. Last updated: 2026-07-16.
+- [WalletConnect](https://docs.walletconnect.network/wallet-sdk/chain-support/canton): WalletConnect integration for Canton Network, connect your dApp to any WalletConnect-compatible wallet that supports Canton. — Maker: WalletConnect. Type: partner. Last updated: 2026-07-16.
+
+---
+Generated automatically from tools.json. Do not edit by hand.
+Generated: 2026-07-22
