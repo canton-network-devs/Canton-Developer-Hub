@@ -1,0 +1,27 @@
+name: Generate llms.txt for Mintlify AI indexing
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "Github Page/tools.json"
+  workflow_dispatch: {}
+  schedule:
+    - cron: "0 6 * * *"  # daily safety-net run in case a push is missed
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate llms.txt from tools.json
+        run: python3 scripts/generate_llms_txt.py
+
+      - name: Commit and push to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "Github Page/llms.txt"
+          git diff --cached --quiet || git commit -m "chore: regenerate llms.txt from tools.json [automated]"
+          git push
