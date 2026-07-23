@@ -89,6 +89,23 @@
     "last_updated": "2026-07-16"
   },
   {
+    "name": "Claude Code Daml Skill",
+    "maker": "Canton Foundation",
+    "type": "official",
+    "category": "AI Tools",
+    "desc": "A Claude Skill that gives any Conversation Updated/Correct level knowledge of the Daml Smart Contracts on Canton Network.",
+    "links": [
+      {
+        "label": "Skill Docs",
+        "url": "https://github.com/canton-network-devs/CF-Daml-Skill"
+      }
+    ],
+    "daml_sdk_version": null,
+    "maintained_by": "Canton Foundation",
+    "dev_fund": false,
+    "last_updated": "2026-07-23"
+  },  
+  {
     "name": "Daml Studio (VS Code Extension)",
     "maker": "Canton Network",
     "type": "official",
@@ -176,7 +193,7 @@
   {
     "name": "Canton Foundation MCP",
     "maker": "Canton Foundation",
-    "type": "partner",
+    "type": "official",
     "category": "AI Tools",
     "desc": "MCP server that plugs accurate Canton docs directly into Claude and other AI tools. Prevents hallucinated or outdated API responses. Refreshes hourly from GitHub.",
     "links": [
