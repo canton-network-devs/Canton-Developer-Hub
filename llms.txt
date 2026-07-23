@@ -77,4 +77,4 @@
 
 ---
 Generated automatically from tools.json. Do not edit by hand.
-Generated: 2026-07-22
+Generated: 2026-07-23
