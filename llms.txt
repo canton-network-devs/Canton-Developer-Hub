@@ -78,4 +78,4 @@
 
 ---
 Generated automatically from tools.json. Do not edit by hand.
-Generated: 2026-07-23
+Generated: 2026-07-24
