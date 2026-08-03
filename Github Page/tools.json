@@ -208,6 +208,27 @@
     "last_updated": "2026-07-16"
   },
   {
+    "name": "Noves Canton MCP",
+    "maker": "Noves",
+    "type": "partner",
+    "category": "AI Tools",
+    "desc": "Read-only MCP server that lets AI agents query the Noves Canton API for balances, rewards, classified transactions, transfer activity, CC prices, identity data, and the network directory. Runs locally through npx and requires a Noves API key.",
+    "links": [
+      {
+        "label": "npm",
+        "url": "https://www.npmjs.com/package/@noves/canton-mcp"
+      },
+      {
+        "label": "Repo",
+        "url": "https://github.com/Noves-Inc/canton-mcp"
+      }
+    ],
+    "daml_sdk_version": null,
+    "maintained_by": "Noves",
+    "dev_fund": false,
+    "last_updated": "2026-06-05"
+  },
+  {
     "name": "Tenzro DAML Studio",
     "maker": "Tenzro",
     "type": "partner",
