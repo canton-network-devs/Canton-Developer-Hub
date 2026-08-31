@@ -739,6 +739,31 @@
     "last_updated": "2026-07-16"
   },
   {
+    "name": "PartyLayer",
+    "maker": "Cayvox Labs",
+    "type": "partner",
+    "category": "Wallet Integration",
+    "desc": "CIP-0103 wallet connection layer for Canton dApps, with React, Vue and React Native packages, hooks for the CIP-0056 token standard, and a signed wallet registry. Any CIP-0103 wallet is discovered at runtime, so no wallet-specific code ships in the dApp.",
+    "links": [
+      {
+        "label": "Docs",
+        "url": "https://partylayer.xyz/docs/introduction"
+      },
+      {
+        "label": "Repo",
+        "url": "https://github.com/PartyLayer/PartyLayer"
+      },
+      {
+        "label": "npm",
+        "url": "https://www.npmjs.com/org/partylayer"
+      }
+    ],
+    "daml_sdk_version": null,
+    "maintained_by": "Cayvox Labs",
+    "dev_fund": true,
+    "last_updated": "2026-08-19"
+  },
+  {
     "name": "Five North ID SDK",
     "maker": "5North",
     "type": "partner",
