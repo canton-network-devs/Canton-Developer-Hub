@@ -981,5 +981,34 @@
     "maintained_by": "ITRocket",
     "dev_fund": false,
     "last_updated": "2026-07-17"
+  },
+  {
+    "name": "KYA Rails",
+    "maker": "Rume Dominic",
+    "type": "partner",
+    "category": "AI Tools",
+    "desc": "Spending mandate for an AI agent enforced as assertMsg fences in a Daml choice body (cap, per-period limit, allow-list, expiry, revoke), with every attempt sealed into a hash-chained receipt including the ones the ledger refused. The chain verifies in a browser with no wallet or install, and its head is anchored on-ledger so a forged chain fails the check.",
+    "links": [
+      {
+        "label": "Repo",
+        "url": "https://github.com/dominicrume/cantor8_kya_rails"
+      },
+      {
+        "label": "Verifier",
+        "url": "https://dominicrume.github.io/cantor8_kya_rails/"
+      },
+      {
+        "label": "Format spec",
+        "url": "https://github.com/dominicrume/cantor8_kya_rails/blob/main/SPEC.md"
+      },
+      {
+        "label": "MCP server",
+        "url": "https://github.com/dominicrume/cantor8_kya_rails/blob/main/step-4-mcp/kya_mcp.py"
+      }
+    ],
+    "daml_sdk_version": "3.4.10",
+    "maintained_by": "Rume Dominic (O'Rume Dominic Uririe)",
+    "dev_fund": false,
+    "last_updated": "2026-09-06"
   }
 ]
