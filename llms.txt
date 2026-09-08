@@ -8,6 +8,7 @@
 - [CCPedia](https://ccpedia.xyz): AI-accessible knowledge base over the Canton - CIPs, forum, GitHub, Dev Fund proposals, docs, blog, videos and more. Three AI endpoints: MCP server, REST API, llms.txt. Plus web UI for human research. — Maker: Unity Nodes. Type: partner. Last updated: 2026-07-16.
 - [Canton Foundation MCP](https://github.com/canton-network-devs/Build-on-Canton-MCP): MCP server that plugs accurate Canton docs directly into Claude and other AI tools. Prevents hallucinated or outdated API responses. Refreshes hourly from GitHub. — Maker: Canton Foundation. Type: official. Last updated: 2026-07-16.
 - [Claude Code Daml Skill](https://github.com/canton-network-devs/CF-Daml-Skill): A Claude Skill that gives any Conversation Updated/Correct level knowledge of the Daml Smart Contracts on Canton Network. — Maker: Canton Foundation. Type: official. Last updated: 2026-07-23.
+- [KYA Rails](https://github.com/dominicrume/cantor8_kya_rails): Spending mandate for an AI agent enforced as assertMsg fences in a Daml choice body (cap, per-period limit, allow-list, expiry, revoke), with every attempt sealed into a hash-chained receipt including the ones the ledger refused. The chain verifies in a browser with no wallet or install, and its head is anchored on-ledger so a forged chain fails the check. — Maker: Rume Dominic. Type: partner. Last updated: 2026-09-06.
 - [Noves Canton MCP](https://www.npmjs.com/package/@noves/canton-mcp): Read-only MCP server that lets AI agents query the Noves Canton API for balances, rewards, classified transactions, transfer activity, CC prices, identity data, and the network directory. Runs locally through npx and requires a Noves API key. — Maker: Noves. Type: partner. Last updated: 2026-06-05.
 - [Tenzro DAML Studio](https://www.tenzro.com/docs/canton): AI-powered browser IDE for generating and editing Daml smart contracts. Includes an agentic layer for DevNet interactions. Review all generated code before deploying. — Maker: Tenzro. Type: partner. Last updated: 2026-07-16.
 - [x402 MCP](https://www.ftptech.xyz/mcp): Enables AI agents to Consume and pay for apps/services that integrated x402, Create wallet and interact with it and Request one-time faucet funding — Maker: FTP. Type: partner. Last updated: 2026-07-16.
@@ -85,4 +86,4 @@
 
 ---
 Generated automatically from tools.json. Do not edit by hand.
-Generated: 2026-09-01
+Generated: 2026-09-08
