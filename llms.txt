@@ -77,6 +77,7 @@
 - [daml-lint](https://github.com/OpenZeppelin/daml-lint): Static analysis scanner for Daml smart contracts, similar to Slither for Solidity. Detects security anti-patterns such as unguarded division, missing ensure clauses, archive-before-execute, and CIP-0104 reward-attribution loss, with SARIF, JSON, and markdown output. — Maker: OpenZeppelin (Canton Foundation Dev Fund). Type: partner. Last updated: 2026-08-11.
 - [daml-props](https://github.com/OpenZeppelin/daml-props): Property-based testing for Daml contracts. Generates randomized and state-machine test cases in Daml Script to check invariants such as conservation, authority, expiry, and settlement accounting, beyond hand-written examples. — Maker: OpenZeppelin (Canton Foundation Dev Fund). Type: partner. Last updated: 2026-06-07.
 - [daml-verify](https://github.com/OpenZeppelin/daml-verify): Lightweight formal verification for Daml contracts using the Z3 SMT solver. Proves narrow invariants for all possible inputs, with 9 shipped properties across conservation, division safety, and temporal ordering. — Maker: OpenZeppelin (Canton Foundation Dev Fund). Type: partner. Last updated: 2026-06-07.
+- [dpm trace](https://github.com/walnuthq/dpm-trace): DPM plugin for visualizing successful and prepared Canton transactions, and understanding why some submissions failed. — Maker: Walnut (Canton Foundation Dev Fund). Type: partner. Last updated: 2026-09-03.
 
 ## Wallet Integration
 
@@ -86,4 +87,4 @@
 
 ---
 Generated automatically from tools.json. Do not edit by hand.
-Generated: 2026-09-08
+Generated: 2026-09-09
