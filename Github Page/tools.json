@@ -1014,5 +1014,19 @@
     "maintained_by": "Rume Dominic (O'Rume Dominic Uririe)",
     "dev_fund": false,
     "last_updated": "2026-09-06"
+  },
+  {
+    "name": "dpm trace",
+    "maker": "Walnut",
+    "type": "partner",
+    "category": "Smart Contract Dev",
+    "desc": "DPM plugin for visualizing successful and prepared Canton transactions, and understanding why some submissions failed.",
+    "links": [
+      { "label": "Repo", "url": "https://github.com/walnuthq/dpm-trace" }
+    ],
+    "daml_sdk_version": "3.4.11",
+    "maintained_by": "Walnut",
+    "dev_fund": true,
+    "last_updated": "2026-09-03"
   }
 ]
