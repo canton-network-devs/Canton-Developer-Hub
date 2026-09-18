@@ -84,6 +84,9 @@ def generate_html(tools, by_category):
   .badge-devfund { display: inline-block; font-size: 11.5px; font-weight: 600; padding: 2px 9px; border-radius: 100px; background: rgba(76,175,80,0.12); color: #2e7d32; border: 1px solid rgba(76,175,80,0.35); }
   .card-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
   .card-meta { font-size: 11.5px; color: #313130; }
+  .card-links { display: flex; flex-wrap: wrap; gap: 6px; }
+  .card-links a { font-size: 11.5px; font-weight: 600; padding: 2px 9px; border-radius: 100px; border: 1px solid var(--border); color: var(--muted); text-decoration: none; }
+  .card-links a:hover { border-color: var(--hint); color: var(--black); }
   .site-footer { background: var(--black); padding: 1.75rem; text-align: center; font-size: 13px; color: var(--taupe); font-weight: 300; }
   .site-footer a { color: var(--yellow); }
 </style>"""
@@ -120,7 +123,18 @@ def generate_html(tools, by_category):
             dev_fund_badge = '<span class="badge-devfund">Dev Fund</span>' if t.get("dev_fund") else ""
             ttype = t.get("type", "partner")
             badge_label = "Official" if ttype == "official" else "Partner tooling"
-            link = html.escape(t["links"][0]["url"]) if t.get("links") else "#"
+            links = t.get("links") or []
+            link = html.escape(links[0]["url"]) if links else "#"
+            # The name already carries the first link. The rest were being
+            # dropped: 19 of the entries in tools.json declare more than one,
+            # and a tool whose demo, package or spec lives behind link two was
+            # listed with no way to reach it.
+            extra = "".join(
+                f'<a href="{html.escape(l["url"])}" target="_blank" rel="noopener">'
+                f'{html.escape(l.get("label") or "Link")}</a>'
+                for l in links[1:] if l.get("url")
+            )
+            extra_html = f'<div class="card-links">{extra}</div>' if extra else ""
             updated = html.escape(t.get("last_updated", ""))
             parts.append(
                 '<div class="card">'
@@ -131,6 +145,7 @@ def generate_html(tools, by_category):
                 "</div>"
                 f"<div>{dev_fund_badge}</div>"
                 f'<div class="card-desc">{desc}</div>'
+                f"{extra_html}"
                 f'<div class="card-meta">Last updated: {updated}</div>'
                 "</div>"
             )
