@@ -984,7 +984,7 @@
   },
   {
     "name": "KYA Rails",
-    "maker": "Rume Dominic",
+    "maker": "O'Rume Dominic Uririe",
     "type": "partner",
     "category": "AI Tools",
     "desc": "Spending mandate for an AI agent enforced as assertMsg fences in a Daml choice body (cap, per-period limit, allow-list, expiry, revoke), with every attempt sealed into a hash-chained receipt including the ones the ledger refused. The chain verifies in a browser with no wallet or install, and its head is anchored on-ledger so a forged chain fails the check.",
