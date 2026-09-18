@@ -983,11 +983,11 @@
     "last_updated": "2026-07-17"
   },
   {
-    "name": "KYA Rails",
+    "name": "Know Your AgenticAI",
     "maker": "Rume Dominic",
     "type": "partner",
     "category": "AI Tools",
-    "desc": "Spending mandate for an AI agent enforced as assertMsg fences in a Daml choice body (cap, per-period limit, allow-list, expiry, revoke), with every attempt sealed into a hash-chained receipt including the ones the ledger refused. The chain verifies in a browser with no wallet or install, and its head is anchored on-ledger so a forged chain fails the check.",
+    "desc": "Records what an AI agent was REFUSED, not only what it did. Spending rules are enforced in a Daml choice body, every attempt including the blocked ones becomes a hash-chained receipt, and refusals can be handed to an auditor without the accepted payments behind them.",
     "links": [
       {
         "label": "Repo",
@@ -1013,7 +1013,7 @@
     "daml_sdk_version": "3.4.11",
     "maintained_by": "Rume Dominic (O'Rume Dominic Uririe)",
     "dev_fund": false,
-    "last_updated": "2026-09-06"
+    "last_updated": "2026-09-14"
   },
   {
     "name": "dpm trace",
