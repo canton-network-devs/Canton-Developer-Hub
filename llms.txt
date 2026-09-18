@@ -28,6 +28,7 @@
 
 - [CC Space](https://cc.itrocket.space/): Canton Network Explorer with activity, analytics, indexed-data API, configurable alerts and validator monitoring – all in one place. — Maker: ITRocket. Type: partner. Last updated: 2026-07-17.
 - [CCView Explorer & Indexing API](https://ccview.io): Canton block explorer with a public indexing API. Browse transactions, ANS lookups, and transaction history. Pull Canton on-chain data into your own application. — Maker: PixelPlex. Type: partner. Last updated: 2026-07-16.
+- [Canton Lens](https://github.com/dsrvlabs/canton-lens): Self-hosted explorer for a single Canton participant's ledger: it reads the JSON Ledger API v2 directly and keeps no index of its own, so every view is scoped to the selected Canton identity's permissions. Covers updates, contract payloads, parties, Splice token holdings, and installed Daml-LF packages, with a documented backend API and OpenAPI document. — Maker: DSRV. Type: partner. Last updated: 2026-09-14.
 - [Lighthouse Explorer](https://lighthouse.cantonloop.com): Community-built Canton Network explorer, an alternative view into network activity and transactions. — Maker: CantonLoop. Type: partner. Last updated: 2026-07-16.
 - [Noves Data App](https://noves.fi/data-app): Self-hosted Canton data indexer and dashboard that connects to a participant's Ledger API, indexes activity into Postgres, and exposes structured data through UI views, exports, alerts, streams, and downstream APIs. Deploys with Docker Compose or Kubernetes and preserves party-level access controls through OIDC/JWT passthrough authorization. — Maker: Noves. Type: partner. Last updated: 2026-07-21.
 - [Noves Data Studio](https://ccdata.noves.fi/): Public explorer for Canton Network activity, including CC price, validators, earnings and rebates, party directories, and featured app compliance metrics. Provides network-level views without requiring users to run an indexer. — Maker: Noves. Type: partner. Last updated: 2026-07-21.
@@ -87,4 +88,4 @@
 
 ---
 Generated automatically from tools.json. Do not edit by hand.
-Generated: 2026-09-09
+Generated: 2026-09-18
