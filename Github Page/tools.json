@@ -121,7 +121,7 @@
     "maintained_by": "Canton Foundation",
     "dev_fund": false,
     "last_updated": "2026-07-23"
-  },  
+  },
   {
     "name": "Daml Studio (VS Code Extension)",
     "maker": "Canton Network",
@@ -1085,5 +1085,21 @@
     "maintained_by": "DSRV",
     "dev_fund": false,
     "last_updated": "2026-09-14"
+  },
+  {
+    "name": "Canton dAppBooster",
+    "maker": "BootNode",
+    "type": "partner",
+    "category": "Local Dev",
+    "desc": "Canton dAppBooster is a local development stack for building applications on the Canton Network: a local Canton stack for development workflows, wagmi-style React hooks, reusable UI components for dApps, CIP-0103 wallet support, and a demo dApp.",
+    "links": [
+      { "label": "Repo", "url": "https://github.com/BootNodeDev/canton-dappbooster" },
+      { "label": "Docs", "url": "https://docs.dappbooster.cc" },
+      { "label": "dappbooster.cc", "url": "https://dappbooster.cc" }
+    ],
+    "daml_sdk_version": "3.4.11",
+    "maintained_by": "BootNode",
+    "dev_fund": true,
+    "last_updated": "2026-09-22"
   }
 ]
