@@ -51,6 +51,7 @@
 - [Canton DevKit](https://bitdynamics-ab.github.io/canton-devkit/): CLI and local Web UI for managing Canton LocalNet instances in your development environment: LocalNet lifecycle, DAR management, ledger inspection, Token Standard V2 flows, LocalNet snapshots. CI and developer friendly. Work both as a standalone CLI or as a DPM component. — Maker: BitDynamics (Canton Foundation Dev Fund). Type: partner. Last updated: 2026-08-08.
 - [Canton LocalNet (cn-quickstart)](https://github.com/digital-asset/cn-quickstart): Full Canton Network in Docker Compose with 3 validators, synchronizer, Canton Coin wallets, PQS, Keycloak, and Scan UI. All on your laptop. No DevNet whitelisting needed. — Maker: Canton Network. Type: official. Last updated: 2026-07-16.
 - [Canton Sandbox (via DPM)](https://docs.digitalasset.com/build/3.4/dpm/): Lightweight single-node Canton environment for fast contract iteration. No Docker required. Starts instantly. Use it before moving to the full LocalNet stack. — Maker: Canton Network. Type: official. Last updated: 2026-07-16.
+- [Canton dAppBooster](https://github.com/BootNodeDev/canton-dappbooster): Canton dAppBooster is a local development stack for building applications on the Canton Network: a local Canton stack for development workflows, wagmi-style React hooks, reusable UI components for dApps, CIP-0103 wallet support, and a demo dApp. — Maker: BootNode (Canton Foundation Dev Fund). Type: partner. Last updated: 2026-09-22.
 
 ## SDKs
 
@@ -90,4 +91,4 @@
 
 ---
 Generated automatically from tools.json. Do not edit by hand.
-Generated: 2026-09-21
+Generated: 2026-09-24
