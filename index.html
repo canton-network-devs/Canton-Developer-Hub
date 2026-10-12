@@ -69,7 +69,7 @@ button { cursor: pointer; font-family: inherit; }
 /* ── APP SHELL ── */
 .app-shell {
   display: grid;
-  grid-template-columns: 240px 1fr 300px;
+  grid-template-columns: 248px minmax(0,1fr);
   min-height: calc(100vh - 56px);
   width: 100%;
   max-width: 1440px;
@@ -90,66 +90,6 @@ button { cursor: pointer; font-family: inherit; }
   -ms-overflow-style: none;
 }
 .sidebar::-webkit-scrollbar { display: none; }
-
-/* ── RIGHT PANEL ── */
-.right-panel {
-  position: sticky;
-  top: 56px;
-  height: calc(100vh - 56px);
-  overflow-y: auto;
-  padding: 1.25rem 1.5rem 1.5rem 1.25rem;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-.right-panel::-webkit-scrollbar { display: none; }
-.right-panel-label {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 9px; font-weight: 500;
-  letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--hint); margin-bottom: 8px;
-  display: flex; align-items: center; gap: 6px;
-}
-.right-panel-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-.right-search-wrap { position: relative; margin-bottom: 8px; }
-.right-search-icon { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 13px; height: 13px; opacity: 0.35; pointer-events: none; }
-#right-search { width: 100%; height: 32px; padding: 0 10px 0 30px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); font-family: inherit; font-size: 12px; color: var(--text); outline: none; transition: border-color 0.15s; }
-#right-search:focus { border-color: var(--purple); }
-#right-search::placeholder { color: var(--hint); }
-.right-type-pills { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 8px; }
-.right-pill { height: 26px; padding: 0 10px; border-radius: 100px; border: 1.5px solid var(--border); background: var(--bg); color: var(--muted); font-family: inherit; font-size: 11px; font-weight: 500; white-space: nowrap; transition: all 0.13s; }
-.right-pill:hover { border-color: var(--border-md); color: var(--text); }
-.right-pill.active { background: var(--black); color: var(--lilac); border-color: var(--black); font-weight: 600; }
-.right-pill.p-official.active { color: var(--purple); }
-.right-pill.p-partner.active { background: transparent; color: var(--purple); border-color: var(--purple); }
-.right-pill.p-devfund.active { background: #0a1a0a; color: #7dde7d; border-color: #4caf50; }
-.right-cat-pills { display: flex; flex-wrap: wrap; gap: 3px; margin-bottom: 10px; }
-.right-cat-pill { height: 22px; padding: 0 8px; border-radius: 100px; border: 1px solid var(--border); background: var(--bg); color: var(--muted); font-family: inherit; font-size: 10px; font-weight: 500; white-space: nowrap; transition: all 0.13s; }
-.right-cat-pill:hover { border-color: var(--border-md); color: var(--text); }
-.right-cat-pill.active { background: var(--black); color: var(--lilac); border-color: var(--black); }
-.right-tool-count { font-size: 10px; color: var(--hint); margin-bottom: 8px; }
-.right-tool-list { display: flex; flex-direction: column; gap: 5px; flex: 1; }
-.right-tool-item {
-  padding: 9px 10px;
-  border: 1px solid var(--glass-border);
-  border-radius: 8px;
-  background: var(--glass-bg);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  cursor: pointer;
-  transition: border-color 0.13s, box-shadow 0.13s;
-  display: flex; align-items: flex-start; justify-content: space-between; gap: 6px;
-}
-.right-tool-item:hover { border-color: rgba(3,2,6,0.2); box-shadow: 0 2px 8px rgba(3,2,6,0.06); }
-.right-tool-item.highlighted { border-color: var(--purple); box-shadow: 0 0 0 2px rgba(135,92,255,0.12); }
-.right-tool-info { flex: 1; min-width: 0; }
-.right-tool-name { font-size: 12px; font-weight: 500; color: var(--text); line-height: 1.3; margin-bottom: 2px; }
-.right-tool-cat { font-size: 10px; color: var(--hint); }
-.right-tool-badge { font-size: 9px; font-weight: 600; padding: 2px 6px; border-radius: 100px; white-space: nowrap; flex-shrink: 0; }
-.right-tool-badge.official { background: var(--yellow); color: var(--black); }
-.right-tool-badge.partner { background: rgba(213,165,227,0.2); color: #4a2060; }
 
 .sidebar-label {
   font-family: 'IBM Plex Mono', monospace;
@@ -185,12 +125,6 @@ button { cursor: pointer; font-family: inherit; }
 .cip-meta { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
 .cip-date { font-size: 10px; color: var(--hint); }
 .cip-badge { font-size: 8.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 6px; border-radius: 100px; background: rgba(243,255,151,0.2); color: #5a5a00; border: 1px solid rgba(243,255,151,0.5); white-space: nowrap; }
-
-/* CIP Discuss cards — purple accent */
-.discuss-card { border-left: 2px solid rgba(135,92,255,0.3); }
-.discuss-card:hover { border-left-color: var(--purple); box-shadow: 0 2px 12px rgba(135,92,255,0.08); }
-.discuss-title { font-size: 12px; font-weight: 500; color: var(--text); line-height: 1.35; margin-bottom: 4px; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.discuss-meta { font-size: 10px; color: var(--hint); }
 
 /* Dev Fund cards — green accent */
 .devfund-card { border-left: 2px solid rgba(76,175,80,0.3); padding: 10px 12px; border-radius: 10px; background: var(--glass-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(76,175,80,0.15); border-left: 2px solid rgba(76,175,80,0.4); margin-bottom: 6px; text-decoration: none; color: inherit; display: block; transition: border-color 0.15s, box-shadow 0.15s; }
@@ -233,11 +167,16 @@ button { cursor: pointer; font-family: inherit; }
   min-width: 0;
   display: flex;
   flex-direction: column;
-  border-right: 1px solid var(--border);
 }
 
 /* ── AI VIEW ── */
-.ai-view { padding: 2rem 0 0; }
+.ai-view {
+  /* AI owns the first screen, but leaves ~120px so the tools sheet always peeks above the fold */
+  min-height: calc(100vh - var(--stick-top, 56px) - 120px);
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 2.5rem 0 2rem;
+  max-width: 880px; width: 100%; margin: 0 auto;
+}
 
 .ai-hero {
   text-align: center;
@@ -375,6 +314,45 @@ button { cursor: pointer; font-family: inherit; }
 .spinner { width: 26px; height: 26px; border: 2px solid var(--border); border-top-color: var(--purple); border-radius: 50%; animation: spin 0.7s linear infinite; margin: 0 auto 1rem; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
+/* ── TOOL CARDS ── */
+.card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 14px; padding: 1.25rem;
+  display: flex; flex-direction: column; gap: 8px;
+  transition: border-color 0.18s, box-shadow 0.16s;
+  position: relative;
+}
+.card:hover { border-color: rgba(3,2,6,0.18); box-shadow: 0 4px 20px rgba(2,2,5,0.08); }
+.card.selected { border-color: var(--purple); box-shadow: 0 0 0 2px rgba(135,92,255,0.12); }
+.card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+.card-name { font-size: 14px; font-weight: 500; color: var(--text); line-height: 1.3; letter-spacing: -0.01em; }
+.card-maker { font-size: 11px; color: var(--hint); margin-top: 2px; font-weight: 500; }
+.badge { font-size: 11px; font-weight: 600; padding: 3px 9px; border-radius: 100px; white-space: nowrap; flex-shrink: 0; letter-spacing: 0.02em; }
+.badge.official { background: var(--yellow); color: var(--black); }
+.badge.partner { background: rgba(213,165,227,0.2); color: #4a2060; }
+.cat-tag { display: inline-block; width: fit-content; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 100px; background: var(--surface); color: var(--muted); border: 1px solid rgba(3,2,6,0.15); }
+.badge-devfund { display: inline-flex; align-items: center; font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 100px; background: rgba(76,175,80,0.1); color: #2e7d32; border: 1px solid rgba(76,175,80,0.3); white-space: nowrap; }
+.card-desc { font-size: 12px; font-weight: 400; color: var(--muted); line-height: 1.65; flex: 1; }
+.card-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 2px; }
+.card-link { font-size: 12px; font-weight: 400; color: var(--purple); display: flex; align-items: center; gap: 3px; transition: opacity 0.12s; }
+.card-link:hover { opacity: 0.7; text-decoration: underline; }
+.card-link svg { width: 10px; height: 10px; flex-shrink: 0; }
+.card-meta { font-size: 10px; color: var(--hint); }
+.card-meta.stale { color: #c0780a; font-weight: 500; }
+.compare-label { display: flex; align-items: center; gap: 5px; cursor: pointer; font-size: 11px; color: var(--muted); user-select: none; -webkit-user-select: none; flex-shrink: 0; margin-left: auto; }
+.compare-label:hover { color: var(--text); }
+.compare-check { width: 14px; height: 14px; border-radius: 3px; border: 1.5px solid #aaa; background: #f0eef8; appearance: none; cursor: pointer; transition: all 0.13s; flex-shrink: 0; position: relative; }
+.compare-check:checked { background: var(--purple); border-color: var(--purple); }
+.compare-check:checked::after { content: '✓'; position: absolute; top: -1px; left: 2px; color: white; font-size: 9px; font-weight: 700; }
+.card-footer { display: flex; align-items: center; margin-top: 4px; padding-top: 10px; border-top: 1px solid var(--border); gap: 8px; }
+.vote-btn { display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px; border-radius: 100px; border: 1.5px solid var(--border); background: transparent; color: var(--muted); font-size: 11px; font-weight: 500; white-space: nowrap; flex-shrink: 0; transition: all 0.15s; }
+.vote-btn:hover { border-color: var(--purple); color: var(--purple); background: rgba(135,92,255,0.04); }
+.vote-btn.active { border-color: var(--purple); color: var(--purple); background: rgba(135,92,255,0.07); }
+.reaction-count { display: flex; align-items: center; gap: 4px; font-size: 11px; color: var(--hint); white-space: nowrap; opacity: 0; transition: opacity 0.4s; }
+.reaction-count.visible { opacity: 1; }
+.reaction-count .rc-num { font-size: 11px; font-weight: 600; color: var(--purple); }
+
 /* ── COMPARE ── */
 .compare-panel { position: fixed; top: 0; right: 0; bottom: 0; width: 480px; background: var(--white); border-left: 1px solid var(--border); z-index: 200; display: flex; flex-direction: column; transform: translateX(100%); transition: transform 0.3s ease; box-shadow: -8px 0 32px rgba(3,2,6,0.1); }
 .compare-panel.open { transform: translateX(0); }
@@ -419,13 +397,14 @@ button { cursor: pointer; font-family: inherit; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 1200px) {
-  .app-shell { grid-template-columns: 220px 1fr 260px; }
+  .app-shell { grid-template-columns: 220px minmax(0,1fr); }
 }
 @media (max-width: 960px) {
   .app-shell { grid-template-columns: 1fr; }
   .sidebar { position: static; height: auto; border-right: none; border-bottom: 1px solid var(--border); padding: 1.25rem 1rem; }
-  .right-panel { position: static; height: auto; border-top: 1px solid var(--border); padding: 1.25rem 1rem; }
-  .main-area { padding: 0 1rem 4rem; border-right: none; }
+  .sidebar { order: 2; border-top: 1px solid var(--border); border-bottom: none; }
+  .main-area { padding: 0 1rem 3rem; }
+  .ai-view { min-height: 0; }
 }
 @media (max-width: 600px) {
   .site-header { padding: 0 1rem; }
@@ -433,11 +412,75 @@ button { cursor: pointer; font-family: inherit; }
   .compare-panel { width: 100%; }
   .ai-quick-prompts { display: none; }
 }
+
+/* ── BROWSE LINK (under AI box) ── */
+.browse-link {
+  align-self: center; margin-top: 1.25rem;
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 13px; color: var(--muted);
+  padding: 6px 4px; border-bottom: 1px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+.browse-link:hover { color: var(--text); border-bottom-color: var(--border-md); }
+.browse-link svg { width: 12px; height: 12px; }
+.browse-link strong { font-weight: 600; color: var(--text); }
+
+/* ── TOOLS SHEET ── */
+.tools-sheet {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-bottom: none;
+  border-radius: 22px 22px 0 0;
+  padding: 0 1.5rem 3rem;
+  margin: 0 -0.5rem;
+  scroll-margin-top: var(--stick-top, 56px);
+  position: relative;
+}
+.sheet-handle { width: 40px; height: 4px; border-radius: 4px; background: var(--border-md); margin: 10px auto 0; }
+.sheet-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 1rem 0 0.25rem; flex-wrap: wrap; }
+.sheet-head h2 { font-size: 22px; font-weight: 400; letter-spacing: -0.02em; }
+.sheet-head p { font-size: 12.5px; color: var(--muted); font-weight: 300; }
+
+.tool-toolbar {
+  position: sticky; top: var(--stick-top, 56px); z-index: 50;
+  background: var(--surface);
+  padding: 12px 0 10px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 14px;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.toolbar-row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.tool-search-wrap { position: relative; flex: 1 1 260px; max-width: 420px; }
+.tool-search-wrap svg { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); width: 14px; height: 14px; opacity: 0.4; pointer-events: none; }
+#tool-search { width: 100%; height: 36px; padding: 0 12px 0 33px; border: 1px solid var(--border); border-radius: 10px; background: var(--bg); font-family: inherit; font-size: 13px; color: var(--text); outline: none; transition: border-color 0.15s; }
+#tool-search:focus { border-color: var(--purple); }
+#tool-search::placeholder { color: var(--hint); }
+.type-pills, .cat-pills { display: flex; flex-wrap: wrap; gap: 5px; }
+.pill { height: 30px; padding: 0 12px; border-radius: 100px; border: 1.5px solid var(--border); background: var(--bg); color: var(--muted); font-size: 12px; font-weight: 500; white-space: nowrap; transition: all 0.13s; }
+.pill:hover { border-color: var(--border-md); color: var(--text); }
+.pill.active { background: var(--black); color: var(--lilac); border-color: var(--black); font-weight: 600; }
+.pill.p-official.active { color: var(--yellow); }
+.pill.p-partner.active { background: var(--bg); color: var(--purple); border-color: var(--purple); }
+.pill.p-devfund.active { background: #0a1a0a; color: #7dde7d; border-color: #4caf50; }
+.cat-pills .pill { height: 26px; padding: 0 10px; font-size: 11px; border-width: 1px; }
+.tool-count { font-size: 11.5px; color: var(--hint); margin-left: auto; white-space: nowrap; }
+
+.tool-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+.tool-grid .card { background: var(--bg); backdrop-filter: none; -webkit-backdrop-filter: none; }
+.tool-grid .card-desc { display: -webkit-box; -webkit-line-clamp: 4; line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.card.flash { border-color: var(--purple); box-shadow: 0 0 0 3px rgba(135,92,255,0.25); }
+.tool-empty { grid-column: 1 / -1; text-align: center; padding: 3rem 1rem; color: var(--muted); font-size: 14px; }
+.tool-empty button { margin-top: 10px; background: none; border: 1px solid var(--border-md); border-radius: 100px; padding: 6px 14px; font-size: 12px; color: var(--text); }
+
+:focus-visible { outline: 2px solid var(--purple); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
+@media (max-width: 960px) { .tools-sheet { margin: 0 -1rem; padding: 0 1rem 2rem; } .tool-count { margin-left: 0; } }
 </style>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 </head>
-
 <body>
+
+<!-- Disclaimer -->
 <div class="disclaimer-bar" id="disclaimer-bar">
   <div class="disclaimer-bar-inner">
     <svg class="disclaimer-bar-icon" viewBox="0 0 16 16" fill="none" stroke="rgba(255,255,252,0.55)" stroke-width="1.5">
@@ -449,6 +492,8 @@ button { cursor: pointer; font-family: inherit; }
   </div>
   <button class="disclaimer-bar-close" id="disclaimer-close" aria-label="Dismiss">×</button>
 </div>
+
+<!-- Navbar -->
 <header class="site-header" id="site-header">
   <div class="logo">Build on Canton</div>
   <div class="header-actions">
@@ -456,18 +501,20 @@ button { cursor: pointer; font-family: inherit; }
     <a class="header-btn filled" href="https://github.com/canton-network-devs/Canton-Developer-Hub/blob/main/Contributing.md" target="_blank" rel="noopener">Submit your tool</a>
   </div>
 </header>
+
 <div class="app-shell">
+
+  <!-- LEFT SIDEBAR — ecosystem feeds -->
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-label">Latest CIPs</div>
-    <div id="cip-announce-feed">
-      <div class="feed-loading">Loading…</div>
-    </div>
+    <div id="cip-announce-feed"><div class="feed-loading">Loading…</div></div>
+
     <div class="sidebar-label">Dev Fund</div>
     <div id="devfund-feed"><div class="devfund-error">Loading…</div></div>
+
     <div class="sidebar-label">New Tools</div>
-    <div id="new-tools-feed">
-      <div class="feed-loading">Loading…</div>
-    </div>
+    <div id="new-tools-feed"><div class="feed-loading">Loading…</div></div>
+
     <div class="sidebar-label">Canton YouTube</div>
     <div id="youtube-feed">
       <div class="video-card video-card-loading">
@@ -476,12 +523,15 @@ button { cursor: pointer; font-family: inherit; }
       </div>
     </div>
   </aside>
+
   <main class="main-area">
-    <div class="ai-view" id="ai-view">
+
+    <!-- AI — first screen -->
+    <section class="ai-view" id="ai-view">
       <div class="ai-hero">
         <div class="ai-hero-eyebrow">Developer Hub AI</div>
         <h2>What are you building on <em>Canton</em>?</h2>
-        <p>Ask about any Idea, Usecase, CIP, or tool. I'll find what you need with full context from the ecosystem along with relevent Canton Tools to use.</p>
+        <p>Ask about any idea, use case, CIP, or tool. I'll find what you need with full context from the ecosystem, along with the relevant Canton tools to use.</p>
       </div>
 
       <div class="ai-panel">
@@ -505,42 +555,63 @@ button { cursor: pointer; font-family: inherit; }
         </div>
         <div class="ai-response" id="ai-response"></div>
       </div>
-    </div>
+
+      <a class="browse-link" href="#tools">Or browse all <strong id="tool-total">the</strong> tools yourself
+        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2v8M2.5 6.5L6 10l3.5-3.5"/></svg>
+      </a>
+    </section>
+
+    <!-- TOOL DIRECTORY — slides up under the AI -->
+    <section class="tools-sheet" id="tools" aria-labelledby="tools-title">
+      <div class="sheet-handle" aria-hidden="true"></div>
+      <div class="sheet-head">
+        <h2 id="tools-title">Tool directory</h2>
+        <p>Official and partner tooling for building on Canton. Filter, compare, and mark what helped.</p>
+      </div>
+
+      <div class="tool-toolbar" id="tool-toolbar">
+        <div class="toolbar-row">
+          <div class="tool-search-wrap">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6.5" cy="6.5" r="4.5"/><path d="M10.5 10.5L14 14"/></svg>
+            <input type="search" id="tool-search" placeholder="Search by name, maker or what it does" autocomplete="off" aria-label="Search tools" />
+          </div>
+          <div class="type-pills" id="type-pills" role="group" aria-label="Filter by source">
+            <button class="pill active" data-type="all">All</button>
+            <button class="pill p-official" data-type="official">Official</button>
+            <button class="pill p-partner" data-type="partner">Partner</button>
+            <button class="pill p-devfund" data-type="devfund">Dev Fund</button>
+          </div>
+          <span class="tool-count" id="tool-count" aria-live="polite"></span>
+        </div>
+        <div class="cat-pills" id="cat-pills" role="group" aria-label="Filter by category"></div>
+      </div>
+
+      <div class="tool-grid" id="tool-grid">
+        <div class="tool-empty">Loading tools…</div>
+      </div>
+    </section>
+
   </main>
-  <aside class="right-panel" id="right-panel">
-    <div class="right-panel-label">All Tools</div>
-    <div class="right-search-wrap">
-      <svg class="right-search-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
-        <circle cx="6.5" cy="6.5" r="4.5"/><path d="M10.5 10.5L14 14"/>
-      </svg>
-      <input type="text" id="right-search" placeholder="Search tools…" autocomplete="off" />
-    </div>
-    <div class="right-type-pills" id="right-type-pills">
-      <button class="right-pill active" data-rtype="all">All</button>
-      <button class="right-pill p-official" data-rtype="official">Official</button>
-      <button class="right-pill p-partner" data-rtype="partner">Partner</button>
-      <button class="right-pill p-devfund" data-rtype="devfund">Dev Fund</button>
-    </div>
-    <div class="right-cat-pills" id="right-cat-pills"></div>
-    <div class="right-tool-count" id="right-count"></div>
-    <div class="right-tool-list" id="right-tool-list">
-      <div style="font-size:11px;color:var(--hint);padding:8px 0;">Loading tools…</div>
-    </div>
-  </aside>
 </div>
+
+<!-- Compare bar -->
 <div class="compare-bar" id="compare-bar">
   <span class="compare-bar-count" id="compare-bar-count">0 tools selected</span>
   <button class="compare-bar-btn" onclick="openComparePanel()">Compare</button>
   <button class="compare-bar-clear" onclick="clearCompare()">Clear</button>
 </div>
+
+<!-- Compare panel -->
 <div class="compare-panel" id="compare-panel">
   <div class="compare-panel-header">
-    <span class="compare-panel-title">Tool Comparison</span>
-    <button class="compare-panel-close" onclick="closeComparePanel()">×</button>
+    <span class="compare-panel-title">Tool comparison</span>
+    <button class="compare-panel-close" onclick="closeComparePanel()" aria-label="Close comparison">×</button>
   </div>
   <div class="compare-panel-body" id="compare-panel-body"></div>
   <button class="compare-clear-btn" onclick="clearCompare()">Clear selection</button>
 </div>
+
+<!-- Giscus overlay -->
 <div class="giscus-overlay" id="giscus-overlay">
   <div class="giscus-panel">
     <div class="giscus-panel-header">
@@ -555,12 +626,11 @@ button { cursor: pointer; font-family: inherit; }
     </div>
   </div>
 </div>
+
 <footer class="site-footer">
   Maintained by <a href="https://canton.foundation/" target="_blank" rel="noopener noreferrer">Canton Foundation</a> DevRel.
 </footer>
-
-<script>
-const TOOLS_URL          = "https://raw.githubusercontent.com/canton-network-devs/Canton-Developer-Hub/refs/heads/main/Github%20Page/tools.json";
+<script>const TOOLS_URL          = "https://raw.githubusercontent.com/canton-network-devs/Canton-Developer-Hub/refs/heads/main/Github%20Page/tools.json";
 const GISCUS_REPO        = "canton-network-devs/Canton-Developer-Hub";
 const GISCUS_REPO_ID     = "R_kgDOROGJ0g";
 const GISCUS_CATEGORY    = "Tools";
@@ -569,10 +639,14 @@ const GISCUS_ORIGIN      = "https://giscus.app";
 const AI_PROXY_URL       = "/api/suggest";
 const YT_CHANNEL_ID      = "UC5Xt611-4AhcGTmlOaPlIQg";
 const YT_FEED_URL        = `https://www.youtube.com/feeds/videos.xml?channel_id=${YT_CHANNEL_ID}`;
+
 let TOOLS = [];
 let currentSlug = null, REACTION_COUNTS = {};
 let compareSelected = [];
-let rightSearchQ = '', rightType = 'all', rightCat = 'all';
+let activeType = 'all', activeCat = 'all', searchQ = '';
+
+/* ── NULL-SAFE DOM HELPERS ──
+   A missing element logs a warning instead of killing the whole script. */
 const $ = id => document.getElementById(id);
 function on(id, ev, fn) {
   const el = $(id);
@@ -586,19 +660,25 @@ function setHTML(id, html) {
 function escapeHTML(s) {
   return String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 }
+
+/* ── DISCLAIMER + STICKY OFFSET ──
+   --stick-top = height of everything pinned above content (disclaimer + header). */
 (function() {
   const bar = $('disclaimer-bar');
   const hdr = $('site-header');
-  const panels = [$('sidebar'), $('right-panel')].filter(Boolean);
+  const side = $('sidebar');
   if (!bar || !hdr) return;
   function setTop(h) {
     hdr.style.top = h + 'px';
-    panels.forEach(p => p.style.top = (h + 56) + 'px');
+    if (side) side.style.top = (h + 56) + 'px';
+    document.documentElement.style.setProperty('--stick-top', (h + 56) + 'px');
   }
   function sync() { setTop(bar.style.display === 'none' ? 0 : bar.offsetHeight); }
   sync(); window.addEventListener('resize', sync);
   on('disclaimer-close', 'click', () => { bar.style.display = 'none'; setTop(0); });
 })();
+
+/* ── HELPERS ── */
 function slugify(n) { return 'tool-' + n.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,''); }
 function formatDate(s) { if(!s) return null; const d=new Date(s); return isNaN(d)?null:d.toLocaleDateString('en-US',{month:'short',year:'numeric'}); }
 function fillPrompt(text) {
@@ -607,6 +687,11 @@ function fillPrompt(text) {
   input.value = text;
   input.focus();
 }
+
+function isStale(s) { if(!s) return false; const d=new Date(s); if(isNaN(d)) return false; const a=new Date(); a.setMonth(a.getMonth()-6); return d<a; }
+const EXT = `<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2H2a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1V7M8 1h3m0 0v3m0-3L5 7"/></svg>`;
+
+/* ── CIP FEEDS (via /api/cips — Groups.io API, RSS fallback, server-side) ── */
 async function loadCIPList(list, limit) {
   const res = await fetch(`/api/cips?list=${list}&limit=${limit}`);
   const data = await res.json();
@@ -617,6 +702,7 @@ function fmtDate(d, opts) {
   const dt = new Date(typeof d === 'number' ? d * 1000 : d);
   return isNaN(dt) ? '' : dt.toLocaleDateString('en-US', opts);
 }
+
 async function fetchCIPAnnounce() {
   const feed = $('cip-announce-feed');
   if (!feed) return;
@@ -643,6 +729,8 @@ async function fetchCIPAnnounce() {
     feed.innerHTML = '<div class="feed-loading">Could not load CIPs.</div>';
   }
 }
+
+/* ── DEV FUND ── */
 async function fetchDevFundApprovals() {
   const feed = $('devfund-feed');
   if (!feed) return;
@@ -668,6 +756,8 @@ async function fetchDevFundApprovals() {
     feed.innerHTML = '<div class="devfund-error">Could not load approvals.</div>';
   }
 }
+
+/* ── REACTION COUNTS ── */
 async function fetchAllReactionCounts() {
   try {
     const res = await fetch('https://api.github.com/repos/canton-network-devs/Canton-Developer-Hub/discussions?per_page=100', { headers: { 'Accept': 'application/vnd.github+json' } });
@@ -683,6 +773,8 @@ function updateBadge(slug, count) {
   el.querySelector('.rc-num').textContent = count;
   if (count > 0) el.classList.add('visible');
 }
+
+/* ── YOUTUBE ── */
 async function fetchYouTube() {
   const feed = $('youtube-feed');
   if (!feed) return;
@@ -709,6 +801,8 @@ async function fetchYouTube() {
     feed.innerHTML = '<div class="feed-loading">Could not load videos.</div>';
   }
 }
+
+/* ── NEW TOOLS ── */
 function renderNewTools() {
   const feed = $('new-tools-feed');
   if (!feed) return;
@@ -721,11 +815,14 @@ function renderNewTools() {
     </div>
   `).join('');
 }
+
+/* ── AI ── */
 function detectCIP(text) {
   const matches = text.match(/CIP[-\s]?(\d+)/gi);
   if (!matches) return null;
   return [...new Set(matches.map(m => m.replace(/\s/g, '-').toUpperCase()))];
 }
+
 async function fetchCIPContext(cipNumbers) {
   const results = await Promise.all(cipNumbers.slice(0, 2).map(async cip => {
     try {
@@ -737,6 +834,7 @@ async function fetchCIPContext(cipNumbers) {
   }));
   return results.filter(Boolean);
 }
+
 function cipContextBlock(c) {
   if (!c.found) {
     return `=== ${c.cip} ===\nNOT FOUND in the canton-foundation/cips repository. Say so plainly; do not invent its contents or status.\n`;
@@ -759,6 +857,7 @@ ${c.abstract || '(none)'}
   }
   return block;
 }
+
 async function callGroq(prompt, cipContext) {
   const body = { prompt };
   if (cipContext && cipContext.length) body.cipContext = cipContext;
@@ -774,19 +873,23 @@ async function callGroq(prompt, cipContext) {
     ? content + '\n\n[Answer cut off at the length limit — ask about one part, e.g. just the status or just the tools, for the full detail.]'
     : content;
 }
+
 async function runAISuggestion() {
   const inputEl = $('ai-input');
   const input = inputEl ? inputEl.value.trim() : '';
   if (!input) return;
   const submit = $('ai-submit'), thinking = $('ai-thinking'), response = $('ai-response');
   const ctxBox = $('ai-cip-context'), ctxText = $('ai-cip-context-text');
+
   submit.disabled = true;
   thinking.classList.add('visible');
   response.classList.remove('visible');
   response.textContent = '';
   ctxBox.classList.remove('visible');
+
   const cipNums = detectCIP(input);
   let cipContext = null;
+
   if (cipNums && cipNums.length) {
     ctxText.textContent = `Loading CIP context: ${cipNums.join(', ')}…`;
     ctxBox.classList.add('visible');
@@ -796,6 +899,7 @@ async function runAISuggestion() {
       ? `Context loaded: ${found.map(c => `${c.cip} (${c.status || 'status unknown'}, ${c.mentions?.length || 0} list mentions)`).join(', ')} + tool catalogue`
       : `Couldn't find ${cipNums.join(', ')} in the CIP repo — answering from tool catalogue`;
   }
+
   const toolList = TOOLS.map(t => `- ${t.name} (${t.category}, ${t.type}): ${(t.desc||'').slice(0,100)}`).join('\n');
   const hasCIP = cipContext && cipContext.length;
   let prompt = `You are a Canton Network developer advisor embedded in the Canton Developer Hub. A developer wrote:\n\n"${input}"\n\n`;
@@ -804,14 +908,15 @@ async function runAISuggestion() {
     prompt += `Grounded context for the CIP(s) they mentioned:\n\n${cipContext.map(cipContextBlock).join('\n')}\n`;
     prompt += `Answer in exactly this order:
 
-1. CIP OVERVIEW: For each CIP - a header line "CIP-XXXX: Title", then 2-4 sentences in plain language on what it standardises and why it matters to a builder. Use only the abstract/motivation above.
+1. CIP OVERVIEW — For each CIP: a header line "CIP-XXXX: Title", then 2-4 sentences in plain language on what it standardises and why it matters to a builder. Use only the abstract/motivation above.
 
-2. STATUS: For each CIP, three short lines:
+2. STATUS — For each CIP, three short lines:
    Formal status: the header Status and Approved date exactly as given.
    On the mailing lists: what the cip-announce / cip-discuss messages say about approval, implementation or rollout, with the date of the message you rely on. If there are none, say no list messages were found.
    MainNet: say it is live on MainNet ONLY if a mailing-list message above explicitly says it is deployed or live on MainNet, citing that message's date. Otherwise write: "Not confirmed in the CIP sources — check the latest Splice release notes." Never infer MainNet deployment from "Approved" or "Active" alone.
 
-3. TOOLS TO BUILD WITH IT: Recommend 4-10 tools from the list below that fit this CIP and the developer's goal, one or two sentences each on how it helps.
+3. TOOLS TO BUILD WITH IT — Recommend 3-6 tools from the list below that fit this CIP and the developer's goal, one or two sentences each on how it helps.
+
 `;
   } else {
     prompt += `Recommend the most relevant tools from the list below and explain briefly why each fits their use case. Be specific and concise. Mention 3-6 tools max.\n\n`;
@@ -822,6 +927,7 @@ IMPORTANT: Whenever you mention a tool name, wrap it in double square brackets l
 
 Available tools:
 ${toolList}`;
+
   try {
     const text = await callGroq(prompt, cipContext);
     const cleaned = escapeHTML(text.replace(/\*\*/g,'').replace(/(^|\s)[*_]([^*_\n]+)[*_](?=\s|[.,;:]|$)/gm,'$1$2').replace(/^#{1,4}\s*/gm,''));
@@ -837,40 +943,41 @@ ${toolList}`;
   thinking.classList.remove('visible');
   submit.disabled = false;
 }
+
+/* AI response tool chips → jump to the tool card in the directory */
 on('ai-response', 'click', e => {
   const chip = e.target.closest('.ai-tool-chip');
   if (!chip) return;
   const tmp = document.createElement('textarea');
-  tmp.innerHTML = chip.dataset.toolName;          
+  tmp.innerHTML = chip.dataset.toolName;           // decode entities back to the raw name
   const name = tmp.value;
   handleToolChip(slugify(name), name);
 });
+
 function handleToolChip(slug, name) {
-  rightSearchQ = name;
-  rightType = 'all';
-  rightCat = 'all';
-  const search = $('right-search');
-  if (search) search.value = name;
-  document.querySelectorAll('[data-rtype]').forEach(p=>p.classList.toggle('active', p.dataset.rtype === 'all'));
-  document.querySelectorAll('[data-rcat]').forEach(p=>p.classList.toggle('active', p.dataset.rcat === 'all'));
-  renderRightPanel();
-  const panel = $('right-panel');
-  if (panel) panel.scrollTop = 0;
-  setTimeout(() => {
-    const item = document.querySelector(`.right-tool-item[data-slug="${slug}"]`);
-    if (item) {
-      item.classList.add('highlighted');
-      item.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      setTimeout(() => item.classList.remove('highlighted'), 2500);
-    }
-  }, 300);
+  let card = document.querySelector(`.card[data-card-slug="${slug}"]`);
+  if (!card) {
+    // Filtered out (or a near-miss name from the AI) — reset filters and search for it
+    resetFilters(name);
+    card = document.querySelector(`.card[data-card-slug="${slug}"]`);
+  }
+  const target = card || $('tools');
+  target.scrollIntoView({ behavior: 'smooth', block: card ? 'center' : 'start' });
+  if (card) { card.classList.add('flash'); setTimeout(() => card.classList.remove('flash'), 2500); }
 }
+
 on('ai-input', 'keydown', e => {
   if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); runAISuggestion(); }
 });
-function toggleCompare(slug) {
-  if (compareSelected.includes(slug)) { compareSelected = compareSelected.filter(s=>s!==slug); }
-  else { if (compareSelected.length >= 3) return; compareSelected.push(slug); }
+
+/* ── COMPARE ── */
+function toggleCompare(slug, checked) {
+  if (!checked) compareSelected = compareSelected.filter(s => s !== slug);
+  else if (!compareSelected.includes(slug)) {
+    if (compareSelected.length >= 3) { renderTools(); return; }   // max 3 — re-render unticks the 4th
+    compareSelected.push(slug);
+  }
+  document.querySelector(`.card[data-card-slug="${slug}"]`)?.classList.toggle('selected', compareSelected.includes(slug));
   updateCompareBar();
 }
 function updateCompareBar() {
@@ -880,82 +987,116 @@ function updateCompareBar() {
   count.textContent = `${compareSelected.length} tool${compareSelected.length!==1?'s':''} selected`;
   bar.classList.toggle('visible', compareSelected.length >= 2);
 }
-function clearCompare() { compareSelected=[]; updateCompareBar(); closeComparePanel(); }
+function clearCompare() { compareSelected=[]; updateCompareBar(); closeComparePanel(); renderTools(); }
 function openComparePanel() {
   const tools = compareSelected.map(slug=>TOOLS.find(t=>slugify(t.name)===slug)).filter(Boolean);
   const fields = [
     ['Type', t=>t.type==='official'?'Official':'Partner'],
-    ['Category', t=>t.category],
-    ['Maker', t=>t.maker],
-    ['SDK Version', t=>t.daml_sdk_version||'—'],
+    ['Category', t=>escapeHTML(t.category)],
+    ['Maker', t=>escapeHTML(t.maker)],
+    ['SDK version', t=>escapeHTML(t.daml_sdk_version||'—')],
     ['Dev Fund', t=>t.dev_fund?'Yes':'No'],
-    ['Last Updated', t=>formatDate(t.last_updated)||'—'],
-    ['Description', t=>t.desc],
-    ['Links', t=>(t.links||[]).map(l=>`<a href="${l.url}" target="_blank" rel="noopener noreferrer" style="color:var(--purple)">${l.label}</a>`).join(', ')||'—'],
+    ['Last updated', t=>formatDate(t.last_updated)||'—'],
+    ['Description', t=>escapeHTML(t.desc)],
+    ['Links', t=>(t.links||[]).map(l=>`<a href="${escapeHTML(l.url)}" target="_blank" rel="noopener noreferrer" style="color:var(--purple)">${escapeHTML(l.label)}</a>`).join(', ')||'—'],
   ];
-  const header = `<tr><th>Field</th>${tools.map(t=>`<th>${t.name}</th>`).join('')}</tr>`;
+  const header = `<tr><th>Field</th>${tools.map(t=>`<th>${escapeHTML(t.name)}</th>`).join('')}</tr>`;
   const rows = fields.map(([label,fn])=>`<tr><td class="row-label">${label}</td>${tools.map(t=>`<td>${fn(t)}</td>`).join('')}</tr>`).join('');
   setHTML('compare-panel-body', `<table class="compare-table"><thead>${header}</thead><tbody>${rows}</tbody></table>`);
   $('compare-panel')?.classList.add('open');
 }
 function closeComparePanel() { $('compare-panel')?.classList.remove('open'); }
-function buildRightCatPills() {
-  const c = $("right-cat-pills");
+
+/* ── TOOL DIRECTORY ── */
+function buildCatPills() {
+  const c = $('cat-pills');
   if (!c) return;
-  const cats = ["all",...new Set(TOOLS.map(t=>t.category).filter(Boolean))];
-  c.innerHTML = cats.map(cat=>`<button class="right-cat-pill${cat==="all"?" active":""}" data-rcat="${escapeHTML(cat)}">${cat==="all"?"All":escapeHTML(cat)}</button>`).join("");
+  const cats = ['all', ...new Set(TOOLS.map(t => t.category).filter(Boolean))];
+  c.innerHTML = cats.map(cat => `<button class="pill${cat==='all'?' active':''}" data-cat="${escapeHTML(cat)}">${cat==='all'?'All categories':escapeHTML(cat)}</button>`).join('');
 }
-function renderRightPanel() {
-  const list = $("right-tool-list");
-  if (!list) return;
-  const q = rightSearchQ.toLowerCase();
-  const filtered = TOOLS.filter(t => {
-    const mt = rightType==="all" ? true : rightType==="devfund" ? t.dev_fund===true : t.type===rightType;
-    const mc = rightCat==="all" || t.category===rightCat;
-    const mq = !q || [t.name,t.desc,t.maker,t.category].some(s=>(s||'').toLowerCase().includes(q));
+
+function filteredTools() {
+  const q = searchQ.trim().toLowerCase();
+  return TOOLS.filter(t => {
+    const mt = activeType==='all' ? true : activeType==='devfund' ? t.dev_fund===true : t.type===activeType;
+    const mc = activeCat==='all' || t.category===activeCat;
+    const mq = !q || [t.name,t.desc,t.maker,t.category].some(s => (s||'').toLowerCase().includes(q));
     return mt && mc && mq;
   });
-  const count = $("right-count");
-  if (count) count.textContent = filtered.length===TOOLS.length ? `${TOOLS.length} tools` : `${filtered.length} of ${TOOLS.length}`;
-  if (!filtered.length) { list.innerHTML = '<div style="font-size:11px;color:var(--hint);padding:8px 0;">No tools found.</div>'; return; }
-  list.innerHTML = filtered.map(t => {
-    const slug = slugify(t.name);
-    return `<div class="right-tool-item" data-slug="${slug}" data-name="${escapeHTML(t.name)}">
-      <div class="right-tool-info">
-        <div class="right-tool-name">${escapeHTML(t.name)}</div>
-        <div class="right-tool-cat">${escapeHTML(t.category)}</div>
-      </div>
-      <span class="right-tool-badge ${t.type}">${t.type==="official"?"Official":"Partner"}</span>
-    </div>`;
-  }).join("");
 }
-function highlightAITool(slug, name) {
-  document.querySelectorAll('.right-tool-item').forEach(el=>el.classList.remove('highlighted'));
-  const item = document.querySelector(`.right-tool-item[data-slug="${slug}"]`);
-  if (item) { item.classList.add('highlighted'); setTimeout(()=>item.classList.remove('highlighted'),2500); }
-  const input = $('ai-input');
-  if (input && !input.value) {
-    input.value = `Tell me about ${name} and how to use it in my Canton project`;
-    input.focus();
+
+function renderTools() {
+  const grid = $('tool-grid');
+  if (!grid) return;
+  const list = filteredTools();
+  const count = $('tool-count');
+  if (count) count.textContent = list.length===TOOLS.length ? `${TOOLS.length} tools` : `${list.length} of ${TOOLS.length} tools`;
+
+  if (!list.length) {
+    grid.innerHTML = `<div class="tool-empty">No tools match these filters.<br><button type="button" onclick="resetFilters()">Clear filters</button></div>`;
+    return;
   }
+  grid.innerHTML = list.map(t => {
+    const slug = slugify(t.name);
+    const rc = REACTION_COUNTS[slug] || 0;
+    const dateFmt = formatDate(t.last_updated);
+    const stale = isStale(t.last_updated);
+    const sel = compareSelected.includes(slug);
+    return `<article class="card${sel?' selected':''}" data-card-slug="${slug}">
+      <div class="card-top">
+        <div><div class="card-name">${escapeHTML(t.name)}</div><div class="card-maker">${escapeHTML(t.maker)}</div></div>
+        <span class="badge ${t.type}">${t.type==='official'?'Official':'Partner'}</span>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:5px;align-items:center;">
+        <span class="cat-tag">${escapeHTML(t.category)}</span>
+        ${t.dev_fund===true?'<span class="badge-devfund">Dev Fund</span>':''}
+      </div>
+      <div class="card-desc">${escapeHTML(t.desc)}</div>
+      ${t.links && t.links.length ? `<div class="card-links">${t.links.map(l=>`<a class="card-link" href="${escapeHTML(l.url)}" target="_blank" rel="noopener">${EXT}${escapeHTML(l.label)}</a>`).join('')}</div>` : ''}
+      ${dateFmt ? `<div class="card-meta${stale?' stale':''}">Updated ${dateFmt}${stale?' · may be outdated':''}</div>` : ''}
+      <div class="card-footer">
+        <button class="vote-btn" type="button" data-slug="${slug}" data-name="${escapeHTML(t.name)}">👍 Helpful</button>
+        <span class="reaction-count${rc>0?' visible':''}" data-slug="${slug}"><span class="rc-num">${rc}</span> reactions</span>
+        <label class="compare-label">
+          <input type="checkbox" class="compare-check" data-slug="${slug}" ${sel?'checked':''}>
+          <span>Compare</span>
+        </label>
+      </div>
+    </article>`;
+  }).join('');
 }
-on("right-search", "input", e => { rightSearchQ = e.target.value; renderRightPanel(); });
-on("right-type-pills", "click", e => {
-  const p = e.target.closest("[data-rtype]"); if (!p) return;
-  rightType = p.dataset.rtype;
-  document.querySelectorAll("[data-rtype]").forEach(x=>x.classList.toggle("active", x === p));
-  renderRightPanel();
+
+function resetFilters(query = '') {
+  activeType = 'all'; activeCat = 'all'; searchQ = query;
+  const s = $('tool-search'); if (s) s.value = query;
+  document.querySelectorAll('[data-type]').forEach(p => p.classList.toggle('active', p.dataset.type === 'all'));
+  document.querySelectorAll('[data-cat]').forEach(p => p.classList.toggle('active', p.dataset.cat === 'all'));
+  renderTools();
+}
+
+/* ── DIRECTORY EVENTS (delegated, bound once) ── */
+on('tool-search', 'input', e => { searchQ = e.target.value; renderTools(); });
+on('type-pills', 'click', e => {
+  const p = e.target.closest('[data-type]'); if (!p) return;
+  activeType = p.dataset.type;
+  document.querySelectorAll('[data-type]').forEach(x => x.classList.toggle('active', x === p));
+  renderTools();
 });
-on("right-cat-pills", "click", e => {
-  const p = e.target.closest("[data-rcat]"); if (!p) return;
-  rightCat = p.dataset.rcat;
-  document.querySelectorAll("[data-rcat]").forEach(x=>x.classList.toggle("active", x === p));
-  renderRightPanel();
+on('cat-pills', 'click', e => {
+  const p = e.target.closest('[data-cat]'); if (!p) return;
+  activeCat = p.dataset.cat;
+  document.querySelectorAll('[data-cat]').forEach(x => x.classList.toggle('active', x === p));
+  renderTools();
 });
-on("right-tool-list", "click", e => {
-  const item = e.target.closest(".right-tool-item"); if (!item) return;
-  highlightAITool(item.dataset.slug, item.dataset.name);
+on('tool-grid', 'click', e => {
+  const vote = e.target.closest('.vote-btn');
+  if (vote) { vote.classList.add('active'); openPanel(vote.dataset.name, vote.dataset.slug); }
 });
+on('tool-grid', 'change', e => {
+  if (e.target.matches('.compare-check')) toggleCompare(e.target.dataset.slug, e.target.checked);
+});
+
+/* ── GISCUS ── */
 const overlay    = $('giscus-overlay');
 const panelBody  = $('panel-body');
 const panelTitle = $('panel-title');
@@ -986,11 +1127,15 @@ window.addEventListener('message', e => {
   if (msg.resizeHeight) { const l=panelBody.querySelector('.panel-loading'); if(l)l.style.display='none'; const i=panelBody.querySelector('iframe'); if(i)i.style.height=msg.resizeHeight+'px'; }
   if (msg.discussion && currentSlug) { const t=typeof msg.discussion.reactionCount==='number'?msg.discussion.reactionCount:Object.values(msg.discussion.reactions||{}).filter(v=>typeof v==='number').reduce((s,n)=>s+n,0); REACTION_COUNTS[currentSlug]=t; updateBadge(currentSlug,t); }
 });
+
+/* ── INIT ──
+   Feeds and the tool catalogue load independently. */
 function loadFeeds() {
-  fetchCIPAnnounce();
-  fetchDevFundApprovals();
-  fetchYouTube();
+  [fetchCIPAnnounce, fetchDevFundApprovals, fetchYouTube].forEach(fn => {
+    try { fn(); } catch (e) { console.error(`[devhub] ${fn.name} failed:`, e); }
+  });
 }
+
 async function loadTools() {
   try {
     const res = await fetch(TOOLS_URL + "?nocache=" + Date.now());
@@ -998,16 +1143,18 @@ async function loadTools() {
     const data = await res.json();
     if (!Array.isArray(data) || !data.length) throw new Error("tools.json is empty.");
     TOOLS = data;
-    buildRightCatPills();
+    const total = $('tool-total'); if (total) total.textContent = TOOLS.length;
+    buildCatPills();
     renderNewTools();
-    renderRightPanel();
+    renderTools();
     fetchAllReactionCounts();
   } catch (err) {
     console.error("[devhub] tools.json failed:", err);
-    setHTML("right-tool-list", `<div style="font-size:11px;color:var(--hint);padding:8px 0;">Could not load tools — ${escapeHTML(err.message)}</div>`);
+    setHTML("tool-grid", `<div class="tool-empty">Could not load the tool list (${escapeHTML(err.message)}). Refresh to try again.</div>`);
     setHTML("new-tools-feed", '<div class="feed-loading">Could not load tools.</div>');
   }
 }
+
 function init() { loadFeeds(); loadTools(); }
 document.readyState === "loading" ? document.addEventListener("DOMContentLoaded", init) : init();
 </script>
