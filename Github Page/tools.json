@@ -1171,5 +1171,34 @@
     "maintained_by": "Raposza",
     "dev_fund": false,
     "last_updated": "2026-10-14"
+  },
+  {
+    "name": "Canton Rust SDK",
+    "maker": "Nodejumper",
+    "type": "partner",
+    "category": "SDKs",
+    "desc": "Async Rust SDK for the Canton Ledger API v2 over gRPC and JSON, with typed codegen from DARs (dpm codegen-rust), the CIP-56 and CIP-0112 token standard, interactive submission with a pluggable signer, and a typed PQS client. Published on crates.io as canton.",
+    "links": [
+      {
+        "label": "Repo",
+        "url": "https://github.com/nodejumper-org/canton-rust-sdk"
+      },
+      {
+        "label": "crates.io",
+        "url": "https://crates.io/crates/canton"
+      },
+      {
+        "label": "Docs",
+        "url": "https://nodejumper-org.github.io/canton-rust-sdk/"
+      },
+      {
+        "label": "Reference app",
+        "url": "https://github.com/nodejumper-org/canton-settlement-service"
+      }
+    ],
+    "daml_sdk_version": "3.5.7",
+    "maintained_by": "Nodejumper",
+    "dev_fund": true,
+    "last_updated": "2026-10-23"
   }
 ]
