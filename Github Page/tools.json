@@ -1171,5 +1171,26 @@
     "maintained_by": "Raposza",
     "dev_fund": false,
     "last_updated": "2026-10-14"
+  },
+  {
+    "name": "Canton DAR Inspector",
+    "maker": "bars26",
+    "type": "partner",
+    "category": "Smart Contract Dev",
+    "desc": "Browser-only inspector for .dar and .dalf files: it re-computes each package ID (SHA-256 of the payload), checks it against official Splice releases, and lists modules, templates, choices, interfaces and Token Standard (CIP-56) implementations without uploading the file. A compare mode diffs two versions of a package and flags changes that smart contract upgrades normally reject, such as removed choices or non-Optional new fields.",
+    "links": [
+      {
+        "label": "Website",
+        "url": "https://canton-dar-inspector.vercel.app"
+      },
+      {
+        "label": "Repo",
+        "url": "https://github.com/bars26/canton-dar-inspector"
+      }
+    ],
+    "daml_sdk_version": null,
+    "maintained_by": "bars26",
+    "dev_fund": false,
+    "last_updated": "2026-11-02"
   }
 ]
