@@ -1053,10 +1053,10 @@
     "links": [
       { "label": "Repo", "url": "https://github.com/walnuthq/dpm-trace" }
     ],
-    "daml_sdk_version": "3.4.11",
+    "daml_sdk_version": "3.5.1",
     "maintained_by": "Walnut",
     "dev_fund": true,
-    "last_updated": "2026-09-03"
+    "last_updated": "2026-10-22"
   },
   {
     "name": "canton-deploy",
