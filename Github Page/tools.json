@@ -1171,5 +1171,26 @@
     "maintained_by": "Raposza",
     "dev_fund": false,
     "last_updated": "2026-10-14"
+  },
+  {
+    "name": "Daml Reason",
+    "maker": "ChainSafe",
+    "type": "partner",
+    "category": "AI Tools",
+    "desc": "Hosted MCP server that checks an agent's Daml draft against a promoted corpus of Canton contract patterns and returns pattern suggestions, abstain, fail, or ready_to_compile. ready_to_compile means the corpus check is finished; the server does not run the Daml SDK or certify that the draft builds.",
+    "links": [
+      {
+        "label": "Site",
+        "url": "https://daml-reason.chainsafe.io/"
+      },
+      {
+        "label": "Docs",
+        "url": "https://chainsafe.github.io/daml-reason-docs/"
+      }
+    ],
+    "daml_sdk_version": null,
+    "maintained_by": "ChainSafe",
+    "dev_fund": false,
+    "last_updated": "2026-10-26"
   }
 ]
