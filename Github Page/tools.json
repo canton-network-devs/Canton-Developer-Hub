@@ -1243,5 +1243,30 @@
     "maintained_by": "ChainSafe",
     "dev_fund": false,
     "last_updated": "2026-10-26"
+  },
+  {
+    "name": "Canton LocalNet GitHub Action",
+    "maker": "Peaceful Studio",
+    "type": "partner",
+    "category": "Local Dev",
+    "desc": "GitHub Action that boots a full Splice LocalNet (Canton 3.7.3, Splice 0.10.2) in one workflow step and hands each validator's JSON Ledger API URL, gRPC URL and OAuth2 client credentials to your tests as environment variables, so integration tests in any language run against a real ledger. Supports up to four validator participants, optional PQS with a ready-made PostgreSQL URL, and a teardown action; runs on the standard ubuntu-latest runner of a public repo.",
+    "links": [
+      {
+        "label": "Docs",
+        "url": "https://github.com/peacefulstudio/canton-localnet/blob/dev/docs/public/github-action.md"
+      },
+      {
+        "label": "Repo",
+        "url": "https://github.com/peacefulstudio/canton-localnet"
+      },
+      {
+        "label": "Forum post",
+        "url": "https://forum.canton.network/t/spin-up-a-full-canton-localnet-in-your-github-actions-ci-in-one-step/9530"
+      }
+    ],
+    "daml_sdk_version": "3.5.2",
+    "maintained_by": "Peaceful Studio",
+    "dev_fund": false,
+    "last_updated": "2026-11-17"
   }
 ]
