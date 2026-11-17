@@ -1243,5 +1243,26 @@
     "maintained_by": "ChainSafe",
     "dev_fund": false,
     "last_updated": "2026-10-26"
+  },
+  {
+    "name": "daml-analyzer",
+    "maker": "Certora",
+    "type": "partner",
+    "category": "Smart Contract Dev",
+    "desc": "Static analyzer for compiled Daml packages (.dar) that lists every cross-package Create, Exercise, Fetch and interface call, with the calling choice, the target package, template and choice, whether the choice is consuming, and the source location. Built for Canton developers and auditors reviewing package dependencies; it writes JSON, Graphviz DOT and a self-contained HTML report, and runs as a Java JAR or a DPM component.",
+    "links": [
+      {
+        "label": "Repo",
+        "url": "https://github.com/Certora/daml-analyzer"
+      },
+      {
+        "label": "Releases",
+        "url": "https://github.com/Certora/daml-analyzer/releases"
+      }
+    ],
+    "daml_sdk_version": "3.5.6",
+    "maintained_by": "Certora",
+    "dev_fund": true,
+    "last_updated": "2026-09-10"
   }
 ]
