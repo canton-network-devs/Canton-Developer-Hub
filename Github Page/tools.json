@@ -1171,7 +1171,7 @@
     "daml_sdk_version": "3.6.0",
     "maintained_by": "Raposza",
     "dev_fund": false,
-    "last_updated": "2026-10-14"
+    "last_updated": "2026-10-26"
   },
   {
     "name": "Canton Rust SDK",
