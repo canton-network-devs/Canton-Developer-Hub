@@ -1258,10 +1258,6 @@
       {
         "label": "Repo",
         "url": "https://github.com/peacefulstudio/canton-localnet"
-      },
-      {
-        "label": "Forum post",
-        "url": "https://forum.canton.network/t/spin-up-a-full-canton-localnet-in-your-github-actions-ci-in-one-step/9530"
       }
     ],
     "daml_sdk_version": "3.5.2",
