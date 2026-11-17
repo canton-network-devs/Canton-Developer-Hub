@@ -1051,12 +1051,13 @@
     "category": "Smart Contract Dev",
     "desc": "DPM plugin for visualizing successful and prepared Canton transactions, and understanding why some submissions failed.",
     "links": [
+      { "label": "Docs", "url": "https://docs.walnut.dev" },
       { "label": "Repo", "url": "https://github.com/walnuthq/dpm-trace" }
     ],
-    "daml_sdk_version": "3.4.11",
+    "daml_sdk_version": "3.5.1",
     "maintained_by": "Walnut",
     "dev_fund": true,
-    "last_updated": "2026-09-03"
+    "last_updated": "2026-10-22"
   },
   {
     "name": "canton-deploy",
@@ -1200,5 +1201,26 @@
     "maintained_by": "Nodejumper",
     "dev_fund": true,
     "last_updated": "2026-10-23"
+  },
+  {
+    "name": "Daml Reason",
+    "maker": "ChainSafe",
+    "type": "partner",
+    "category": "AI Tools",
+    "desc": "Hosted MCP server that checks an agent's Daml draft against a promoted corpus of Canton contract patterns and returns pattern suggestions, abstain, fail, or ready_to_compile. ready_to_compile means the corpus check is finished; the server does not run the Daml SDK or certify that the draft builds.",
+    "links": [
+      {
+        "label": "Site",
+        "url": "https://daml-reason.chainsafe.io/"
+      },
+      {
+        "label": "Docs",
+        "url": "https://chainsafe.github.io/daml-reason-docs/"
+      }
+    ],
+    "daml_sdk_version": null,
+    "maintained_by": "ChainSafe",
+    "dev_fund": false,
+    "last_updated": "2026-10-26"
   }
 ]
