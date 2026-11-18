@@ -18,21 +18,17 @@
   --lilac:   #D5A5E3;
   --purple:  #875CFF;
   --taupe:   #A89F91;
-  /* Foundation dark theme — matches Canton Partners / Partners Directory */
-  --bg:      #030206;
-  --surface: #0e0e0c;
-  --surface-2: #161614;
-  --border:  rgba(255,255,252,0.10);
-  --border-md: rgba(255,255,252,0.18);
-  --text:    #f5f5f0;
-  --soft:    #cfcfc9;
-  --muted:   #a3a39c;
-  --hint:    #75756f;
-  --accent:  #F3FF97;
-  --glass-bg: #0e0e0c;
-  --glass-border: rgba(255,255,252,0.10);
-  --glass-dark: #0e0e0c;
-  --glass-dark-border: rgba(255,255,252,0.10);
+  --bg:      #FFFFFC;
+  --surface: #f4f3f0;
+  --border:  rgba(3,2,6,0.12);
+  --border-md: rgba(3,2,6,0.2);
+  --text:    #030206;
+  --muted:   #5a5860;
+  --hint:    #9a97a0;
+  --glass-bg: rgba(255,255,252,0.65);
+  --glass-border: rgba(3,2,6,0.1);
+  --glass-dark: #030206;
+  --glass-dark-border: rgba(135,92,255,0.2);
 }
 *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { font-size: 16px; scroll-behavior: smooth; }
@@ -433,163 +429,6 @@ button { cursor: pointer; font-family: inherit; }
 :focus-visible { outline: 2px solid var(--purple); outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
 @media (max-width: 960px) { .tools-sheet { margin: 0 -1rem; padding: 0 1rem 2rem; } .tool-count { margin-left: 0; } }
-
-/* ═══════════ FOUNDATION THEME LAYER ═══════════
-   Brand alignment with Canton Partners pages. Layout untouched — colour, type, shape only. */
-html { color-scheme: dark; }
-::selection { background: rgba(243,255,151,0.25); color: var(--white); }
-:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.spinner, .panel-spinner { border-top-color: var(--accent); }
-
-/* Eyebrow: ▪ LABEL in yellow */
-.eyebrow, .ai-hero-eyebrow { font-family: 'IBM Plex Sans', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); display: inline-flex; align-items: center; gap: 8px; }
-.eyebrow::before, .ai-hero-eyebrow::before { content: ''; width: 6px; height: 6px; flex: none; max-width: none; background: var(--accent); }
-.ai-hero-eyebrow::after { display: none; }
-
-/* Disclaimer + header */
-.disclaimer-bar { background: var(--surface); border-bottom: 1px solid var(--border); }
-.disclaimer-bar-text { color: var(--hint); }
-.disclaimer-bar-text strong { color: var(--soft); }
-.disclaimer-bar-close { color: var(--hint); }
-.disclaimer-bar-close:hover { color: var(--text); }
-.site-header { background: rgba(3,2,6,0.92); border-bottom: 1px solid var(--border); }
-.logo { gap: 10px; font-weight: 400; color: var(--text); }
-.logo img { width: 22px; height: auto; display: block; }
-.header-actions { gap: 4px; }
-.header-btn { font-size: 13px; }
-.header-btn.outline { border: none; color: var(--soft); padding: 8px 12px; }
-.header-btn.outline:hover { color: var(--white); }
-.header-btn.filled { border-radius: 6px; padding: 8px 16px; font-weight: 600; margin-left: 8px; }
-
-/* Sidebar feeds */
-.sidebar { border-right: 1px solid var(--border); }
-.sidebar-label { font-family: 'IBM Plex Sans', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.1em; color: var(--hint); }
-.glass-card, .new-tool-card, .video-card, .devfund-card { background: var(--surface); backdrop-filter: none; -webkit-backdrop-filter: none; border: 1px solid var(--border); border-radius: 8px; }
-.glass-card:hover, .glass-card-link:hover .glass-card, .new-tool-card:hover, .video-card:hover { border-color: var(--border-md); box-shadow: none; }
-.cip-card { border-left: 2px solid rgba(243,255,151,0.55); }
-.cip-card:hover { border-left-color: var(--accent); }
-.cip-badge, .new-badge { background: rgba(243,255,151,0.1); color: var(--accent); border: 1px solid rgba(243,255,151,0.3); border-radius: 4px; }
-.devfund-card { border-left: 2px solid var(--purple); }
-.devfund-card:hover { border-left-color: var(--lilac); box-shadow: none; }
-.devfund-badge { background: rgba(135,92,255,0.12); color: #b9a1ff; border: 1px solid rgba(135,92,255,0.4); border-radius: 4px; }
-.cip-title, .devfund-name, .new-tool-name, .video-title { color: var(--text); }
-.new-tool-desc { color: var(--muted); }
-.video-badge { border-radius: 3px; }
-.video-shimmer-title, .video-shimmer-date, .video-thumb-placeholder, .video-thumb { background: var(--surface-2); }
-
-/* Hero */
-.ai-hero h2 { font-size: clamp(30px, 4.2vw, 48px); font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; color: var(--text); }
-.ai-hero h2 em { display: block; color: var(--accent); }
-.ai-hero p { font-size: 15px; font-weight: 400; color: var(--muted); max-width: 520px; }
-.ai-hero-eyebrow { margin-bottom: 1.1rem; }
-
-/* AI panel */
-.ai-panel { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none; }
-.ai-panel::before, .ai-panel::after { display: none; }
-.ai-textarea { background: var(--bg); border: 1px solid var(--border-md); border-radius: 8px; color: var(--text); font-weight: 400; }
-.ai-textarea::placeholder { color: var(--hint); }
-.ai-textarea:focus { border-color: rgba(243,255,151,0.5); box-shadow: 0 0 0 3px rgba(243,255,151,0.08); }
-.ai-submit { background: var(--accent); color: var(--black); border-radius: 8px; font-weight: 600; box-shadow: none; }
-.ai-submit:hover { background: #e8f080; box-shadow: none; transform: none; }
-.ai-quick-prompts { align-items: center; }
-.ai-quick-prompts::before { content: 'TRY'; font-size: 10px; font-weight: 600; letter-spacing: 0.12em; color: var(--hint); margin-right: 4px; }
-.ai-quick-btn { color: var(--soft); border: 1px solid var(--border-md); background: transparent; }
-.ai-quick-btn:hover { color: var(--white); border-color: rgba(243,255,151,0.4); background: transparent; }
-.ai-thinking { color: var(--muted); }
-.ai-dot { background: var(--accent); }
-.ai-cip-context { color: var(--accent); }
-.ai-cip-context-dot { background: var(--accent); }
-.ai-response { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; color: #e6e6e0; font-weight: 400; }
-.ai-tool-chip { background: rgba(243,255,151,0.08); color: var(--accent); border: 1px solid rgba(243,255,151,0.3); }
-.ai-tool-chip:hover { background: rgba(243,255,151,0.16); border-color: var(--accent); color: var(--accent); }
-.ai-actions { color: var(--muted); }
-.ai-action-btn { background: transparent; border: 1px solid var(--border-md); color: var(--soft); border-radius: 6px; }
-.ai-action-btn:hover:not(:disabled) { border-color: rgba(243,255,151,0.4); color: var(--white); }
-.ai-action-btn.chosen { border-color: var(--accent); background: rgba(243,255,151,0.12); color: var(--accent); }
-.ai-thanks { color: var(--soft); }
-.browse-link { color: var(--muted); }
-.browse-link strong { color: var(--accent); }
-.browse-link:hover { color: var(--text); }
-
-/* Tool directory sheet */
-.tools-sheet { background: var(--surface); border: 1px solid var(--border); border-bottom: none; border-radius: 16px 16px 0 0; }
-.sheet-handle { background: var(--border-md); }
-.sheet-head { display: block; padding: 1.75rem 0 0.5rem; }
-.sheet-head h2 { font-size: 30px; font-weight: 600; letter-spacing: -0.02em; color: var(--text); margin: 0.6rem 0 0.4rem; }
-.sheet-head p { font-size: 14px; font-weight: 400; color: var(--muted); }
-.tool-toolbar { background: var(--surface); border-bottom: 1px solid var(--border); padding: 14px 0 14px; gap: 10px; }
-#tool-search { background: var(--bg); border: 1px solid var(--border-md); border-radius: 8px; color: var(--text); }
-#tool-search:focus { border-color: rgba(243,255,151,0.5); }
-#tool-search::-webkit-search-cancel-button { filter: invert(1); opacity: 0.5; }
-/* Segmented filter groups */
-.type-pills, .cat-pills { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 3px; gap: 2px; width: fit-content; max-width: 100%; }
-.pill, .cat-pills .pill { height: 28px; padding: 0 11px; border: none; border-radius: 6px; background: transparent; color: var(--soft); font-size: 12px; font-weight: 500; }
-.cat-pills .pill { height: 26px; font-size: 11.5px; }
-.pill:hover { background: rgba(255,255,252,0.05); color: var(--white); }
-.pill.active, .pill.p-official.active, .pill.p-partner.active, .pill.p-devfund.active { background: var(--accent); color: var(--black); border: none; font-weight: 600; }
-.tool-count { color: var(--hint); }
-
-/* Tool cards */
-.card, .tool-grid .card { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 1.4rem; gap: 10px; }
-.card:hover { border-color: var(--border-md); box-shadow: none; }
-.card.selected { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
-.card.flash { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(243,255,151,0.22); }
-.card-name { font-size: 16px; font-weight: 600; color: var(--text); }
-.card-maker { color: var(--hint); }
-.badge { border-radius: 4px; font-size: 10.5px; }
-.badge.official { background: var(--accent); color: var(--black); }
-.badge.partner { background: transparent; color: var(--soft); border: 1px solid var(--border-md); }
-.cat-tag, .badge-devfund { background: none; border: none; padding: 0; border-radius: 0; font-size: 12px; font-weight: 500; display: inline-flex; align-items: center; gap: 6px; }
-.cat-tag { color: var(--soft); }
-.cat-tag::before { content: '◇'; color: var(--muted); font-size: 10px; }
-.badge-devfund { color: #b9a1ff; margin-left: 6px; }
-.badge-devfund::before { content: '◆'; font-size: 10px; }
-.card-desc { font-size: 13px; color: var(--muted); }
-.card-link { color: var(--accent); font-weight: 500; font-size: 12.5px; }
-.card-link:hover { opacity: 0.8; }
-.card-meta { color: var(--hint); }
-.card-meta.stale { color: #e0a85a; }
-.card-footer { border-top: 1px solid var(--border); }
-.vote-btn { border: 1px solid var(--border-md); color: var(--soft); border-radius: 6px; }
-.vote-btn:hover, .vote-btn.active { border-color: rgba(243,255,151,0.5); color: var(--accent); background: rgba(243,255,151,0.06); }
-.reaction-count .rc-num { color: var(--accent); }
-.compare-label { color: var(--muted); }
-.compare-label:hover { color: var(--text); }
-.compare-check { background: transparent; border: 1.5px solid var(--border-md); }
-.compare-check:checked { background: var(--accent); border-color: var(--accent); }
-.compare-check:checked::after { color: var(--black); }
-.tool-empty { color: var(--muted); }
-.tool-empty button { border-color: var(--border-md); color: var(--text); border-radius: 6px; }
-
-/* Compare + reactions overlays */
-.compare-panel { background: var(--surface); border-left: 1px solid var(--border); box-shadow: -8px 0 32px rgba(0,0,0,0.5); }
-.compare-panel-header { border-bottom: 1px solid var(--border); }
-.compare-panel-close, .giscus-panel-close { color: var(--muted); }
-.compare-table th, .compare-table .row-label { background: var(--surface-2); color: var(--muted); }
-.compare-table th, .compare-table td { border-bottom: 1px solid var(--border); }
-.compare-table td { color: var(--text); }
-.compare-table a { color: var(--accent) !important; }
-.compare-clear-btn { border-color: var(--border-md); color: var(--soft); }
-.compare-bar { background: var(--surface); border: 1px solid var(--border-md); box-shadow: 0 8px 24px rgba(0,0,0,0.5); border-radius: 10px; }
-.compare-bar-btn { border-radius: 6px; }
-.giscus-overlay { background: rgba(0,0,0,0.65); }
-.giscus-panel { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; box-shadow: 0 24px 64px rgba(0,0,0,0.6); }
-.giscus-panel-header { border-bottom: 1px solid var(--border); }
-
-/* Footer — same structure as Partners pages */
-.site-footer { background: var(--bg); border-top: 1px solid var(--border); padding: 3rem 2rem 1.75rem; text-align: left; color: var(--hint); font-weight: 400; }
-.footer-inner { max-width: 1440px; margin: 0 auto; }
-.footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--border); }
-.footer-brand p { margin-top: 12px; font-size: 13px; color: var(--soft); }
-.footer-brand p span { color: var(--accent); }
-.site-footer .logo { font-size: 13px; color: var(--text); }
-.main-area { padding-bottom: 0; }
-.tools-sheet { padding-bottom: 3.5rem; }
-.footer-col h4 { font-size: 11px; font-weight: 500; color: var(--hint); margin-bottom: 12px; }
-.footer-col a { display: block; font-size: 13px; color: var(--soft); padding: 4px 0; }
-.site-footer a:hover { color: var(--white); text-decoration: none; }
-.footer-bottom { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding-top: 1.25rem; font-size: 11.5px; color: var(--hint); }
-@media (max-width: 700px) { .footer-top { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: 1 / -1; } .site-footer { padding: 2.5rem 1rem 1.5rem; } }
 </style>
 <script>
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -608,7 +447,7 @@ html { color-scheme: dark; }
   <button class="disclaimer-bar-close" id="disclaimer-close" aria-label="Dismiss">×</button>
 </div>
 <header class="site-header" id="site-header">
-  <a class="logo" href="/"><img src="/favicon.svg" alt="" width="22" height="25">Developer Hub</a>
+  <div class="logo">Build on Canton</div>
   <div class="header-actions">
     <a class="header-btn outline" href="https://github.com/canton-network-devs/Canton-Developer-Hub/issues/new?assignees=&labels=bad+tool+report&template=&title=%5BBad+Tool+Report%5D+Tool+Name+Here&body=%23%23+Tool+Report%0A%0A**Tool+name:**%20%0A**Issue:**%20%0A**Link+to+tool:**%20%0A**Additional+context:**%20" target="_blank" rel="noopener">Report a tool</a>
     <a class="header-btn filled" href="https://github.com/canton-network-devs/Canton-Developer-Hub/blob/main/Contributing.md" target="_blank" rel="noopener">Submit your tool</a>
@@ -633,7 +472,8 @@ html { color-scheme: dark; }
   <main class="main-area">
     <section class="ai-view" id="ai-view">
       <div class="ai-hero">
-        <h2>What are you building<em>on Canton?</em></h2>
+        <div class="ai-hero-eyebrow">Developer Hub AI</div>
+        <h2>What are you building on <em>Canton</em>?</h2>
         <p>Ask about any idea, use case, CIP, or tool. I'll find what you need with full context from the ecosystem, along with the relevant Canton tools to use.</p>
       </div>
       <div class="ai-panel">
@@ -672,8 +512,7 @@ html { color-scheme: dark; }
     <section class="tools-sheet" id="tools" aria-labelledby="tools-title">
       <div class="sheet-handle" aria-hidden="true"></div>
       <div class="sheet-head">
-        <div class="eyebrow">Directory</div>
-        <h2 id="tools-title">All tools.</h2>
+        <h2 id="tools-title">Tool directory</h2>
         <p>Official and partner tooling for building on Canton. Filter, compare, and mark what helped.</p>
       </div>
       <div class="tool-toolbar" id="tool-toolbar">
@@ -726,31 +565,7 @@ html { color-scheme: dark; }
   </div>
 </div>
 <footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a class="logo" href="/"><img src="/logo-mark.png" alt="" width="20" height="23">Canton Developer Hub</a>
-        <p>Where finance <span>flows</span></p>
-      </div>
-      <div class="footer-col">
-        <h4>Developers</h4>
-        <a href="https://certification.canton.foundation" target="_blank" rel="noopener">Developer Certification</a>
-        <a href="https://docs.canton.network/" target="_blank" rel="noopener">Docs</a>
-        <a href="https://www.youtube.com/channel/UC5Xt611-4AhcGTmlOaPlIQg" target="_blank" rel="noopener">YouTube</a>
-      </div>
-      <div class="footer-col">
-        <h4>This hub</h4>
-        <a href="https://github.com/canton-network-devs/Canton-Developer-Hub/blob/main/Contributing.md" target="_blank" rel="noopener">Submit a tool</a>
-        <a href="https://github.com/canton-network-devs/Canton-Developer-Hub/issues/new?assignees=&labels=bad+tool+report&template=&title=%5BBad+Tool+Report%5D+Tool+Name+Here&body=%23%23+Tool+Report%0A%0A**Tool+name:**%20%0A**Issue:**%20%0A**Link+to+tool:**%20%0A**Additional+context:**%20" target="_blank" rel="noopener">Report a tool</a>
-        <a href="/llms.txt">llms.txt for AI assistants</a>
-        <a href="https://canton.foundation/" target="_blank" rel="noopener noreferrer">Canton Foundation</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© Canton Foundation · Maintained by Canton Foundation DevRel</span>
-      <span>Community tools are not audited or endorsed</span>
-    </div>
-  </div>
+  Maintained by <a href="https://canton.foundation/" target="_blank" rel="noopener noreferrer">Canton Foundation</a> DevRel.
 </footer>
 <script>const TOOLS_URL          = "https://raw.githubusercontent.com/canton-network-devs/Canton-Developer-Hub/refs/heads/main/Github%20Page/tools.json";
 const GISCUS_REPO        = "canton-network-devs/Canton-Developer-Hub";
@@ -1288,7 +1103,7 @@ function openPanel(toolName, slug) {
     s.setAttribute('data-mapping','specific'); s.setAttribute('data-term',slug);
     s.setAttribute('data-strict','0'); s.setAttribute('data-reactions-enabled','1');
     s.setAttribute('data-emit-metadata','1'); s.setAttribute('data-input-position','top');
-    s.setAttribute('data-theme','transparent_dark'); s.setAttribute('data-lang','en');
+    s.setAttribute('data-theme','light'); s.setAttribute('data-lang','en');
     s.crossOrigin = 'anonymous'; s.async = true; panelBody.appendChild(s);
   }
   overlay.classList.add('open'); document.body.style.overflow = 'hidden';
