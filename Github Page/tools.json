@@ -1285,5 +1285,55 @@
     "maintained_by": "Peaceful Studio",
     "dev_fund": false,
     "last_updated": "2026-11-17"
+  },
+  {
+    "name": "CCTools Open Daily Record",
+    "maker": "CCTools",
+    "type": "partner",
+    "category": "Data & Indexing",
+    "desc": "Daily record of Canton Network state as open CSV and JSON files (CC BY 4.0, no key), one row per UTC day derived from Canton Scan: issuance by reward type, supply, featured app rights, validator licenses and super validators. Gaps and revisions are published, and the open-source pipeline re-derives a published day from Scan.",
+    "links": [
+      {
+        "label": "Network overview",
+        "url": "https://cctools.network/network"
+      },
+      {
+        "label": "Open files",
+        "url": "https://api.cctools.network/api/open/network-record/v1/status.json"
+      },
+      {
+        "label": "Docs",
+        "url": "https://docs.cctools.network/network/network-stats"
+      },
+      {
+        "label": "Methodology",
+        "url": "https://cctools.network/methodology"
+      },
+      {
+        "label": "Repo",
+        "url": "https://github.com/0xScoutr/cctools-network-record"
+      }
+    ],
+    "daml_sdk_version": null,
+    "maintained_by": "CCTools",
+    "dev_fund": false,
+    "last_updated": "2026-11-26"
+  },
+  {
+    "name": "CCTools MCP",
+    "maker": "CCTools",
+    "type": "partner",
+    "category": "AI Tools",
+    "desc": "Read-only MCP server over CCTools data on Canton Network: the project directory, campaigns, network stats, governance, news, CIP explanations and the CCTools docs. Hosted over Streamable HTTP, with no key or account.",
+    "links": [
+      {
+        "label": "Setup & tools",
+        "url": "https://cctools.network/mcp"
+      }
+    ],
+    "daml_sdk_version": null,
+    "maintained_by": "CCTools",
+    "dev_fund": false,
+    "last_updated": "2026-11-24"
   }
 ]
