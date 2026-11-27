@@ -1324,7 +1324,7 @@
     "maker": "CCTools",
     "type": "partner",
     "category": "AI Tools",
-    "desc": "Read-only MCP server over CCTools data on Canton Network: the project directory, campaigns, network stats, governance, news, CIP explanations and the CCTools docs. Hosted over Streamable HTTP, with no key or account.",
+    "desc": "Read-only MCP server for AI agents to search the CCTools directory of Canton Network ecosystem projects and read network stats, governance votes, news, campaigns, CIP explanations and the CCTools docs. Hosted over Streamable HTTP; none of these needs a key or account.",
     "links": [
       {
         "label": "Setup & tools",
@@ -1335,5 +1335,55 @@
     "maintained_by": "CCTools",
     "dev_fund": false,
     "last_updated": "2026-11-24"
+  },
+  {
+    "name": "CCTools Ecosystem Directory",
+    "maker": "CCTools",
+    "type": "partner",
+    "category": "Getting Started",
+    "desc": "Searchable list of projects in the Canton Network ecosystem (apps, infrastructure, node operators, institutions), each with a page showing category, status, links, community votes, linked network parties and any featured app right. Filter by category, status or network role, submit your own project, or read the same data through the CCTools API and MCP.",
+    "links": [
+      {
+        "label": "Directory",
+        "url": "https://cctools.network/ecosystem"
+      },
+      {
+        "label": "Submit a project",
+        "url": "https://cctools.network/ecosystem/submit"
+      },
+      {
+        "label": "Docs",
+        "url": "https://docs.cctools.network/ecosystem/browsing-projects"
+      }
+    ],
+    "daml_sdk_version": null,
+    "maintained_by": "CCTools",
+    "dev_fund": false,
+    "last_updated": "2026-11-27"
+  },
+  {
+    "name": "CCTools API",
+    "maker": "CCTools",
+    "type": "partner",
+    "category": "APIs",
+    "desc": "Read-only REST API for Canton Network ecosystem data: the project directory, validators, featured apps, network stats, markets and DEX pools, governance votes and news, with an OpenAPI spec. Keys come with a plan (an evaluation key on request, CCTools Pro, paid Data plans, or free for 12 months to verified validator operators), and one market route can be paid per call with x402.",
+    "links": [
+      {
+        "label": "Docs",
+        "url": "https://docs.cctools.network/api/overview"
+      },
+      {
+        "label": "Endpoints & plans",
+        "url": "https://cctools.network/api-docs"
+      },
+      {
+        "label": "OpenAPI",
+        "url": "https://api.cctools.network/api/v1/openapi.json"
+      }
+    ],
+    "daml_sdk_version": null,
+    "maintained_by": "CCTools",
+    "dev_fund": true,
+    "last_updated": "2026-11-27"
   }
 ]
